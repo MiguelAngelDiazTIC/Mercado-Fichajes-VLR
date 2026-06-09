@@ -1,15 +1,26 @@
+export type PlayerStatus = 'confirmed' | 'likely' | 'possible' | 'rumor' | 'benched' | 'out';
+
 export interface Player {
-  status: "confirmed" | "likely" | "possible" | "rumor";
+  status: PlayerStatus;
   name: string;
   flag: string;
-  role: string;
+  role?: string;
 }
+
+export interface StaffMember {
+  role: string;
+  name: string;
+  flag?: string;
+}
+
 export interface Team {
   flag: string;
   name: string;
   players: Player[];
-  note?: string;
+  staff?: StaffMember[];
+  note?: string | null;
 }
+
 export interface Region {
   id: string;
   label: string;

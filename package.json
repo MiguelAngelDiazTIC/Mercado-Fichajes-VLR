@@ -1,0 +1,11 @@
+{
+  "name": "mercado-fichajes-vlr",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmitOnError",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

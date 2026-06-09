@@ -20,19 +20,19 @@ async function renderRegion(id) {
   const grid = document.getElementById(`${id}-grid`);
   if (!grid) return;
 
-  grid.innerHTML = region.teams
-    .map((team) => {
-      const starters = team.players.filter((player) => player.status !== 'benched');
-      const bench = team.players.filter((player) => player.status === 'benched');
-
-      const playerHtml = (player) =>
-        `<div class="player-row${player.status === 'benched' ? ' bench-row' : ''}">
+  const playerHtml = (player) =>
+    `<div class="player-row${player.status === 'benched' ? ' bench-row' : ''}">
             <div class="player-info">
               <div class="player-status status-${player.status}"></div>
               <span class="player-name">${player.name}</span>
               <span class="player-flag">${player.flag}</span>
             </div>
           </div>`;
+
+  grid.innerHTML = region.teams
+    .map((team) => {
+      const starters = team.players.filter((player) => player.status !== 'benched');
+      const bench = team.players.filter((player) => player.status === 'benched');
 
       const startersHtml = starters.map(playerHtml).join('');
       const benchHtml = bench.length
@@ -112,6 +112,7 @@ function setTabByName(name) {
 function resetFilters() {
   currentSearch = '';
   currentStatus = '';
+  document.querySelectorAll('.search-input').forEach((input) => (input.value = ''));
   document.querySelectorAll('.filter-btn').forEach((btn) =>
     btn.classList.toggle('active', btn.textContent?.trim() === 'Todos')
   );

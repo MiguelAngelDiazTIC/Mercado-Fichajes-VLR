@@ -1,39 +1,85 @@
-import { loadRegions } from './main.ts';
+import { loadRegions, Player } from './main.js';
 
-type FilterStatus = '' | 'confirmed' | 'likely' | 'rumor';
+type FilterStatus = '' | 'confirmed' | 'likely' | 'possible' | 'rumor';
+type RegionKey = 'emea' | 'apac' | 'amer' | 'cn';
 
-const regionIds = ['emea', 'apac', 'amer', 'cn'];
+const regionIds: RegionKey[] = ['emea', 'apac', 'amer', 'cn'];
+const regionIdMap: Record<RegionKey, string> = {
+  emea: 'emea',
+  apac: 'pacific',
+  amer: 'americas',
+  cn: 'china',
+};
+
 let currentSearch = '';
 let currentStatus: FilterStatus = '';
 const regionDataPromise = loadRegions();
 
-async function renderRegion(id: string): Promise<void> {
+async function renderRegion(id: RegionKey): Promise<void> {
   const regions = await regionDataPromise;
-  const region = regions.find((item) => item.id === id);
+  const dataId = regionIdMap[id] ?? id;
+  const region = regions.find((item) => item.id === dataId);
   if (!region) return;
 
   const grid = document.getElementById(`${id}-grid`);
   if (!grid) return;
 
+  const playerHtml = (player: Player): string =>
+    `<div class="player-row${player.status === 'benched' ? ' bench-row' : ''}">
+            <div class="player-info">
+              <div class="player-status status-${player.status}"></div>
+              <span class="player-name">${player.name}</span>
+              <span class="player-flag">${player.flag}</span>
+            </div>
+          </div>`;
+
   grid.innerHTML = region.teams
     .map((team) => {
+      const starters = team.players.filter((player) => player.status !== 'benched');
+      const bench = team.players.filter((player) => player.status === 'benched');
+
+      const startersHtml = starters.map(playerHtml).join('');
+      const benchHtml = bench.length
+        ? bench.map(playerHtml).join('')
+        : `<div class="empty-state">Sin movimientos regristrados</div>`;
+
+      const rosterHtml = `
+        <div class="team-roster-grid">
+          <div class="roster-column">
+            <div class="roster-column-title">ROOSTER</div>
+            ${startersHtml}
+          </div>
+          <div class="roster-column">
+            <div class="roster-column-title">SUBS</div>
+            ${benchHtml}
+          </div>
+        </div>`;
+
+      const staffHtml =
+        Array.isArray(team.staff) && team.staff.length
+          ? `<div class="team-staff">
+              <div class="staff-title">Staff</div>
+              ${team.staff
+                .map(
+                  (member) =>
+                    `<div class="staff-row"><span class="staff-role">${member.role}</span><span class="staff-meta"><span class="staff-name">${member.name}</span>${member.flag ? `<span class="staff-flag">${member.flag}</span>` : ''}</span></div>`
+                )
+                .join('')}
+            </div>`
+          : '';
+
       const noteHtml = team.note
-        ? `<div style="padding:6px 14px;border-top:1px solid var(--border);font-size:10px;color:var(--muted);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px">⬡ ${team.note}</div>`
+        ? `<div class="team-note">⬡ ${team.note}</div>`
         : '';
-      const playersHtml = team.players
-        .map(
-          (player) =>
-            `<div class="player-row"><div class="player-info"><div class="player-status status-${player.status}"></div><span class="player-name">${player.name}</span><span class="player-flag">${player.flag}</span></div><span class="player-role">${player.role || 'Jugador'}</span></div>`
-        )
-        .join('');
 
       return `<div class="team-card">
       <div class="team-card-header">
         <span class="team-flag">${team.flag}</span>
         <span class="team-name">${team.name}</span>
       </div>
-      <div class="team-roster">${playersHtml}</div>
+      <div class="team-roster">${rosterHtml}</div>
       ${noteHtml}
+      ${staffHtml}
     </div>`;
     })
     .join('');
@@ -46,9 +92,9 @@ function showPage(id: string): void {
   const page = document.getElementById('page-' + id);
   if (page) page.classList.add('active');
 
-  if (regionIds.includes(id)) {
+  if (regionIds.includes(id as RegionKey)) {
     resetFilters();
-    renderRegion(id);
+    renderRegion(id as RegionKey);
   }
 }
 
@@ -115,9 +161,15 @@ function buttonLabel(status: FilterStatus): string {
   }
 }
 
+function sendPrompt(message: string): void {
+  console.warn('sendPrompt called with:', message);
+  alert(message);
+}
+
 (window as any).showPage = showPage;
 (window as any).setTabByName = setTabByName;
 (window as any).filterPlayers = filterPlayers;
 (window as any).filterStatus = filterStatus;
+(window as any).sendPrompt = sendPrompt;
 
 renderRegion('emea');
