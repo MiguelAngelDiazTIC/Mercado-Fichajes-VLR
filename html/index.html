@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VCT Transfer Hub</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-logo" onclick="showPage('home')">
+      <div class="v-icon">V</div>
+      <div>
+        <div class="rajdhani" style="font-weight:700;font-size:18px;letter-spacing:2px">VCT <span
+            style="color:var(--accent)">TRANSFERS</span></div>
+        <div class="sub">MERCADO DE FICHAJES</div>
+      </div>
+    </div>
+    <div class="nav-tabs">
+      <div class="nav-tab active" onclick="showPage('home');setTab(this)">Inicio</div>
+      <div class="nav-tab" onclick="showPage('emea');setTab(this)">EMEA</div>
+      <div class="nav-tab" onclick="showPage('apac');setTab(this)">APAC</div>
+      <div class="nav-tab" onclick="showPage('amer');setTab(this)">AMER</div>
+      <div class="nav-tab" onclick="showPage('cn');setTab(this)">CN</div>
+      <div class="nav-tab" onclick="showPage('nats');setTab(this)">Selecciones</div>
+    </div>
+    <div class="game-switch" style="margin-left:1rem">
+      <button class="game-btn val">VALORANT</button>
+      <button class="game-btn lol" onclick="alert('LOL — próximamente 🔜')">LOL</button>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <div id="page-home" class="page active">
+    <div class="hero">
+      <div class="hero-badge">⬡ TEMPORADA 2025/26 · TRANSFER WINDOW</div>
+      <h1 class="rajdhani">VCT <span>TRANSFER</span><br>HUB</h1>
+      <p>Sigue todos los movimientos del mercado competitivo de Valorant en tiempo real. Fichajes, renovaciones y
+        rumores.</p>
+      <div class="season-tag">
+        <div class="season-dot"></div> TEMPORADA 2025/2026 · Ultima actualización: 09/06/2026
+      </div>
+    </div>
+
+    <div class="regions-grid">
+      <div class="region-card emea" onclick="showPage('emea');setTabByName('EMEA')">
+        <div class="r-header">
+          <div class="r-badge">EMEA</div>
+          <div>
+            <div class="r-name">EMEA</div>
+            <div class="r-full">Europe, Middle East & Africa</div>
+          </div>
+          <div class="r-arrow">→</div>
+        </div>
+        <div class="r-teams">
+          <span class="r-team-pill">Team Heretics</span>
+          <span class="r-team-pill">Team Vitality</span>
+          <span class="r-team-pill">Fnatic</span>
+          <span class="r-team-pill">Team Liquid</span>
+          <span class="r-team-pill">+8 más</span>
+        </div>
+      </div>
+
+      <div class="region-card apac" onclick="showPage('apac');setTabByName('APAC')">
+        <div class="r-header">
+          <div class="r-badge">APAC</div>
+          <div>
+            <div class="r-name">APAC</div>
+            <div class="r-full">Asia-Pacific</div>
+          </div>
+          <div class="r-arrow">→</div>
+        </div>
+        <div class="r-teams">
+          <span class="r-team-pill">Paper Rex</span>
+          <span class="r-team-pill">Team Secret</span>
+          <span class="r-team-pill">ZETA Division</span>
+          <span class="r-team-pill">+7 más</span>
+        </div>
+      </div>
+
+      <div class="region-card amer" onclick="showPage('amer');setTabByName('AMER')">
+        <div class="r-header">
+          <div class="r-badge">AMER</div>
+          <div>
+            <div class="r-name">AMER</div>
+            <div class="r-full">Americas</div>
+          </div>
+          <div class="r-arrow">→</div>
+        </div>
+        <div class="r-teams">
+          <span class="r-team-pill">Sentinels</span>
+          <span class="r-team-pill">Cloud9</span>
+          <span class="r-team-pill">Leviatán</span>
+          <span class="r-team-pill">LOUD</span>
+          <span class="r-team-pill">+6 más</span>
+        </div>
+      </div>
+
+      <div class="region-card cn" onclick="showPage('cn');setTabByName('CN')">
+        <div class="r-header">
+          <div class="r-badge">CN</div>
+          <div>
+            <div class="r-name">CN</div>
+            <div class="r-full">China</div>
+          </div>
+          <div class="r-arrow">→</div>
+        </div>
+        <div class="r-teams">
+          <span class="r-team-pill">EDward Gaming</span>
+          <span class="r-team-pill">Bilibili Gaming</span>
+          <span class="r-team-pill">FPX</span>
+          <span class="r-team-pill">+7 más</span>
+        </div>
+      </div>
+
+      <div class="region-card nats" style="grid-column:1/-1" onclick="showPage('nats');setTabByName('Selecciones')">
+        <div class="r-header">
+          <div class="r-badge">🌍</div>
+          <div>
+            <div class="r-name">SELECCIONES NACIONALES</div>
+            <div class="r-full">ENC · Nations Cup · Representación por países</div>
+          </div>
+          <div class="r-arrow">→</div>
+        </div>
+        <div class="r-teams">
+          <span class="r-team-pill">🇪🇸 España</span>
+          <span class="r-team-pill">🇫🇷 Francia</span>
+          <span class="r-team-pill">🇬🇧 Reino Unido</span>
+          <span class="r-team-pill">🇺🇦 Ucrania</span>
+          <span class="r-team-pill">🇹🇷 Türkiye</span>
+          <span class="r-team-pill">+ 27 naciones</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMEA PAGE -->
+  <div id="page-emea" class="page">
+    <div class="region-header">
+      <div class="rh-accent" style="background:var(--emea)"></div>
+      <div>
+        <div class="rh-title">EMEA</div>
+        <div class="rh-sub">Europe · Middle East · Africa — VCT 2026</div>
+      </div>
+      <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')" style="margin-left:auto">←
+        Volver</button>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#00c8a0"></div>Confirmado/Renovado
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#4a9eff"></div>+90% probable
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--gold)"></div>Posibilidad
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--muted)"></div>Rumor
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--accent)"></div>Sale/Baja
+      </div>
+      <div
+        style="margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--muted);letter-spacing:0.5px">
+        Fuente: xTittan · Luigi9 · 21/12/2025</div>
+    </div>
+
+    <div class="teams-container">
+      <div class="teams-grid" id="emea-grid">
+      </div>
+    </div>
+  </div>
+
+  <!-- APAC PAGE -->
+  <div id="page-apac" class="page">
+    <div class="region-header">
+      <div class="rh-accent" style="background:var(--apac)"></div>
+      <div>
+        <div class="rh-title">APAC</div>
+        <div class="rh-sub">Asia-Pacific — VCT 2026</div>
+      </div>
+      <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')" style="margin-left:auto">←
+        Volver</button>
+    </div>
+
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#00c8a0"></div>Confirmado/Renovado
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#4a9eff"></div>+90% probable
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--gold)"></div>Posibilidad
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--muted)"></div>Rumor
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--accent)"></div>Sale/Baja
+      </div>
+      <div
+        style="margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--muted);letter-spacing:0.5px">
+        Fuente: xTittan · Luigi9 · 21/12/2025</div>
+    </div>
+
+    <div class="teams-container">
+      <div class="teams-grid" id="apac-grid"></div>
+    </div>
+  </div>
+
+  <!-- AMER PAGE -->
+  <div id="page-amer" class="page">
+    <div class="region-header">
+      <div class="rh-accent" style="background:var(--amer)"></div>
+      <div>
+        <div class="rh-title">AMER</div>
+        <div class="rh-sub">Americas — VCT 2026</div>
+      </div>
+      <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')" style="margin-left:auto">←
+        Volver</button>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#00c8a0"></div>Confirmado/Renovado
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#4a9eff"></div>+90% probable
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--gold)"></div>Posibilidad
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--muted)"></div>Rumor
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--accent)"></div>Sale/Baja
+      </div>
+      <div
+        style="margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--muted);letter-spacing:0.5px">
+        Fuente: xTittan · Luigi9 · 21/12/2025</div>
+    </div>
+
+    <div class="teams-container">
+      <div class="teams-grid" id="amer-grid"></div>
+    </div>
+  </div>
+
+  <!-- CN PAGE -->
+  <div id="page-cn" class="page">
+    <div class="region-header">
+      <div class="rh-accent" style="background:var(--cn)"></div>
+      <div>
+        <div class="rh-title">CN</div>
+        <div class="rh-sub">China — VCT 2026</div>
+      </div>
+      <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')" style="margin-left:auto">←
+        Volver</button>
+    </div>
+
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#00c8a0"></div>Confirmado/Renovado
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#4a9eff"></div>+90% probable
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--gold)"></div>Posibilidad
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--muted)"></div>Rumor
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--accent)"></div>Sale/Baja
+      </div>
+      <div
+        style="margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--muted);letter-spacing:0.5px">
+        Fuente: xTittan · Luigi9 · 21/12/2025</div>
+    </div>
+
+    <div class="teams-container">
+      <div class="teams-grid" id="cn-grid"></div>
+    </div>
+  </div>
+
+  <!-- SELECCIONES PAGE -->
+  <div id="page-nats" class="page">
+    <div class="region-header">
+      <div class="rh-accent" style="background:var(--nats)"></div>
+      <div>
+        <div class="rh-title">SELECCIONES NACIONALES</div>
+        <div class="rh-sub">ENC · Nations Cup 2025</div>
+      </div>
+      <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')" style="margin-left:auto">←
+        Volver</button>
+    </div>
+    <div class="nat-grid">
+      <!-- Fila 1 -->
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇫🇮</span><span class="nat-name">Finland</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇪🇸</span><span class="nat-name">España</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇫🇷</span><span class="nat-name">Francia</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇬🇧</span><span class="nat-name">Reino Unido</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <!-- Fila 2 -->
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇨🇿</span><span class="nat-name">Czech Rep.</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇹🇷</span><span class="nat-name">Türkiye</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇺🇦</span><span class="nat-name">Ukraine</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇷🇺</span><span class="nat-name">Russia</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <!-- Fila 3 -->
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇨🇱</span><span class="nat-name">Chile</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇵🇱</span><span class="nat-name">Poland</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇱🇹</span><span class="nat-name">Lithuania</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇳🇱</span><span class="nat-name">Netherlands</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <!-- Fila 4 -->
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇨🇦</span><span class="nat-name">Canada</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇨🇳</span><span class="nat-name">China</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇰🇷</span><span class="nat-name">South Korea</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇮🇩</span><span class="nat-name">Indonesia</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <!-- Fila 5 -->
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇮🇹</span><span class="nat-name">Italy</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇩🇪</span><span class="nat-name">Germany</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇯🇵</span><span class="nat-name">Japan</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇺🇸</span><span class="nat-name">USA</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <!-- Fila 6 -->
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇦🇷</span><span class="nat-name">Argentina</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇧🇷</span><span class="nat-name">Brazil</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇵🇹</span><span class="nat-name">Portugal</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇸🇬</span><span class="nat-name">Singapore</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <!-- Fila 7 -->
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇹🇭</span><span class="nat-name">Thailand</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇵🇭</span><span class="nat-name">Philippines</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇹🇼</span><span class="nat-name">Taiwan</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇸🇦</span><span class="nat-name">Saudi Arabia</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <!-- Fila 8 -->
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇲🇽</span><span class="nat-name">Mexico</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇪🇪</span><span class="nat-name">Estonia</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇷🇸</span><span class="nat-name">Serbia</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+      <div class="nat-card">
+        <div class="nat-header"><span class="nat-flag">🇪🇬</span><span class="nat-name">Egypt</span></div>
+        <div class="nat-slots">
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+          <div class="nat-slot"></div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:0 2rem 2rem;text-align:center">
+      <button
+        style="background:rgba(0,200,160,0.15);border:1px solid rgba(0,200,160,0.4);color:var(--nats);padding:10px 24px;border-radius:3px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:1px"
+        onclick="sendPrompt('Rellena los jugadores de las selecciones nacionales del ENC de Valorant con los datos que se ven en la imagen')">Rellenar
+        selecciones con jugadores ↗</button>
+    </div>
+  </div>
+
+  <script type="module" src="../src/RegionTable.js"></script>
+</body>
+
+</html>

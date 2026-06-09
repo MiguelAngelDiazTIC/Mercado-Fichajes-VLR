@@ -1,0 +1,439 @@
+[
+  {
+    "id": "emea",
+    "label": "EMEA",
+    "subtitle": "Europe, Middle East & Africa",
+    "accent": "var(--emea)",
+    "_comment": "Status values: confirmed, likely, possible, rumor. Extras: benched, out.",
+    "teams": [
+      {
+        "flag": "🇳🇱",
+        "name": "TEAM LIQUID",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "nAts",
+            "flag": "🇷🇺"
+          },
+          {
+            "status": "confirmed",
+            "name": "purp0",
+            "flag": "🇷🇺"
+          },
+          {
+            "status": "confirmed",
+            "name": "kamo",
+            "flag": "🇵🇱"
+          },
+          {
+            "status": "confirmed",
+            "name": "MiniBoo",
+            "flag": "🇱🇹"
+          },
+          {
+            "status": "benched",
+            "name": "wayne",
+            "flag": "🇺🇸"
+          },
+          {
+            "status": "likely",
+            "name": "trexx",
+            "flag": "🇷🇺"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇹🇷",
+        "name": "FUT ESPORTS",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "sociablEE",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "yetujey",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "xeus",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "KROSTALY",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "s0pp",
+            "flag": "🇹🇷"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇺🇦",
+        "name": "NATUS VINCERE",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "Filu",
+            "flag": "🇵🇱"
+          },
+          {
+            "status": "confirmed",
+            "name": "chloric",
+            "flag": "🇺🇸"
+          },
+          {
+            "status": "confirmed",
+            "name": "Ruxic",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "hiro",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "ComeBack",
+            "flag": "🇹🇷"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇫🇷",
+        "name": "GENTLE MATES",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "starxo",
+            "flag": "🇵🇱"
+          },
+          {
+            "status": "confirmed",
+            "name": "bipo",
+            "flag": "🇮🇹"
+          },
+          {
+            "status": "confirmed",
+            "name": "marteen",
+            "flag": "🇨🇿"
+          },
+          {
+            "status": "confirmed",
+            "name": "GLYPH",
+            "flag": "🇺🇸"
+          },
+          {
+            "status": "confirmed",
+            "name": "Minny",
+            "flag": "🇨🇿"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇪🇸",
+        "name": "TEAM HERETICS",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "Boo",
+            "flag": "🇱🇹"
+          },
+          {
+            "status": "confirmed",
+            "name": "RieNs",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "Wo0t",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "Koshmaras",
+            "flag": "🇷🇺"
+          },
+          {
+            "status": "confirmed",
+            "name": "benjyfishy",
+            "flag": "🇬🇧"
+          },
+          {
+            "status": "benched",
+            "name": "ComeBack",
+            "flag": "🇹🇷"
+          }
+        ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "neilzinho",
+            "flag": "🇬🇧"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "Weber",
+            "flag": "🇬🇧"
+          },
+          {
+            "role": "Analista",
+            "name": "Beny",
+            "flag": "🇩🇪"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇫🇷",
+        "name": "KARMINE CORP",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "SUYGETSU",
+            "flag": "🇷🇺"
+          },
+          {
+            "status": "confirmed",
+            "name": "Avez",
+            "flag": "🇪🇬"
+          },
+          {
+            "status": "confirmed",
+            "name": "dos9",
+            "flag": "🇰🇿"
+          },
+          {
+            "status": "confirmed",
+            "name": "LewN",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "N4RRATE",
+            "flag": "🇷🇺"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇬🇧",
+        "name": "FNATIC",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "crashies",
+            "flag": "🇺🇸"
+          },
+          {
+            "status": "confirmed",
+            "name": "Boaster",
+            "flag": "🇬🇧"
+          },
+          {
+            "status": "confirmed",
+            "name": "kaajak",
+            "flag": "🇩🇰"
+          },
+          {
+            "status": "confirmed",
+            "name": "Alfajer",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "Veqaj",
+            "flag": "🇦🇱"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇹🇷",
+        "name": "ETERNAL FIRE",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "Izzy",
+            "flag": "🇩🇪"
+          },
+          {
+            "status": "confirmed",
+            "name": "nekky",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "audaz",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "Favian",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "echo",
+            "flag": "🇹🇷"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇫🇷",
+        "name": "TEAM VITALITY",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "Derke",
+            "flag": "🇫🇮"
+          },
+          {
+            "status": "confirmed",
+            "name": "Jamppi",
+            "flag": "🇫🇮"
+          },
+          {
+            "status": "confirmed",
+            "name": "PROFEK",
+            "flag": "🇵🇱"
+          },
+          {
+            "status": "confirmed",
+            "name": "Chronicle",
+            "flag": "🇷🇺"
+          },
+          {
+            "status": "confirmed",
+            "name": "Sayonara",
+            "flag": "🇷🇴"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇹🇷",
+        "name": "BBL ESPORTS",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "Rosé",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "Crewen",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "Loita",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "Lar0k",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "lovers rock",
+            "flag": "🇹🇷"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇪🇸",
+        "name": "GIANTX",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "grubinho",
+            "flag": "🇧🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "ara",
+            "flag": "🇷🇴"
+          },
+          {
+            "status": "confirmed",
+            "name": "Flickless",
+            "flag": "🇧🇪"
+          },
+          {
+            "status": "confirmed",
+            "name": "Cloud",
+            "flag": "🇷🇺"
+          },
+          {
+            "status": "confirmed",
+            "name": "westside",
+            "flag": "🇵🇱"
+          }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇹🇷",
+        "name": "PCIFIC ESPORTS",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "cNed",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "al0rante",
+            "flag": "🇲🇽"
+          },
+          {
+            "status": "confirmed",
+            "name": "qpert",
+            "flag": "🇸🇰"
+          },
+          {
+            "status": "confirmed",
+            "name": "seven",
+            "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "NINJA",
+            "flag": "🇵🇱"
+          }
+        ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "thnikii",
+            "flag": "🇪🇸"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "ZaeS",
+            "flag": "🇪🇸"
+          },
+          {
+            "role": "Analista",
+            "name": "Koyo",
+            "flag": "🇩🇪"
+          }
+        ],
+        "note": null
+      }
+    ]
+  }
+]
