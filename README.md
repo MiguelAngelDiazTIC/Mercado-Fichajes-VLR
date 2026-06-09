@@ -236,12 +236,8 @@ Ejecuta TypeScript en modo observación.
 ## 🚧 Próximas mejoras
 
 * [ ] Integrar dinámicamente `teamsSEL.json`.
-* [ ] Añadir panel de estadísticas.
 * [ ] Filtros avanzados para staff técnico.
-* [ ] Sistema de búsqueda global.
-* [ ] Migración a Vite.
 * [ ] Persistencia de filtros.
-* [ ] Tema oscuro.
 * [ ] Consumo de API en tiempo real.
 
 ---
