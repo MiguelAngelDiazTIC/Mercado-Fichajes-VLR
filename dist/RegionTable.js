@@ -31,8 +31,8 @@ async function renderRegion(id) {
 
   grid.innerHTML = region.teams
     .map((team) => {
-      const starters = team.players.filter((player) => player.status !== 'benched');
-      const bench = team.players.filter((player) => player.status === 'benched');
+      const starters = team.players.filter((player) => player.status !== 'benched' && player.status !== 'rumor');
+      const bench = team.players.filter((player) => player.status === 'benched' || player.status === 'rumor');
 
       const startersHtml = starters.map(playerHtml).join('');
       const benchHtml = bench.length

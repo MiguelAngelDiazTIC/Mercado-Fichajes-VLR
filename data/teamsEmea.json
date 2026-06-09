@@ -33,12 +33,29 @@
           {
             "status": "benched",
             "name": "wayne",
-            "flag": "🇺🇸"
+            "flag": "🇸🇬"
           },
           {
             "status": "likely",
             "name": "trexx",
             "flag": "🇷🇺"
+          }
+        ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "LohaN",
+            "flag": "🇵🇹"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "yaotziN.",
+            "flag": "🇵🇱"
+          },
+          {
+            "role": "Analista",
+            "name": "Beacon9",
+            "flag": "🇬🇧"
           }
         ],
         "note": null
@@ -73,6 +90,23 @@
             "flag": "🇹🇷"
           }
         ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "Vlad",
+            "flag": "🇹🇷"
+          },
+          {
+            "role": "Analista",
+            "name": "Bambino",
+            "flag": "🇬🇧"
+          },
+          {
+            "role": "Manager",
+            "name": "Mighty",
+            "flag": "🇹🇷"
+          }
+        ],
         "note": null
       },
       {
@@ -100,9 +134,31 @@
             "flag": "🇹🇷"
           },
           {
-            "status": "confirmed",
+            "status": "benched",
             "name": "ComeBack",
             "flag": "🇹🇷"
+          },
+          {
+            "status": "confirmed",
+            "name": "ExiT",
+            "flag": "🇸🇦🇹🇷"
+          }
+        ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "ANGE1",
+            "flag": "🇺🇦"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "chippy",
+            "flag": "🇺🇦"
+          },
+          {
+            "role": "Analista",
+            "name": "Flynn",
+            "flag": "🇩🇿"
           }
         ],
         "note": null
@@ -127,7 +183,7 @@
             "flag": "🇨🇿"
           },
           {
-            "status": "confirmed",
+            "status": "benched",
             "name": "GLYPH",
             "flag": "🇺🇸"
           },
@@ -135,6 +191,28 @@
             "status": "confirmed",
             "name": "Minny",
             "flag": "🇨🇿"
+          },
+          {
+            "status": "likely",
+            "name": "Proxh",
+            "flag": "🇹🇷"
+          }
+        ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "KUNDIKUNDI",
+            "flag": "🇺🇦"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "Mavera",
+            "flag": "🇹🇷"
+          },
+          {
+            "role": "Analista",
+            "name": "Luinwess",
+            "flag": "🇹🇷"
           }
         ],
         "note": null
@@ -220,7 +298,34 @@
           {
             "status": "confirmed",
             "name": "N4RRATE",
+            "flag": "🇺🇸"
+          },
+          {
+            "status": "benched",
+            "name": "sheydos",
             "flag": "🇷🇺"
+          },
+          {
+            "status": "benched",
+            "name": "ENGH",
+            "flag": "🇷🇺"
+          }
+        ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "ZE1SH",
+            "flag": "🇪🇬"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "Youenn",
+            "flag": "🇫🇷"
+          },
+          {
+            "role": "Manager",
+            "name": "P4tz",
+            "flag": "🇫🇷"
           }
         ],
         "note": null
@@ -252,7 +357,34 @@
           {
             "status": "confirmed",
             "name": "Veqaj",
-            "flag": "🇦🇱"
+            "flag": "🇫🇷"
+          },
+          {
+            "status": "benched",
+            "name": "Cyvoph",
+            "flag": "🇫🇷"
+          },
+          {
+            "status": "benched",
+            "name": "Milan",
+            "flag": "🇳🇱"
+          }
+        ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "ENG",
+            "flag": "🇷🇺"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "Desmo",
+            "flag": "🇩🇰"
+          },
+          {
+            "role": "Manager",
+            "name": "Cojo",
+            "flag": "🇺🇸"
           }
         ],
         "note": null
@@ -284,6 +416,23 @@
           {
             "status": "confirmed",
             "name": "echo",
+            "flag": "🇹🇷"
+          }
+        ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "afr0nfire",
+            "flag": "🇹🇷"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "L7",
+            "flag": "🇹🇷"
+          },
+          {
+            "role": "Manager",
+            "name": "Big Poppa",
             "flag": "🇹🇷"
           }
         ],
@@ -319,6 +468,23 @@
             "flag": "🇷🇴"
           }
         ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "PAL",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "Scuttt",
+            "flag": "🇮🇪"
+          },
+          {
+            "role": "Analista",
+            "name": "slk",
+            "flag": "🇷🇺"
+          }
+        ],
         "note": null
       },
       {
@@ -351,6 +517,23 @@
             "flag": "🇹🇷"
           }
         ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "KEY",
+            "flag": "🇹🇷"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "Viento",
+            "flag": "🇹🇷"
+          },
+          {
+            "role": "Manager",
+            "name": "Tropik",
+            "flag": "🇹🇷"
+          }
+        ],
         "note": null
       },
       {
@@ -360,7 +543,7 @@
           {
             "status": "confirmed",
             "name": "grubinho",
-            "flag": "🇧🇷"
+            "flag": "🇵🇱"
           },
           {
             "status": "confirmed",
@@ -383,6 +566,23 @@
             "flag": "🇵🇱"
           }
         ],
+        "staff": [
+          {
+            "role": "Entrenador",
+            "name": "pipsoN",
+            "flag": "🇷🇺"
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "wayLander",
+            "flag": "🇫🇮"
+          },
+          {
+            "role": "Manager",
+            "name": "Hehnal",
+            "flag": "🇩🇪"
+          }
+        ],
         "note": null
       },
       {
@@ -397,7 +597,7 @@
           {
             "status": "confirmed",
             "name": "al0rante",
-            "flag": "🇲🇽"
+            "flag": "🇩🇪"
           },
           {
             "status": "confirmed",
@@ -407,7 +607,7 @@
           {
             "status": "confirmed",
             "name": "seven",
-            "flag": "🇹🇷"
+            "flag": "🇲🇽"
           },
           {
             "status": "confirmed",

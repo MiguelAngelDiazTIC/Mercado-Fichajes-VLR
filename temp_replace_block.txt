@@ -1,0 +1,7 @@
+      const starters = team.players.filter((player) => player.status !== 'benched' && player.status !== 'rumor');
+      const bench = team.players.filter((player) => player.status === 'benched' || player.status === 'rumor');
+
+      const startersHtml = starters.map(playerHtml).join('');
+      const benchHtml = bench.length
+        ? bench.map(playerHtml).join('')
+        : `<div class="empty-state">Sin movimientos regristrados</div>`;
