@@ -114,7 +114,7 @@
         "name": "NATUS VINCERE",
         "players": [
           {
-            "status": "confirmed",
+            "status": "possible",
             "name": "Filu",
             "flag": "🇵🇱"
           },
@@ -141,7 +141,12 @@
           {
             "status": "confirmed",
             "name": "ExiT",
-            "flag": "🇸🇦🇹🇷"
+            "flag": "🇸🇦"
+          },
+          {
+            "status": "rumor",
+            "name": "Cyvoph",
+            "flag": "🇫🇷"
           }
         ],
         "staff": [
