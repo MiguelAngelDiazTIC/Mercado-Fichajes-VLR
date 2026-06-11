@@ -2,11 +2,12 @@
   "name": "mercado-fichajes-vlr",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"vite\"",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "concurrently": "^10.0.3",
     "typescript": "^5.9.3",
     "vite": "^8.0.16"
   },
