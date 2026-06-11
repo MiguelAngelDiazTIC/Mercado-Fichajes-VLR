@@ -251,6 +251,9 @@ Previsualiza la carpeta `dist/` con Vite.
 * [ ] Filtros avanzados para staff técnico.
 * [ ] Persistencia de filtros.
 * [ ] Consumo de API en tiempo real.
+* [ ] Integración de un bot para actualización de API automáticamente.
+* [ ] Actualizar todas las regiones con coaches y equipos actuales.
+* [ ] Consumo de API en tiempo real.
 
 ---
 
@@ -258,7 +261,7 @@ Previsualiza la carpeta `dist/` con Vite.
 
 **Miguel Ángel Díaz Gutiérrez**
 
-Desarrollador Frontend especializado en TypeScript y desarrollo web.
+Desarrollador Frontend.
 
 📍 Madrid, España
 
