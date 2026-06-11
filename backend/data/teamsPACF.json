@@ -11,10 +11,15 @@
         "name": "GLOBAL ESPORTS",
         "players": [
           { "status": "confirmed", "name": "Autumn", "flag": "🇸🇬" },
-          { "status": "confirmed", "name": "UdoTan", "flag": "🇸🇬" },
-          { "status": "confirmed", "name": "Kr1stal", "flag": "🇸🇬" },
+          { "status": "confirmed", "name": "UdoTan", "flag": "🇰🇷" },
+          { "status": "confirmed", "name": "Kr1stal", "flag": "🇷🇺" },
           { "status": "confirmed", "name": "xavi8k", "flag": "🇵🇭" },
-          { "status": "confirmed", "name": "PatMen", "flag": "🇮🇳" }
+          { "status": "confirmed", "name": "PatMen", "flag": "🇵🇭" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "FrosT", "flag": "🇺🇸" },
+          { "role": "Assistant Coach", "name": "Vladk0r", "flag": "🇷🇺" },
+          { "role": "Analista", "name": "Platoon", "flag": "🇨🇦" }
         ],
         "note": null
       },
@@ -26,7 +31,14 @@
           { "status": "confirmed", "name": "MaKo", "flag": "🇰🇷" },
           { "status": "confirmed", "name": "BeYN", "flag": "🇰🇷" },
           { "status": "confirmed", "name": "HYUNMIN", "flag": "🇰🇷" },
-          { "status": "confirmed", "name": "yong", "flag": "🇰🇷" }
+          { "status": "confirmed", "name": "yong", "flag": "🇰🇷" },
+          { "status": "rumor", "name": "Hermes", "flag": "🇰🇷" },
+          { "status": "benched", "name": "Flicker", "flag": "🇰🇷" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "termi", "flag": "🇰🇷" },
+          { "role": "Coach", "name": "glow", "flag": "🇰🇷" },
+          { "role": "Analista", "name": "Argency", "flag": "🇰🇷" }
         ],
         "note": null
       },
@@ -35,10 +47,15 @@
         "name": "PAPER REX",
         "players": [
           { "status": "confirmed", "name": "Jinggg", "flag": "🇸🇬" },
-          { "status": "confirmed", "name": "invy", "flag": "🇸🇬" },
-          { "status": "confirmed", "name": "f0rsakeN", "flag": "🇸🇬" },
-          { "status": "confirmed", "name": "d4v41", "flag": "🇸🇬" },
-          { "status": "confirmed", "name": "something", "flag": "🇸🇬" }
+          { "status": "confirmed", "name": "invy", "flag": "🇵🇭" },
+          { "status": "confirmed", "name": "f0rsakeN", "flag": "🇮🇩" },
+          { "status": "confirmed", "name": "d4v41", "flag": "🇲🇾" },
+          { "status": "confirmed", "name": "something", "flag": "🇷🇺" }
+        ],
+        "staff": [
+          { "role": "Coach", "name": "alecks", "flag": "🇫🇷" },
+          { "role": "Assistant Coach", "name": "Wendler", "flag": "🇺🇸" },
+          { "role": "Manager", "name": "Tommy", "flag": "🇸🇬" }
         ],
         "note": null
       },
@@ -52,6 +69,11 @@
           { "status": "confirmed", "name": "Ivy", "flag": "🇰🇷" },
           { "status": "confirmed", "name": "Xross", "flag": "🇰🇷" }
         ],
+        "staff": [
+          { "role": "Head Coach", "name": "SilKanoN", "flag": "🇰🇷" },
+          { "role": "Coach", "name": "yoman", "flag": "🇰🇷" },
+          { "role": "Coach", "name": "Sungmin", "flag": "🇰🇷" }
+        ],
         "note": null
       },
       {
@@ -59,10 +81,16 @@
         "name": "TEAM SECRET",
         "players": [
           { "status": "confirmed", "name": "JessieVash", "flag": "🇵🇭" },
-          { "status": "confirmed", "name": "Sylvan", "flag": "🇵🇭" },
-          { "status": "confirmed", "name": "BerserX", "flag": "🇵🇭" },
+          { "status": "confirmed", "name": "Sylvan", "flag": "🇰🇷" },
+          { "status": "confirmed", "name": "BerserX", "flag": "🇮🇩" },
           { "status": "confirmed", "name": "kellyS", "flag": "🇵🇭" },
-          { "status": "confirmed", "name": "Rimuru", "flag": "🇵🇭" }
+          { "status": "confirmed", "name": "Zeus", "flag": "🇵🇭" },
+          { "status": "rumor", "name": "Rimuru", "flag": "🇵🇭" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "Rbtx", "flag": "🇵🇭" },
+          { "role": "Analista", "name": "skye", "flag": "🇸🇬" },
+          { "role": "Manager", "name": "yamyam yui", "flag": "🇵🇭" }
         ],
         "note": null
       },
@@ -72,9 +100,15 @@
         "players": [
           { "status": "confirmed", "name": "Lakia", "flag": "🇰🇷" },
           { "status": "confirmed", "name": "t3xture", "flag": "🇰🇷" },
-          { "status": "confirmed", "name": "Foxy9", "flag": "🇰🇷" },
+          { "status": "confirmed", "name": "Ash", "flag": "🇰🇷" },
           { "status": "confirmed", "name": "Karon", "flag": "🇰🇷" },
-          { "status": "confirmed", "name": "ZynX", "flag": "🇰🇷" }
+          { "status": "confirmed", "name": "ZynX", "flag": "🇰🇷" },
+          { "status": "benched", "name": "Xiesta", "flag": "🇰🇷" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "solo", "flag": "🇰🇷" },
+          { "role": "Coach", "name": "HSK", "flag": "🇰🇷" },
+          { "role": "Coach", "name": "peri", "flag": "🇰🇷" }
         ],
         "note": null
       },
@@ -86,7 +120,13 @@
           { "status": "confirmed", "name": "BuZz", "flag": "🇰🇷" },
           { "status": "confirmed", "name": "Munchkin", "flag": "🇰🇷" },
           { "status": "confirmed", "name": "Meteor", "flag": "🇰🇷" },
-          { "status": "confirmed", "name": "iZu", "flag": "🇰🇷" }
+          { "status": "confirmed", "name": "iZu", "flag": "🇰🇷" },
+          { "status": "benched", "name": "carpe", "flag": "🇰🇷" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "KDG", "flag": "🇰🇷" },
+          { "role": "Coach", "name": "CheongGak", "flag": "🇰🇷" },
+          { "role": "Analyst", "name": "Norman", "flag": "🇰🇷" }
         ],
         "note": null
       },
@@ -98,7 +138,14 @@
           { "status": "confirmed", "name": "Killua", "flag": "🇹🇭" },
           { "status": "confirmed", "name": "JitBoyS", "flag": "🇹🇭" },
           { "status": "confirmed", "name": "primmie", "flag": "🇹🇭" },
-          { "status": "confirmed", "name": "Leviathan", "flag": "🇹🇭" }
+          { "status": "confirmed", "name": "Leviathan", "flag": "🇹🇭" },
+          { "status": "rumor", "name": "seph1roth", "flag": "🇹🇭" },
+          { "status": "benched", "name": "thyy", "flag": "🇹🇭" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "THEELOVEFAMILY", "flag": "🇹🇭" },
+          { "role": "Assistant Coach", "name": "Sushiboys", "flag": "🇹🇭" },
+          { "role": "Manager", "name": "Pannys", "flag": "🇸🇬" }
         ],
         "note": null
       },
@@ -106,11 +153,16 @@
         "flag": "🇮🇩",
         "name": "REX REGUM QEON",
         "players": [
-          { "status": "confirmed", "name": "crazyguy", "flag": "🇮🇩" },
+          { "status": "confirmed", "name": "crazyguy", "flag": "🇻🇳" },
           { "status": "confirmed", "name": "Kushy", "flag": "🇮🇩" },
           { "status": "confirmed", "name": "xffero", "flag": "🇮🇩" },
           { "status": "confirmed", "name": "Monyet", "flag": "🇮🇩" },
-          { "status": "confirmed", "name": "Jemkin", "flag": "🇮🇩" }
+          { "status": "confirmed", "name": "Jemkin", "flag": "🇷🇺" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "Jovi", "flag": "🇨🇺" },
+          { "role": "Assistant Coach", "name": "Warbids", "flag": "🇺🇸" },
+          { "role": "Manager", "name": "SeasoNz", "flag": "🇲🇾" }
         ],
         "note": null
       },
@@ -118,11 +170,16 @@
         "flag": "🇯🇵",
         "name": "ZETA DIVISION",
         "players": [
-          { "status": "confirmed", "name": "eKo", "flag": "🇯🇵" },
+          { "status": "confirmed", "name": "eKo", "flag": "🇰🇷" },
           { "status": "confirmed", "name": "SugarZ3ro", "flag": "🇯🇵" },
           { "status": "confirmed", "name": "SyouTa", "flag": "🇯🇵" },
           { "status": "confirmed", "name": "Xdll", "flag": "🇯🇵" },
           { "status": "confirmed", "name": "Absol", "flag": "🇯🇵" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "ryota-", "flag": "🇯🇵" },
+          { "role": "Assistant Coach", "name": "XQQ", "flag": "🇯🇵" },
+          { "role": "Analista", "name": "gya9", "flag": "🇯🇵" }
         ],
         "note": null
       },
@@ -130,11 +187,17 @@
         "flag": "🇯🇵",
         "name": "VARREL",
         "players": [
-          { "status": "confirmed", "name": "C1ndeR", "flag": "🇯🇵" },
-          { "status": "confirmed", "name": "Klaus", "flag": "🇯🇵" },
-          { "status": "confirmed", "name": "oonzmlp", "flag": "🇯🇵" },
-          { "status": "confirmed", "name": "Zexy", "flag": "🇯🇵" },
-          { "status": "confirmed", "name": "XuNa", "flag": "🇯🇵" }
+          { "status": "benched", "name": "C1ndeR", "flag": "🇰🇷" },
+          { "status": "confirmed", "name": "Klaus", "flag": "🇰🇷" },
+          { "status": "confirmed", "name": "oonzmlp", "flag": "🇰🇷" },
+          { "status": "confirmed", "name": "Zexy", "flag": "🇰🇷" },
+          { "status": "confirmed", "name": "XuNa", "flag": "🇰🇷" },
+          { "status": "confirmed", "name": "Foxy9", "flag": "🇰🇷" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "TK9", "flag": "🇰🇷" },
+          { "role": "Analista", "name": "R3DTHME", "flag": "🇰🇷" },
+          { "role": "Staff", "name": "Howard", "flag": "🇰🇷" }
         ],
         "note": null
       },
@@ -143,10 +206,15 @@
         "name": "DETONATION FOCUSME",
         "players": [
           { "status": "confirmed", "name": "Meiy", "flag": "🇯🇵" },
-          { "status": "confirmed", "name": "Akame", "flag": "🇯🇵" },
+          { "status": "confirmed", "name": "Akame", "flag": "🇰🇷" },
           { "status": "confirmed", "name": "SSeeS", "flag": "🇯🇵" },
           { "status": "confirmed", "name": "Caedye", "flag": "🇯🇵" },
           { "status": "confirmed", "name": "yatsuka", "flag": "🇯🇵" }
+        ],
+        "staff": [
+          { "role": "Head Coach", "name": "Vorz", "flag": "🇯🇵" },
+          { "role": "Coach", "name": "Melofovia", "flag": "🇯🇵" },
+          { "role": "Coach", "name": "NorthernLights", "flag": "🇯🇵" }
         ],
         "note": null
       }
