@@ -82,25 +82,31 @@ Toda la información se organiza por regiones para facilitar la navegación y el
 
 ```text
 Mercado-Fichajes-VLR/
-│
-├── html/
-│   └── index.html
-│
+├── .git/
+├── node_modules/
 ├── css/
 │   └── style.css
-│
+├── data/
+│   ├── teamsAmer.json
+│   ├── teamsCN.json
+│   ├── teamsEmea.json
+│   ├── teamsPACF.json
+│   └── teamsSEL.json
+├── dist/
+│   ├── assets/
+│   │   ├── index-DjZN0phc.css
+│   │   └── index-tzrnkB1X.js
+│   ├── index.html
+│   └── teams*.json  (copias públicas de los JSON usados en `src`)
 ├── src/
 │   ├── main.ts
 │   └── RegionTable.ts
-│
-├── data/
-│   ├── teamsEmea.json
-│   ├── teamsAmer.json
-│   ├── teamsPACF.json
-│   ├── teamsCN.json
-│   └── teamsSEL.json
-│
-└── dist/
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
 ---
@@ -169,30 +175,30 @@ cd mercado-fichajes-vlr
 npm install
 ```
 
-### 3. Compilar TypeScript
+### 3. Modo desarrollo
+
+Arranca el servidor de desarrollo (Vite):
+
+```bash
+npm run dev
+```
+
+Esto lanza Vite y recarga en caliente para desarrollos rápidos.
+
+### 4. Compilar para producción
+
+Genera la carpeta `dist/` optimizada:
 
 ```bash
 npm run build
 ```
 
-### 4. Modo desarrollo
+### 5. Previsualizar la build de producción
+
+Sirve la carpeta `dist/` en un servidor local (Vite preview):
 
 ```bash
-npm run watch
-```
-
-### 5. Ejecutar la aplicación
-
-Abrir:
-
-```text
-html/index.html
-```
-
-o utilizar cualquier servidor local:
-
-```bash
-npx serve .
+npm run preview
 ```
 
 ---
@@ -200,16 +206,22 @@ npx serve .
 ## ⚙️ Scripts disponibles
 
 ```bash
+npm run dev
+```
+
+Arranca Vite en modo desarrollo (hot-reload).
+
+```bash
 npm run build
 ```
 
-Compila los archivos TypeScript.
+Construye la aplicación y produce `dist/`.
 
 ```bash
-npm run watch
+npm run preview
 ```
 
-Ejecuta TypeScript en modo observación.
+Previsualiza la carpeta `dist/` con Vite.
 
 ---
 
