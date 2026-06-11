@@ -2,10 +2,27 @@
   "name": "mercado-fichajes-vlr",
   "private": true,
   "scripts": {
-    "build": "tsc --noEmitOnError",
-    "watch": "tsc --watch"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^5.5.4"
-  }
+    "typescript": "^5.9.3",
+    "vite": "^8.0.16"
+  },
+  "version": "1.0.0",
+  "description": "> Aplicación web para seguir el mercado de fichajes competitivo de Valorant (VCT 2025/26), mostrando movimientos confirmados, probables y rumores organizados por región.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelAngelDiazTIC/Mercado-Fichajes-VLR.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MiguelAngelDiazTIC/Mercado-Fichajes-VLR/issues"
+  },
+  "homepage": "https://github.com/MiguelAngelDiazTIC/Mercado-Fichajes-VLR#readme"
 }

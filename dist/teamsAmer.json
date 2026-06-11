@@ -1,0 +1,155 @@
+[
+  {
+    "id": "americas",
+    "label": "AMERICAS",
+    "subtitle": "North & South America",
+    "accent": "var(--americas)",
+    "_comment": "Status values: confirmed, likely, possible, rumor. Extras: benched, out.",
+    "teams": [
+      {
+        "flag": "🇧🇷",
+        "name": "MIBR",
+        "players": [
+          { "status": "confirmed", "name": "tex", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "zekken", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "Mazino", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "aspas", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "Verno", "flag": "🇺🇸" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇦🇷",
+        "name": "LEVIATÁN",
+        "players": [
+          { "status": "confirmed", "name": "kiNgg", "flag": "🇦🇷" },
+          { "status": "confirmed", "name": "blowz", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "Sato", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "spike", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "Neon", "flag": "🇧🇷" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇺🇸",
+        "name": "G2 ESPORTS",
+        "players": [
+          { "status": "confirmed", "name": "BABYBAY", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "valyn", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "jawgemo", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "leaf", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "trent", "flag": "🇺🇸" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇧🇷",
+        "name": "LOUD",
+        "players": [
+          { "status": "confirmed", "name": "pANcada", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "Virtyy", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "Bati", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "cauanzin", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "Darker", "flag": "🇧🇷" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇺🇸",
+        "name": "CLOUD9",
+        "players": [
+          { "status": "confirmed", "name": "Zellsis", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "penny", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "Xeppaa", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "v1c", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "OXY", "flag": "🇺🇸" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇺🇸",
+        "name": "ENVY",
+        "players": [
+          { "status": "confirmed", "name": "Rossy", "flag": "🇨🇱" },
+          { "status": "confirmed", "name": "keznit", "flag": "🇨🇱" },
+          { "status": "confirmed", "name": "P0PPIN", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "Demon1", "flag": "🇷🇺" },
+          { "status": "confirmed", "name": "Eggsterr", "flag": "🇺🇸" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇦🇷",
+        "name": "KRÜ ESPORTS",
+        "players": [
+          { "status": "confirmed", "name": "saadhak", "flag": "🇦🇷" },
+          { "status": "confirmed", "name": "mwzera", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "Less", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "silentzz", "flag": "🇦🇷" },
+          { "status": "confirmed", "name": "Dantedeu5", "flag": "🇧🇷" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇧🇷",
+        "name": "FURIA",
+        "players": [
+          { "status": "confirmed", "name": "nerve", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "eeiu", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "koalanoob", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "artzin", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "alym", "flag": "🇧🇷" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇺🇸",
+        "name": "SENTINELS",
+        "players": [
+          { "status": "confirmed", "name": "johnqt", "flag": "🇲🇦" },
+          { "status": "confirmed", "name": "JonahP", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "cortezia", "flag": "🇧🇷" },
+          { "status": "confirmed", "name": "Reduxx", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "Jerrwin", "flag": "🇵🇭" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇺🇸",
+        "name": "100 THIEVES",
+        "players": [
+          { "status": "confirmed", "name": "Asuna", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "bang", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "Cryocells", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "vora", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "Timotino", "flag": "🇺🇸" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇺🇸",
+        "name": "NRG",
+        "players": [
+          { "status": "confirmed", "name": "brawk", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "mada", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "skuba", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "Ethan", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "keiko", "flag": "🇺🇸" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇺🇸",
+        "name": "EVIL GENIUSES",
+        "players": [
+          { "status": "confirmed", "name": "C0M", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "supamen", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "Paincakes", "flag": "🇺🇸" },
+          { "status": "confirmed", "name": "Okeanos", "flag": "🇬🇷" },
+          { "status": "confirmed", "name": "dgzin", "flag": "🇧🇷" }
+        ],
+        "note": null
+      }
+    ]
+  }
+]

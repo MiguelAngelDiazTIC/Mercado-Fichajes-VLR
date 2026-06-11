@@ -1,0 +1,155 @@
+[
+  {
+    "id": "china",
+    "label": "CHINA",
+    "subtitle": "China",
+    "accent": "var(--china)",
+    "_comment": "Status values: confirmed, likely, possible, rumor. Extras: benched, out.",
+    "teams": [
+      {
+        "flag": "🇨🇳",
+        "name": "EDWARD GAMING",
+        "players": [
+          { "status": "confirmed", "name": "ZmjjKK", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Smoggy", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "nobody", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Haodong", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Chichoo", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "ALL GAMERS",
+        "players": [
+          { "status": "confirmed", "name": "Shyy", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "didididi", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Biank", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "wange", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Westball", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "BILIBILI GAMING",
+        "players": [
+          { "status": "confirmed", "name": "Lmeow", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "s3game", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "GaGaGa", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "rin", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "WaKa", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "JDG ESPORTS",
+        "players": [
+          { "status": "confirmed", "name": "dsp", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "xiaomai", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "CuoBa", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Johnta", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "eggXingChao", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "TYLOO",
+        "players": [
+          { "status": "confirmed", "name": "Attacker", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "CHICHOO", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Mercury", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Life", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Eleven", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "TITAN ESPORTS CLUB",
+        "players": [
+          { "status": "confirmed", "name": "yoyo", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "bask3t", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "qiulin", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Flovian", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "YuCheng", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "FUNPLUS PHOENIX",
+        "players": [
+          { "status": "confirmed", "name": "AAAAY", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "tianzun", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Lysoar", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "yuicaw", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Fuze", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "TRACE ESPORTS",
+        "players": [
+          { "status": "confirmed", "name": "xsz", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Demonoir", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "zhongxia", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Amara", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Pepper", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "XI LAI GAMING",
+        "players": [
+          { "status": "confirmed", "name": "MoLoNG", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "SoWhyGG", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "iNTRO", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "YuanFang", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Wastelands", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "WOLVES ESPORTS",
+        "players": [
+          { "status": "confirmed", "name": "Kiki", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Aqua", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "bv1", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "AoE", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Spring", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "DRAGON RANGER GAMING",
+        "players": [
+          { "status": "confirmed", "name": "Bazinga", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "gMd", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "YangMax", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Fearless", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "RWQ", "flag": "🇨🇳" }
+        ],
+        "note": null
+      },
+      {
+        "flag": "🇨🇳",
+        "name": "NOVA ESPORTS",
+        "players": [
+          { "status": "confirmed", "name": "Abo", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Fengmi", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "Wanmei", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "YING", "flag": "🇨🇳" },
+          { "status": "confirmed", "name": "T1me", "flag": "🇨🇳" }
+        ],
+        "note": null
+      }
+    ]
+  }
+]

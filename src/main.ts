@@ -31,10 +31,10 @@ export interface Region {
 
 export async function loadRegions(): Promise<Region[]> {
   const files = [
-    '../data/teamsEmea.json',
-    '../data/teamsAmer.json',
-    '../data/teamsPACF.json',
-    '../data/teamsCN.json',
+    '/teamsEmea.json',
+    '/teamsAmer.json',
+    '/teamsPACF.json',
+    '/teamsCN.json',
   ];
 
   const responses = await Promise.all(files.map((f) => fetch(f)));
