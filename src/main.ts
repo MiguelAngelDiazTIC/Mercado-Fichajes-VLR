@@ -30,15 +30,14 @@ export interface Region {
 }
 
 export async function loadRegions(): Promise<Region[]> {
-  const baseUrl = 'mercado-fichajes-vlr-production.up.railway.app'
+  const baseUrl = 'https://mercado-fichajes-vlr-production.up.railway.app'
   const files = [
-    'http://localhost:3000/api/teams/teamsEmea',
-    'http://localhost:3000/api/teams/teamsAmer',
-    'http://localhost:3000/api/teams/teamsPACF',
-    'http://localhost:3000/api/teams/teamsCN',
-  ];
-
-  const responses = await Promise.all(files.map((f) => fetch(f)));
-  const jsons = await Promise.all(responses.map((r) => r.json()));
-  return ([] as Region[]).concat(...jsons);
+    baseUrl + '/api/teams/teamsEmea',
+    baseUrl + '/api/teams/teamsAmer',
+    baseUrl + '/api/teams/teamsPACF',
+    baseUrl + '/api/teams/teamsCN',
+  ]
+  const responses = await Promise.all(files.map((f) => fetch(f)))
+  const jsons = await Promise.all(responses.map((r) => r.json()))
+  return ([] as Region[]).concat(...jsons)
 }
