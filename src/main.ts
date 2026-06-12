@@ -30,6 +30,7 @@ export interface Region {
 }
 
 export async function loadRegions(): Promise<Region[]> {
+  const baseUrl = 'mercado-fichajes-vlr-production.up.railway.app'
   const files = [
     'http://localhost:3000/api/teams/teamsEmea',
     'http://localhost:3000/api/teams/teamsAmer',
