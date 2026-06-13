@@ -15,7 +15,7 @@
             "name": "nAts",
             "flag": "🇷🇺",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -449,7 +449,7 @@
             "name": "Boaster",
             "flag": "🇬🇧",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -476,6 +476,13 @@
             "status": "benched",
             "name": "Cyvoph",
             "flag": "🇫🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Cloud",
+            "flag": "🇷🇺",
             "photoUrl": null,
             "igl": false
           },
