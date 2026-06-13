@@ -63,8 +63,9 @@ async function renderRegion(id: RegionKey): Promise<void> {
       <div class="player-avatar" title="${player.name}">${avatarHtml}</div>
       <div class="player-status status-${player.status}"></div>
       <div class="player-info">
-        <span class="player-name">${player.name} ${iglBadge}</span>
+        <span class="player-name">${player.name}</span>
         <span class="player-flag">${player.flag}</span>
+        ${iglBadge}
       </div>
     </div>`;
   };

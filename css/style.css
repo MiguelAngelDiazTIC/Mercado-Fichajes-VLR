@@ -305,7 +305,7 @@ nav{
 .teams-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(450px,1fr));
-  gap:12px;
+  gap:36px;
   background:transparent;
   border-radius:4px;
   overflow:visible;
@@ -356,9 +356,11 @@ nav{
 .team-card .player-avatar{font-size:14px}
 .team-card .player-name{font-size:18px}
 .team-card .player-flag{font-size:15px}
-.team-card .staff-title{font-size:12px}
-.team-card .staff-row{font-size:15px}
-.team-card .team-note{font-size:15px}
+.team-card .staff-title{font-size:16px}
+.team-card .staff-row{font-size:18px}
+.team-card .team-note{font-size:18px}
+.team-card .empty-state{font-size:18px}
+.team-card .player-igl{margin-left:auto;background:linear-gradient(135deg, rgba(0,255,255,0.15), rgba(0,255,255,0.06));color:#00fefe;border:1px solid rgba(0,255,255,0.35);padding:6px 12px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:0.9px;text-transform:uppercase;box-shadow:0 0 14px rgba(0,255,255,0.18);align-self:center}
 
 .team-card-header{
   padding:15px 21px;
