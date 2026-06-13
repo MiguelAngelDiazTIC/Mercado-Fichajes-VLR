@@ -43,7 +43,7 @@
             "name": "Verno",
             "flag": "🇺🇸",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           }
         ],
         "staff": [
@@ -78,7 +78,7 @@
             "name": "kiNgg",
             "flag": "🇨🇱",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -148,7 +148,7 @@
             "name": "valyn",
             "flag": "🇺🇸",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -204,7 +204,7 @@
             "name": "pANcada",
             "flag": "🇧🇷",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -267,7 +267,7 @@
             "name": "Zellsis",
             "flag": "🇺🇸",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "benched",
@@ -365,7 +365,7 @@
             "name": "P0PPIN",
             "flag": "🇺🇸",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -428,7 +428,7 @@
             "name": "saadhak",
             "flag": "🇦🇷",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -519,7 +519,7 @@
             "name": "artzin",
             "flag": "🇧🇷",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -568,7 +568,7 @@
             "name": "johnqt",
             "flag": "🇲🇦",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -659,7 +659,7 @@
             "name": "vora",
             "flag": "🇨🇦",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -722,7 +722,7 @@
             "name": "Ethan",
             "flag": "🇺🇸",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
@@ -771,7 +771,7 @@
             "name": "supamen",
             "flag": "🇺🇸",
             "photoUrl": null,
-            "igl": false
+            "igl": true
           },
           {
             "status": "confirmed",
