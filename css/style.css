@@ -207,6 +207,7 @@ nav{
 .region-entry.apac::after{background-image:linear-gradient(to right, rgba(7,9,15,0.92), rgba(7,9,15,0.5)), url("../photos/backgrounds/tarjetas/pcf_bg.jpg");}
 .region-entry.amer::after{background-image:linear-gradient(to right, rgba(7,9,15,0.92), rgba(7,9,15,0.5)), url("../photos/backgrounds/tarjetas/amer-bg.jpg");}
 .region-entry.cn::after{background-image:linear-gradient(to right, rgba(7,9,15,0.92), rgba(7,9,15,0.5)), url("../photos/backgrounds/tarjetas/ch_bg.jpg");}
+.region-entry.nats::after{background-image:linear-gradient(to right, rgba(7,9,15,0.92), rgba(7,9,15,0.5)), url("../photos/backgrounds/tarjetas/enc_bg.jpg");}
 
 .region-entry:hover{background:rgba(13,21,32,0.96);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.22);}
 .region-entry:hover::after{
