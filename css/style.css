@@ -290,15 +290,20 @@ nav{
 
 /* legend inline */
 .legend-inline{
-  margin-left:auto;
-  display:flex;align-items:center;gap:12px;
+  width:100%;
+  display:flex;justify-content:center;align-items:center;gap:24px;
+  margin:1rem 0;
+  padding:12px 18px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;
 }
 .legend-item{
-  display:flex;align-items:center;gap:5px;
+  display:flex;align-items:center;gap:8px;
   font-family:'Barlow Condensed',sans-serif;
-  font-size:10px;color:var(--text2);letter-spacing:0.5px;
+  font-size:20px;color:var(--text);letter-spacing:1px;
 }
-.legend-dot{width:5px;height:5px;border-radius:50%}
+.legend-dot{width:10px;height:10px;border-radius:50%}
 
 /* ─── TEAMS GRID ─── */
 .teams-container{padding:1.5rem 3rem 4rem}
