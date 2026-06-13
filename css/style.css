@@ -189,22 +189,42 @@ nav{
   cursor:pointer;
   position:relative;
   overflow:hidden;
-  transition:background 0.15s;
+  transform:translateY(0);
+  transition:transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
-.region-entry::before{
+.region-entry::after{
   content:'';
-  position:absolute;left:0;top:0;bottom:0;
-  width:0;
-  transition:width 0.25s ease;
+  position:absolute;inset:0;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:left center;
+  opacity:0.12;
+  transition:background-position 0.8s ease, opacity 0.4s ease, filter 0.4s ease, transform 0.25s ease;
+  transform:translateX(0);
+  z-index:0;
 }
-.region-entry.emea::before{background:var(--emea)}
-.region-entry.apac::before{background:var(--apac)}
-.region-entry.amer::before{background:var(--amer)}
-.region-entry.cn::before{background:var(--cn)}
-.region-entry.nats::before{background:var(--nats)}
+.region-entry.emea::after{background-image:linear-gradient(to right, rgba(7,9,15,0.92), rgba(7,9,15,0.5)), url("../photos/backgrounds/tarjetas/emea-bg.jpg");}
+.region-entry.apac::after{background-image:linear-gradient(to right, rgba(7,9,15,0.92), rgba(7,9,15,0.5)), url("../photos/backgrounds/tarjetas/pcf_bg.jpg");}
+.region-entry.amer::after{background-image:linear-gradient(to right, rgba(7,9,15,0.92), rgba(7,9,15,0.5)), url("../photos/backgrounds/tarjetas/amer-bg.jpg");}
+.region-entry.cn::after{background-image:linear-gradient(to right, rgba(7,9,15,0.92), rgba(7,9,15,0.5)), url("../photos/backgrounds/tarjetas/ch_bg.jpg");}
 
-.region-entry:hover{background:var(--surface)}
-.region-entry:hover::before{width:2px}
+.region-entry:hover{background:rgba(13,21,32,0.96);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.22);}
+.region-entry:hover::after{
+  opacity:0.45;
+  background-position:right center;
+  filter:brightness(1.25);
+}
+.region-entry:hover .re-code,
+.region-entry:hover .re-name,
+.region-entry:hover .re-arrow{
+  color:#fff;
+}
+.region-entry .re-top,
+.region-entry .re-name,
+.region-entry .re-arrow{
+  position:relative;
+  z-index:2;
+}
 
 .re-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
 .re-code{
