@@ -323,6 +323,19 @@ nav{
 .team-card.visible{opacity:1;transform:translateY(0)}
 .team-card:hover{background:var(--surface2)}
 
+/* Scale up all text inside team cards by ~1.5x */
+.team-card{font-size:1.5rem}
+.team-card .team-logo{font-size:18px}
+.team-card .team-name{font-size:30px}
+.team-card .team-flag{font-size:20px}
+.team-card .roster-column-title{font-size:20px}
+.team-card .player-avatar{font-size:14px}
+.team-card .player-name{font-size:18px}
+.team-card .player-flag{font-size:15px}
+.team-card .staff-title{font-size:12px}
+.team-card .staff-row{font-size:15px}
+.team-card .team-note{font-size:15px}
+
 .team-card-header{
   padding:15px 21px;
   display:flex;align-items:center;gap:10px;
