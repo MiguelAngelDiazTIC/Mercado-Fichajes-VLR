@@ -76,46 +76,19 @@ nav{
   font-size:11px;letter-spacing:2px;
   color:var(--text2);cursor:pointer;
   position:relative;
-  transition:color 0.25s ease;
+  transition:color 0.15s;
   text-transform:uppercase;font-weight:600;
-  overflow:hidden;
 }
-.nav-tab::before,
 .nav-tab::after{
   content:'';
-  position:absolute;
-  left:0;
-  width:100%;
-  height:100%;
-  transition:transform 0.3s ease, opacity 0.3s ease;
+  position:absolute;bottom:-1px;left:14px;right:14px;
+  height:1px;background:var(--accent);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.2s ease;
 }
-.nav-tab::before{
-  top:0;
-  border-top:2px solid currentColor;
-  border-bottom:2px solid currentColor;
-  transform:scaleY(2);
-  opacity:0;
-}
-.nav-tab::after{
-  top:2px;
-  background-color:currentColor;
-  transform:scale(0);
-  opacity:0;
-  z-index:-1;
-}
-.nav-tab:hover{
-  color:#fff;
-}
-.nav-tab:hover::before{
-  transform:scaleY(1);
-  opacity:1;
-}
-.nav-tab:hover::after{
-  transform:scaleY(1);
-  opacity:1;
-}
+.nav-tab:hover{color:var(--text)}
 .nav-tab.active{color:var(--text)}
-.nav-tab.active::before{opacity:0.2;transform:scaleY(1)}
+.nav-tab.active::after{transform:scaleX(1)}
 
 .nav-credit{
   margin-left:2rem;
