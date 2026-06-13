@@ -251,10 +251,10 @@ nav{
 .back-btn{
   margin-left:auto;
   background:transparent;border:1px solid var(--border);
-  color:var(--text2);padding:5px 12px;border-radius:2px;
+  color:var(--text2);padding:8px 16px;border-radius:3px;
   cursor:pointer;
   font-family:'Barlow Condensed',sans-serif;
-  font-size:11px;letter-spacing:1px;
+  font-size:14px;letter-spacing:1px;
   transition:all 0.15s;
 }
 .back-btn:hover{border-color:var(--border2);color:var(--text)}
@@ -351,16 +351,16 @@ nav{
 .team-card{font-size:1.5rem}
 .team-card .team-logo{font-size:18px}
 .team-card .team-name{font-size:30px}
-.team-card .team-flag{font-size:20px}
+.team-card .team-flag{font-size:25px}
 .team-card .roster-column-title{font-size:20px}
 .team-card .player-avatar{font-size:14px}
 .team-card .player-name{font-size:18px}
 .team-card .player-flag{font-size:15px}
-.team-card .staff-title{font-size:16px}
-.team-card .staff-row{font-size:18px}
+.team-card .staff-title{font-size:13px;color:var(--muted)}
+.team-card .staff-row{font-size:18px;color:var(--text)}
 .team-card .team-note{font-size:18px}
 .team-card .empty-state{font-size:18px}
-.team-card .player-igl{margin-left:auto;background:linear-gradient(135deg, rgba(0,255,255,0.15), rgba(0,255,255,0.06));color:#00fefe;border:1px solid rgba(0,255,255,0.35);padding:6px 12px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:0.9px;text-transform:uppercase;box-shadow:0 0 14px rgba(0,255,255,0.18);align-self:center}
+.team-card .player-igl{margin-left:auto;background:rgba(0,255,255,0.12);color:#00fefe;border:1px solid rgba(0,255,255,0.35);width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;font-weight:800;font-size:10px;letter-spacing:0.9px;text-transform:uppercase;box-shadow:0 0 12px rgba(0,255,255,0.18);align-self:center}
 
 .team-card-header{
   padding:15px 21px;
@@ -442,7 +442,7 @@ nav{
   background:var(--bg);
 }
 .staff-title{
-  font-size:12px;color:var(--text);
+  font-size:13px;color:var(--muted);
   font-family:'Barlow Condensed',sans-serif;
   letter-spacing:2px;text-transform:uppercase;
   margin-bottom:10px;
@@ -450,12 +450,12 @@ nav{
 .staff-row{
   display:flex;justify-content:space-between;align-items:center;
   font-family:'Barlow Condensed',sans-serif;
-  font-size:14px;color:var(--text2);margin-bottom:6px;
+  font-size:16px;color:var(--text);margin-bottom:6px;
 }
 .staff-row:last-child{margin-bottom:0}
-.staff-role{color:var(--muted);font-size:13px;font-weight:700}
+.staff-role{color:var(--text);font-size:15px;font-weight:700}
 .staff-meta{display:inline-flex;align-items:center;gap:6px;font-weight:700}
-.staff-flag{font-size:12px}
+.staff-flag{font-size:13px}
 
 .team-note{
   padding:6px 12px;
