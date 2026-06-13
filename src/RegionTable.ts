@@ -53,11 +53,17 @@ async function renderRegion(id: RegionKey): Promise<void> {
     const avatarInitials = initials(player.name);
     // When you have real photos, swap the initials span for:
     // <img src="${player.photoUrl}" alt="${player.name}">
+    const avatarHtml = player.photoUrl
+      ? `<img src="${player.photoUrl}" alt="${player.name}">`
+      : avatarInitials;
+
+    const iglBadge = player.igl ? `<span class="player-igl">IGL</span>` : '';
+
     return `<div class="player-row">
-      <div class="player-avatar" title="${player.name}">${avatarInitials}</div>
+      <div class="player-avatar" title="${player.name}">${avatarHtml}</div>
       <div class="player-status status-${player.status}"></div>
       <div class="player-info">
-        <span class="player-name">${player.name}</span>
+        <span class="player-name">${player.name} ${iglBadge}</span>
         <span class="player-flag">${player.flag}</span>
       </div>
     </div>`;
@@ -102,12 +108,14 @@ async function renderRegion(id: RegionKey): Promise<void> {
       ? `<div class="team-note">${team.note}</div>`
       : '';
 
-    // team-logo: when you have real logos, add an <img> inside .team-logo
-    const logoInitials = initials(team.name);
+    // team-logo: when you have real logos, render the image
+    const logoHtml = team.logoUrl
+      ? `<img src="${team.logoUrl}" alt="${team.name}">`
+      : initials(team.name);
 
     return `<div class="team-card">
       <div class="team-card-header">
-        <div class="team-logo" title="${team.name}">${logoInitials}</div>
+        <div class="team-logo" title="${team.name}">${logoHtml}</div>
         <span class="team-name">${team.name}</span>
         <span class="team-flag">${team.flag}</span>
       </div>

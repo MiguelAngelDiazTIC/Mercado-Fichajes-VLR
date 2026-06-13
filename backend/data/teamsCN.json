@@ -10,211 +10,799 @@
         "flag": "🇨🇳",
         "name": "EDWARD GAMING",
         "players": [
-          { "status": "confirmed", "name": "ZmjjKK", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Smoggy", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "nobody", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Jieni7", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Chichoo", "flag": "🇨🇳" },
-          { "status": "rumor", "name": "zjc", "flag": "🇨🇳" },
-          { "status": "benched", "name": "cb", "flag": "🇨🇳" }
+          {
+            "status": "confirmed",
+            "name": "ZmjjKK",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Smoggy",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "nobody",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Jieni7",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Chichoo",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "zjc",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "benched",
+            "name": "cb",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "Autumn", "flag": "🇰🇷" },
-          { "role": "Coach", "name": "Indigo", "flag": "🇰🇷" },
-          { "role": "Coach", "name": "signed", "flag": "🇳🇿" }
+          {
+            "role": "Head Coach",
+            "name": "Autumn",
+            "flag": "🇰🇷",
+            "photoUrl": null
+          },
+          {
+            "role": "Coach",
+            "name": "Indigo",
+            "flag": "🇰🇷",
+            "photoUrl": null
+          },
+          {
+            "role": "Coach",
+            "name": "signed",
+            "flag": "🇳🇿",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "ALL GAMERS",
         "players": [
-          { "status": "confirmed", "name": "Shr1mp", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Septem7", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "f4nger", "flag": "🇷🇺" },
-          { "status": "confirmed", "name": "iamgrq", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "k1ra", "flag": "🇨🇳" },
-          { "status": "rumor", "name": "Youze", "flag": "🇹🇼" }
+          {
+            "status": "confirmed",
+            "name": "Shr1mp",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Septem7",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "f4nger",
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "iamgrq",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "k1ra",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Youze",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "ED101", "flag": "🇨🇳" },
-          { "role": "Manager", "name": "AaRon0", "flag": "🇨🇳" },
-          { "role": "Staff", "name": "Master", "flag": "🇨🇳" }
+          {
+            "role": "Head Coach",
+            "name": "ED101",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Manager",
+            "name": "AaRon0",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Staff",
+            "name": "Master",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "BILIBILI GAMING",
         "players": [
-          { "status": "confirmed", "name": "whzy", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "rushia", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "nephh", "flag": "🇸🇬" },
-          { "status": "confirmed", "name": "yilai", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Knight", "flag": "🇨🇳" },
-          { "status": "benched", "name": "Levius", "flag": "🇨🇳" }
+          {
+            "status": "confirmed",
+            "name": "whzy",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "rushia",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "nephh",
+            "flag": "🇸🇬",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "yilai",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Knight",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "benched",
+            "name": "Levius",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Coach", "name": "YaoXie", "flag": "🇨🇳" },
-          { "role": "Coach", "name": "Jexen", "flag": "🇨🇳" },
-          { "role": "Staff", "name": "Rain", "flag": "🇨🇳" }
+          {
+            "role": "Coach",
+            "name": "YaoXie",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Coach",
+            "name": "Jexen",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Staff",
+            "name": "Rain",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "JDG ESPORTS",
         "players": [
-          { "status": "confirmed", "name": "stew", "flag": "🇰🇷" },
-          { "status": "confirmed", "name": "jkuro", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "zhe", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Yuicaw", "flag": "🇰🇷" },
-          { "status": "confirmed", "name": "coconut", "flag": "🇭🇰" }
+          {
+            "status": "confirmed",
+            "name": "stew",
+            "flag": "🇰🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "jkuro",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "zhe",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Yuicaw",
+            "flag": "🇰🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "coconut",
+            "flag": "🇭🇰",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "bail", "flag": "🇰🇷" },
-          { "role": "Assistant Coach", "name": "Desire", "flag": "🇨🇳" },
-          { "role": "Staff", "name": "Phong", "flag": "🇨🇳" }
+          {
+            "role": "Head Coach",
+            "name": "bail",
+            "flag": "🇰🇷",
+            "photoUrl": null
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "Desire",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Staff",
+            "name": "Phong",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "TYLOO",
         "players": [
-          { "status": "confirmed", "name": "splash", "flag": "🇮🇩" },
-          { "status": "confirmed", "name": "scales", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Erv", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "sword9", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "slowly", "flag": "🇨🇳" }
+          {
+            "status": "confirmed",
+            "name": "splash",
+            "flag": "🇮🇩",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "scales",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Erv",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "sword9",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "slowly",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "hypnotizing", "flag": "🇨🇳" },
-          { "role": "Assistant Coach", "name": "Billyo", "flag": "🇨🇳" },
-          { "role": "Analista", "name": "Ominous", "flag": "🇳🇵" }
+          {
+            "role": "Head Coach",
+            "name": "hypnotizing",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "Billyo",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Analista",
+            "name": "Ominous",
+            "flag": "🇳🇵",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "TITAN ESPORTS CLUB",
         "players": [
-          { "status": "confirmed", "name": "yoyo", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "bask3t", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "qiulin", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Flovian", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "YuCheng", "flag": "🇨🇳" }
+          {
+            "status": "confirmed",
+            "name": "yoyo",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "bask3t",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "qiulin",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Flovian",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "YuCheng",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "AfteR", "flag": "🇹🇼" },
-          { "role": "Assistant Coach", "name": "3water", "flag": "🇨🇳" },
-          { "role": "Analista", "name": "sora", "flag": "🇨🇳" }
+          {
+            "role": "Head Coach",
+            "name": "AfteR",
+            "flag": "🇹🇼",
+            "photoUrl": null
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "3water",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Analista",
+            "name": "sora",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "FUNPLUS PHOENIX",
         "players": [
-          { "status": "confirmed", "name": "BerLIN", "flag": "🇹🇼" },
-          { "status": "confirmed", "name": "AAAAY", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Ben1Ley", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "KovaQ", "flag": "🇨🇭" },
-          { "status": "confirmed", "name": "Setrod", "flag": "🇹🇼" }
+          {
+            "status": "confirmed",
+            "name": "BerLIN",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "AAAAY",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Ben1Ley",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "KovaQ",
+            "flag": "🇨🇭",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Setrod",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "LEGIJA", "flag": "🇩🇪" },
-          { "role": "Coach", "name": "York", "flag": "🇨🇳" },
-          { "role": "Staff", "name": "PHO", "flag": "🇨🇳" }
+          {
+            "role": "Head Coach",
+            "name": "LEGIJA",
+            "flag": "🇩🇪",
+            "photoUrl": null
+          },
+          {
+            "role": "Coach",
+            "name": "York",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Staff",
+            "name": "PHO",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "TRACE ESPORTS",
         "players": [
-          { "status": "confirmed", "name": "delb", "flag": "🇮🇩" },
-          { "status": "confirmed", "name": "Viva", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Kai", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Abo", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Xlele", "flag": "🇨🇳" },
-          { "status": "benched", "name": "Feng", "flag": "🇨🇳" }
+          {
+            "status": "confirmed",
+            "name": "delb",
+            "flag": "🇮🇩",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Viva",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Kai",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Abo",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Xlele",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "benched",
+            "name": "Feng",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "destroyeR", "flag": "🇨🇳" },
-          { "role": "Coach", "name": "Yiyee", "flag": "🇨🇳" },
-          { "role": "Staff", "name": "Draven", "flag": "🇨🇳" }
+          {
+            "role": "Head Coach",
+            "name": "destroyeR",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Coach",
+            "name": "Yiyee",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Staff",
+            "name": "Draven",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "XI LAI GAMING",
         "players": [
-          { "status": "confirmed", "name": "WsLeo", "flag": "🇹🇼" },
-          { "status": "confirmed", "name": "Lysoar", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Noman", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Rarga", "flag": "🇷🇺" },
-          { "status": "confirmed", "name": "happywei", "flag": "🇹🇼" }
+          {
+            "status": "confirmed",
+            "name": "WsLeo",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Lysoar",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Noman",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Rarga",
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "happywei",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "hvoya", "flag": "🇷🇺" },
-          { "role": "Assistant Coach", "name": "steady", "flag": "🇷🇺" },
-          { "role": "Staff", "name": "Coffin0", "flag": "🇷🇺" }
+          {
+            "role": "Head Coach",
+            "name": "hvoya",
+            "flag": "🇷🇺",
+            "photoUrl": null
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "steady",
+            "flag": "🇷🇺",
+            "photoUrl": null
+          },
+          {
+            "role": "Staff",
+            "name": "Coffin0",
+            "flag": "🇷🇺",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "WOLVES ESPORTS",
         "players": [
-          { "status": "confirmed", "name": "glacier", "flag": "🇹🇼" },
-          { "status": "confirmed", "name": "yosemite", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "Spring", "flag": "🇹🇼" },
-          { "status": "benched", "name": "jowa", "flag": "🇨🇳" },
-          { "status": "benched", "name": "SiufatBB", "flag": "🇭🇰" }
+          {
+            "status": "confirmed",
+            "name": "glacier",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "yosemite",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Spring",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "benched",
+            "name": "jowa",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "benched",
+            "name": "SiufatBB",
+            "flag": "🇭🇰",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "alexRr", "flag": "🇩🇪" },
-          { "role": "Staff", "name": "ja7", "flag": "🇨🇳" },
-          { "role": "Manager", "name": "Chao", "flag": "🇨🇳" }
+          {
+            "role": "Head Coach",
+            "name": "alexRr",
+            "flag": "🇩🇪",
+            "photoUrl": null
+          },
+          {
+            "role": "Staff",
+            "name": "ja7",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Manager",
+            "name": "Chao",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "DRAGON RANGER GAMING",
         "players": [
-          { "status": "confirmed", "name": "voOkashu", "flag": "🇷🇺" },
-          { "status": "confirmed", "name": "Nicc", "flag": "🇹🇼" },
-          { "status": "confirmed", "name": "Flex1n", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "SpiritZ1", "flag": "🇹🇼" },
-          { "status": "confirmed", "name": "life", "flag": "🇨🇳" },
-          { "status": "benched", "name": "Akerman", "flag": "🇨🇳" }
+          {
+            "status": "confirmed",
+            "name": "voOkashu",
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Nicc",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Flex1n",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "SpiritZ1",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "life",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "benched",
+            "name": "Akerman",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "NaThanD", "flag": "🇨🇳" },
-          { "role": "Assistant Coach", "name": "JKH", "flag": "🇨🇳" },
-          { "role": "Assistant Coach", "name": "1t", "flag": "🇨🇳" }
+          {
+            "role": "Head Coach",
+            "name": "NaThanD",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "JKH",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "1t",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇨🇳",
         "name": "NOVA ESPORTS",
         "players": [
-          { "status": "confirmed", "name": "Ezeir", "flag": "🇨🇳" },
-          { "status": "confirmed", "name": "quitiaN", "flag": "🇹🇼" },
-          { "status": "confirmed", "name": "swagzor", "flag": "🇷🇺" },
-          { "status": "confirmed", "name": "GREEN", "flag": "🇹🇼" },
-          { "status": "confirmed", "name": "GuanG", "flag": "🇨🇳" }
+          {
+            "status": "confirmed",
+            "name": "Ezeir",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "quitiaN",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "swagzor",
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "GREEN",
+            "flag": "🇹🇼",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "GuanG",
+            "flag": "🇨🇳",
+            "photoUrl": null,
+            "igl": false
+          }
         ],
         "staff": [
-          { "role": "Head Coach", "name": "24K", "flag": "🇨🇳" },
-          { "role": "Coach", "name": "OnbusH", "flag": "🇰🇷" },
-          { "role": "Coach", "name": "fore", "flag": "🇨🇳" }
+          {
+            "role": "Head Coach",
+            "name": "24K",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          },
+          {
+            "role": "Coach",
+            "name": "OnbusH",
+            "flag": "🇰🇷",
+            "photoUrl": null
+          },
+          {
+            "role": "Coach",
+            "name": "fore",
+            "flag": "🇨🇳",
+            "photoUrl": null
+          }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       }
     ]
   }

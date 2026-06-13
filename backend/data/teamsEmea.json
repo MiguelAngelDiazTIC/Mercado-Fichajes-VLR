@@ -13,52 +13,68 @@
           {
             "status": "confirmed",
             "name": "nAts",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "purp0",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "kamo",
-            "flag": "🇵🇱"
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "MiniBoo",
-            "flag": "🇱🇹"
+            "flag": "🇱🇹",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "benched",
             "name": "wayne",
-            "flag": "🇸🇬"
+            "flag": "🇸🇬",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "likely",
             "name": "trexx",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "LohaN",
-            "flag": "🇵🇹"
+            "flag": "🇵🇹",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "yaotziN.",
-            "flag": "🇵🇱"
+            "flag": "🇵🇱",
+            "photoUrl": null
           },
           {
             "role": "Analista",
             "name": "Beacon9",
-            "flag": "🇬🇧"
+            "flag": "🇬🇧",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇹🇷",
@@ -67,47 +83,61 @@
           {
             "status": "confirmed",
             "name": "sociablEE",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "yetujey",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "xeus",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "KROSTALY",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "s0pp",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "Vlad",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           },
           {
             "role": "Analista",
             "name": "Bambino",
-            "flag": "🇬🇧"
+            "flag": "🇬🇧",
+            "photoUrl": null
           },
           {
             "role": "Manager",
             "name": "Mighty",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇺🇦",
@@ -116,57 +146,75 @@
           {
             "status": "possible",
             "name": "Filu",
-            "flag": "🇵🇱"
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "chloric",
-            "flag": "🇺🇸"
+            "flag": "🇺🇸",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Ruxic",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "hiro",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "benched",
             "name": "ComeBack",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "ExiT",
-            "flag": "🇸🇦"
+            "flag": "🇸🇦",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "rumor",
             "name": "Cyvoph",
-            "flag": "🇫🇷"
+            "flag": "🇫🇷",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "ANGE1",
-            "flag": "🇺🇦"
+            "flag": "🇺🇦",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "chippy",
-            "flag": "🇺🇦"
+            "flag": "🇺🇦",
+            "photoUrl": null
           },
           {
             "role": "Analista",
             "name": "Flynn",
-            "flag": "🇩🇿"
+            "flag": "🇩🇿",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇫🇷",
@@ -175,52 +223,68 @@
           {
             "status": "confirmed",
             "name": "starxo",
-            "flag": "🇵🇱"
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "bipo",
-            "flag": "🇮🇹"
+            "flag": "🇮🇹",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "marteen",
-            "flag": "🇨🇿"
+            "flag": "🇨🇿",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "benched",
             "name": "GLYPH",
-            "flag": "🇺🇸"
+            "flag": "🇺🇸",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Minny",
-            "flag": "🇨🇿"
+            "flag": "🇨🇿",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "likely",
             "name": "Proxh",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "KUNDIKUNDI",
-            "flag": "🇺🇦"
+            "flag": "🇺🇦",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "Mavera",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           },
           {
             "role": "Analista",
             "name": "Luinwess",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇪🇸",
@@ -229,52 +293,68 @@
           {
             "status": "confirmed",
             "name": "Boo",
-            "flag": "🇱🇹"
+            "flag": "🇱🇹",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "RieNs",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Wo0t",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Koshmaras",
-            "flag": "🇱🇹"
+            "flag": "🇱🇹",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "benjyfishy",
-            "flag": "🇬🇧"
+            "flag": "🇬🇧",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "benched",
             "name": "ComeBack",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "neilzinho",
-            "flag": "🇬🇧"
+            "flag": "🇬🇧",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "Weber",
-            "flag": "🇬🇧"
+            "flag": "🇬🇧",
+            "photoUrl": null
           },
           {
             "role": "Analista",
             "name": "Beny",
-            "flag": "🇩🇪"
+            "flag": "🇩🇪",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇫🇷",
@@ -283,57 +363,75 @@
           {
             "status": "confirmed",
             "name": "SUYGETSU",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Avez",
-            "flag": "🇪🇬"
+            "flag": "🇪🇬",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "dos9",
-            "flag": "🇰🇿"
+            "flag": "🇰🇿",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "LewN",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "N4RRATE",
-            "flag": "🇺🇸"
+            "flag": "🇺🇸",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "benched",
             "name": "sheydos",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "benched",
             "name": "ENGH",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "ZE1SH",
-            "flag": "🇪🇬"
+            "flag": "🇪🇬",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "Youenn",
-            "flag": "🇫🇷"
+            "flag": "🇫🇷",
+            "photoUrl": null
           },
           {
             "role": "Manager",
             "name": "P4tz",
-            "flag": "🇫🇷"
+            "flag": "🇫🇷",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇬🇧",
@@ -342,57 +440,75 @@
           {
             "status": "confirmed",
             "name": "crashies",
-            "flag": "🇺🇸"
+            "flag": "🇺🇸",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Boaster",
-            "flag": "🇬🇧"
+            "flag": "🇬🇧",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "kaajak",
-            "flag": "🇩🇰"
+            "flag": "🇩🇰",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Alfajer",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Veqaj",
-            "flag": "🇫🇷"
+            "flag": "🇫🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "benched",
             "name": "Cyvoph",
-            "flag": "🇫🇷"
+            "flag": "🇫🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "benched",
             "name": "Milan",
-            "flag": "🇳🇱"
+            "flag": "🇳🇱",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "ENG",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "Desmo",
-            "flag": "🇩🇰"
+            "flag": "🇩🇰",
+            "photoUrl": null
           },
           {
             "role": "Manager",
             "name": "Cojo",
-            "flag": "🇺🇸"
+            "flag": "🇺🇸",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇹🇷",
@@ -401,47 +517,61 @@
           {
             "status": "confirmed",
             "name": "Izzy",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "nekky",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "audaz",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Favian",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "echo",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "afr0nfire",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "L7",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           },
           {
             "role": "Manager",
             "name": "Big Poppa",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇫🇷",
@@ -450,47 +580,61 @@
           {
             "status": "confirmed",
             "name": "Derke",
-            "flag": "🇫🇮"
+            "flag": "🇫🇮",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Jamppi",
-            "flag": "🇫🇮"
+            "flag": "🇫🇮",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "PROFEK",
-            "flag": "🇵🇱"
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Chronicle",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Sayonara",
-            "flag": "🇷🇴"
+            "flag": "🇷🇴",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "PAL",
-            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "Scuttt",
-            "flag": "🇮🇪"
+            "flag": "🇮🇪",
+            "photoUrl": null
           },
           {
             "role": "Analista",
             "name": "slk",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇹🇷",
@@ -499,47 +643,61 @@
           {
             "status": "confirmed",
             "name": "Rosé",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Crewen",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Loita",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Lar0k",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "lovers rock",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "KEY",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "Viento",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           },
           {
             "role": "Manager",
             "name": "Tropik",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇪🇸",
@@ -548,47 +706,61 @@
           {
             "status": "confirmed",
             "name": "grubinho",
-            "flag": "🇵🇱"
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "ara",
-            "flag": "🇷🇴"
+            "flag": "🇷🇴",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Flickless",
-            "flag": "🇧🇪"
+            "flag": "🇧🇪",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "Cloud",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "westside",
-            "flag": "🇵🇱"
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "pipsoN",
-            "flag": "🇷🇺"
+            "flag": "🇷🇺",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "wayLander",
-            "flag": "🇫🇮"
+            "flag": "🇫🇮",
+            "photoUrl": null
           },
           {
             "role": "Manager",
             "name": "Hehnal",
-            "flag": "🇩🇪"
+            "flag": "🇩🇪",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇹🇷",
@@ -597,47 +769,61 @@
           {
             "status": "confirmed",
             "name": "cNed",
-            "flag": "🇹🇷"
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "al0rante",
-            "flag": "🇩🇪"
+            "flag": "🇩🇪",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "qpert",
-            "flag": "🇸🇰"
+            "flag": "🇸🇰",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "seven",
-            "flag": "🇲🇽"
+            "flag": "🇲🇽",
+            "photoUrl": null,
+            "igl": false
           },
           {
             "status": "confirmed",
             "name": "NINJA",
-            "flag": "🇵🇱"
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
           }
         ],
         "staff": [
           {
             "role": "Head Coach",
             "name": "thnikii",
-            "flag": "🇪🇸"
+            "flag": "🇪🇸",
+            "photoUrl": null
           },
           {
             "role": "Assistant Coach",
             "name": "ZaeS",
-            "flag": "🇪🇸"
+            "flag": "🇪🇸",
+            "photoUrl": null
           },
           {
             "role": "Analista",
             "name": "Koyo",
-            "flag": "🇩🇪"
+            "flag": "🇩🇪",
+            "photoUrl": null
           }
         ],
-        "note": null
+        "note": null,
+        "logoUrl": null
       }
     ]
   }

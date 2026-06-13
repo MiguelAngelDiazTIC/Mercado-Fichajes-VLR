@@ -5,12 +5,15 @@ export interface Player {
   name: string;
   flag: string;
   role?: string;
+  photoUrl?: string | null;
+  igl?: boolean;
 }
 
 export interface StaffMember {
   role: string;
   name: string;
   flag?: string;
+  photoUrl?: string | null;
 }
 
 export interface Team {
@@ -18,6 +21,7 @@ export interface Team {
   name: string;
   players: Player[];
   staff?: StaffMember[];
+  logoUrl?: string | null;
   note?: string | null;
 }
 
