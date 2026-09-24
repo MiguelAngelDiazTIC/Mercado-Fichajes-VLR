@@ -103,17 +103,36 @@ Mercado-Fichajes-VLR/
 
 Para actualizar los datos basta con editar los JSON de `public/data/` y hacer push: Vercel vuelve a desplegar y la fecha de "Actualizado" se toma del último commit que tocó esa carpeta.
 
-### 🖼️ Añadir logos y fotos
+---
 
-1. Copia la imagen en su carpeta: `public/logos/`, `public/players/` o `public/staff/`.
-2. Enlázala en el JSON con una ruta que empiece por `/`:
+## ✏️ Gestionar equipos, jugadores, fotos y logos
+
+Todo el contenido sale de los JSON de `public/data/`. No hace falta tocar código para añadir, cambiar o quitar nada.
+
+**¿Se pueden meter más equipos en una región?** Sí, no hay límite. Todo lo que depende del número de equipos se calcula a partir del JSON: los contadores de la portada y de cada región, el buscador y el modo captura. El modo captura reorganiza las columnas para que sigan cabiendo todos en pantalla; con muchos equipos el texto de la captura será más pequeño.
+
+### Qué archivo es cada región
+
+| Archivo | Región |
+| --- | --- |
+| `public/data/teamsEmea.json` | EMEA |
+| `public/data/teamsAmer.json` | AMER |
+| `public/data/teamsPACF.json` | APAC |
+| `public/data/teamsCN.json` | CN |
+
+Cada archivo contiene una región con su lista `teams`. No cambies el `id` de la región (`emea`, `americas`, `pacific`, `china`): la web lo usa para saber qué pestaña es.
+
+### Estructura de un equipo
 
 ```json
 {
   "name": "FNATIC",
+  "flag": "🇬🇧",
   "logoUrl": "/logos/fnatic.png",
+  "note": null,
   "players": [
-    { "name": "Boaster", "status": "confirmed", "flag": "🇬🇧", "igl": true, "photoUrl": "/players/boaster.jpg" }
+    { "name": "Boaster", "status": "confirmed", "flag": "🇬🇧", "igl": true, "photoUrl": "/players/boaster.jpg" },
+    { "name": "Cyvoph", "status": "rumor", "flag": "🇫🇷", "igl": false, "photoUrl": null }
   ],
   "staff": [
     { "role": "Head Coach", "name": "ENG", "flag": "🇷🇺", "photoUrl": "/staff/eng.jpg" }
@@ -121,9 +140,73 @@ Para actualizar los datos basta con editar los JSON de `public/data/` y hacer pu
 }
 ```
 
-- **Logos:** cuadrados, con fondo transparente (PNG o SVG). Se muestran antes del nombre del equipo en la tarjeta, en la vista grande y en el modo captura.
-- **Fotos:** vertical 4:5 (por ejemplo 400×500), JPG o WebP. Se ven al hacer clic en un equipo.
-- Sin imagen (o si la ruta falla) se muestran las iniciales, así que se pueden ir añadiendo poco a poco.
+| Campo | Obligatorio | Qué es |
+| --- | --- | --- |
+| `name` | Sí | Nombre del equipo. Se muestra en mayúsculas. |
+| `flag` | Sí | Bandera como emoji (🇪🇸). Se convierte sola en imagen y en el nombre del país. |
+| `logoUrl` | No | Ruta del logo, o `null` si no hay. |
+| `note` | No | Texto corto que aparece como "Nota /" en la tarjeta, o `null`. |
+| `players[].name` | Sí | Nombre del jugador. |
+| `players[].status` | Sí | Estado (ver tabla de abajo). |
+| `players[].flag` | Sí | Bandera del jugador. |
+| `players[].igl` | No | `true` si es el IGL: sale la etiqueta "IGL". |
+| `players[].photoUrl` | No | Ruta de la foto, o `null`. |
+| `staff[].role` | Sí | Cargo, p. ej. "Head Coach", "Assistant Coach", "Analista", "Manager". El que contenga "Head Coach" es el que aparece en el modo captura. |
+| `staff[].name` / `flag` / `photoUrl` | Nombre sí | Igual que en jugadores. |
+
+**Estados de jugador** (`status`):
+
+| Valor | Se ve como | Columna |
+| --- | --- | --- |
+| `confirmed` | Confirmado (cuadro verde) | Roster |
+| `likely` | Probable (cuadro rojo) | Roster |
+| `possible` | Posible (cuadro hueco) | Roster |
+| `rumor` | Rumor (cuadro punteado) | Subs · Rumores |
+| `benched` | Benched / Sub (cuadro tachado) | Subs · Rumores |
+| `out` | Fuera (cuadro tachado) | Roster |
+
+### Añadir un equipo
+
+1. Abre el JSON de la región.
+2. Copia el bloque de un equipo entero (de su `{` a su `}`) y pégalo dentro de `"teams": [ ... ]`.
+3. Separa los equipos con una coma: `}, {`. Después del último equipo **no** va coma.
+4. Cambia nombre, bandera, jugadores y staff.
+
+El orden de los equipos en el JSON es el orden en la web.
+
+### Cambiar un equipo o un jugador
+
+- **Nombre, bandera, estado o IGL:** edita el valor directamente.
+- **Un jugador pasa a otro estado** (p. ej. de rumor a confirmado): cambia su `status`. La web lo mueve sola a la columna que toca.
+- **Un jugador cambia de equipo:** corta su bloque `{ ... }` de un equipo y pégalo en `players` del otro (también puede ser de otra región, en otro archivo).
+- **Staff:** igual que los jugadores, dentro de `staff`.
+
+### Eliminar un equipo o un jugador
+
+Borra su bloque completo `{ ... }` y revisa las comas: entre elementos va una coma y después del último no.
+
+### Logos y fotos
+
+**Añadir**
+1. Copia la imagen en su carpeta: `public/logos/`, `public/players/` o `public/staff/`.
+2. Pon su ruta en el JSON **empezando por `/`**: `"logoUrl": "/logos/fnatic.png"`, `"photoUrl": "/players/boaster.jpg"`.
+
+**Formatos recomendados**
+- **Logos:** cuadrados y con fondo transparente (PNG o SVG). Salen antes del nombre del equipo en la tarjeta, en la vista grande y en el modo captura.
+- **Fotos:** verticales 4:5 (por ejemplo 400×500), JPG o WebP. Se ven al hacer clic en un equipo.
+- Nombres de archivo en minúsculas y sin espacios ni tildes (`team-liquid.png`, no `Team Liquid.png`): Vercel distingue mayúsculas.
+
+**Cambiar:** sustituye el archivo por otro con el mismo nombre, o pon la ruta del nuevo en el JSON. Si el navegador sigue mostrando la imagen antigua, recarga con Ctrl+F5.
+
+**Quitar:** pon el campo a `null` (`"photoUrl": null`) y borra el archivo de la carpeta.
+
+Sin imagen, o si la ruta está mal, la web muestra las iniciales en lugar de un icono roto, así que se pueden ir añadiendo poco a poco.
+
+### Comprobar antes de publicar
+
+1. `npm run dev` y revisa la región que has tocado.
+2. Si las regiones salen con "No se pudieron cargar los equipos", algún JSON tiene un error de formato. Los cuatro archivos se cargan juntos, así que un error en uno deja sin datos a todas las regiones. Lo más habitual es una coma de más o de menos, o unas comillas sin cerrar. VS Code marca la línea en rojo.
+3. `git add -A`, `git commit` y `git push`: Vercel publica los cambios en uno o dos minutos.
 
 ---
 
