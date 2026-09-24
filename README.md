@@ -32,7 +32,6 @@ Toda la información se organiza por regiones para facilitar la navegación y el
 * 🌎 Americas
 * 🌏 APAC
 * 🇨🇳 China
-* 🏆 Selecciones Nacionales (ENC / Nations Cup)
 
 ---
 
@@ -50,6 +49,7 @@ Toda la información se organiza por regiones para facilitar la navegación y el
 * Navegación entre regiones con transiciones animadas.
 * Estado de cada jugador marcado por forma y color (accesible).
 * Banderas en SVG y diseño adaptado a móvil.
+* Modo captura en cada región: vista general con todos los equipos en una sola pantalla, lista para hacer captura.
 
 ### ⚡ Rendimiento
 
@@ -81,8 +81,7 @@ Mercado-Fichajes-VLR/
 │   ├── teamsAmer.json
 │   ├── teamsCN.json
 │   ├── teamsEmea.json
-│   ├── teamsPACF.json
-│   └── teamsSEL.json
+│   └── teamsPACF.json
 ├── photos/
 │   └── backgrounds/tarjetas/
 ├── src/
@@ -226,8 +225,6 @@ Previsualiza la carpeta `dist/` con Vite.
 
 ## 📝 Notas
 
-* La sección de selecciones nacionales utiliza contenido HTML estático.
-* `teamsSEL.json` aún no está conectado dinámicamente.
 * Los datos se sirven como archivos JSON estáticos desde `data/`.
 * El proyecto no usa frameworks; la única dependencia es `flag-icons` para las banderas.
 
@@ -235,7 +232,6 @@ Previsualiza la carpeta `dist/` con Vite.
 
 ## 🚧 Próximas mejoras
 
-* [ ] Integrar dinámicamente `teamsSEL.json`.
 * [ ] Filtros avanzados para staff técnico.
 * [ ] Persistencia de filtros.
 * [ ] Consumo de API en tiempo real.

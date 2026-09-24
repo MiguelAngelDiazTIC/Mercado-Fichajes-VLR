@@ -290,7 +290,6 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 .strip-panel.apac::before{background-image:url("../photos/backgrounds/tarjetas/pcf_bg.jpg")}
 .strip-panel.amer::before{background-image:url("../photos/backgrounds/tarjetas/amer-bg.jpg")}
 .strip-panel.cn::before{background-image:url("../photos/backgrounds/tarjetas/ch_bg.jpg")}
-.strip-panel.nats::before{background-image:url("../photos/backgrounds/tarjetas/enc_bg.jpg")}
 /* Velo: degradado para leer el texto + oscurecido cuando otro panel tiene el foco */
 .strip-panel::after{
   background-color:rgba(0,0,0,0);
@@ -366,7 +365,7 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 /* ─── REGION PAGE ─── */
 .region-header{padding-top:clamp(24px,3vw,40px)}
 .rh-top{
-  display:flex;justify-content:flex-end;align-items:center;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
   margin-bottom:clamp(12px,2vw,24px);
 }
 .rh-title{
@@ -396,6 +395,139 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 .back-btn .icon{transition:transform 0.2s var(--ease-expo)}
 .back-btn:hover .icon{transform:translateX(-3px)}
 .back-btn:active .icon{transform:translateX(-5px)}
+
+/* Botón de modo captura: acción principal de la cabecera, en negativo */
+.capture-btn{
+  position:relative;
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 16px;
+  background:var(--ink);color:var(--paper);
+  font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  transition:background-color 150ms ease, transform 160ms var(--ease-expo);
+}
+.capture-btn:active{transform:scale(0.97)}
+@media (hover:hover) and (pointer:fine){
+  .capture-btn:hover{background:var(--accent)}
+}
+
+/* ─── MODO CAPTURA ───
+   Capa a pantalla completa con un lienzo de tamaño fijo (1600px en horizontal,
+   900px en vertical) que se escala para que toda la región quepa en pantalla.
+   Al abrir, el lienzo llega desde algo más grande: se lee como un zoom out. */
+.capture{
+  position:fixed;inset:0;z-index:200;
+  background:var(--paper);
+  overflow:hidden;
+  opacity:0;
+  transition:opacity 200ms ease;
+}
+.capture.is-open{opacity:1}
+.capture-canvas{
+  position:absolute;left:50%;top:50%;
+  width:var(--cw,1600px);
+  --z:1.1;
+  transform:translate(-50%,-50%) scale(calc(var(--s,1) * var(--z)));
+  opacity:0;
+  transition:transform 380ms var(--ease-expo), opacity 240ms ease;
+}
+.capture.is-open .capture-canvas{--z:1;opacity:1}
+/* Salida: más rápida y por el mismo camino */
+.capture.is-closing{transition-duration:180ms}
+.capture.is-closing .capture-canvas{--z:1.06;opacity:0;transition-duration:200ms,160ms}
+
+.cap-head{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:end;
+  gap:24px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--ink);
+}
+.cap-title{
+  font-size:120px;
+  font-weight:800;
+  font-stretch:var(--wide);
+  line-height:0.86;
+  letter-spacing:-0.035em;
+}
+.cap-meta{
+  display:flex;flex-direction:column;align-items:flex-end;gap:4px;
+  font-size:14px;letter-spacing:0.06em;text-transform:uppercase;
+  text-align:right;
+}
+.cap-meta strong{font-weight:800;font-stretch:var(--wide);letter-spacing:0.01em;font-size:18px}
+.cap-legend{
+  display:flex;flex-wrap:wrap;gap:6px 24px;
+  padding-block:12px 26px;
+  font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+}
+.cap-legend span{display:inline-flex;align-items:center;gap:8px}
+
+.cap-grid{
+  display:grid;
+  grid-template-columns:repeat(var(--cols,4),1fr);
+  gap:30px 32px;
+}
+.cap-card{border-top:2px solid var(--ink);padding-top:10px;min-width:0}
+.cap-name{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  font-size:19px;font-weight:800;font-stretch:var(--wide);
+  line-height:1.05;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.cap-name .fi{font-size:16px;flex-shrink:0}
+.cap-row{
+  display:flex;align-items:center;gap:8px;
+  padding-block:3px;
+  font-size:14px;font-weight:600;
+  border-bottom:1px solid var(--rule);
+}
+.cap-row .fi{font-size:11px;flex-shrink:0}
+.cap-row .player-igl{font-size:10px;padding:1px 4px}
+.cap-row-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.cap-sub{
+  margin-top:8px;
+  font-size:11px;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;
+}
+.cap-sub + .cap-row{border-top:0}
+.cap-empty{font-size:13px;color:var(--ink-3);padding-block:3px}
+.cap-coach{
+  display:flex;justify-content:space-between;gap:8px;
+  margin-top:8px;
+  font-size:13px;
+}
+.cap-coach span:first-child{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-2)}
+.cap-coach span:last-child{font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.cap-foot{
+  display:flex;justify-content:space-between;
+  margin-top:26px;padding-top:12px;
+  border-top:1px solid var(--rule);
+  font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-2);
+}
+
+/* Controles fuera del lienzo; se ocultan si el ratón está quieto para no salir en la captura */
+.capture-bar{
+  position:absolute;top:16px;right:16px;z-index:1;
+  display:flex;align-items:center;gap:14px;
+  font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-2);
+  transition:opacity 250ms ease;
+}
+/* Con foco de teclado los controles se quedan visibles */
+.capture.is-idle .capture-bar:not(:has(:focus-visible)){opacity:0}
+.capture-close{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 14px;
+  background:var(--ink);color:var(--paper);
+  font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  transition:background-color 150ms ease, transform 160ms var(--ease-expo);
+}
+.capture-close:active{transform:scale(0.97)}
+@media (hover:hover) and (pointer:fine){
+  .capture-close:hover{background:var(--accent)}
+}
+@media (hover:none){
+  .capture-hint{display:none}
+}
 
 /* Leyenda: las líneas van en pseudo-elementos para respetar el margen del .frame */
 .legend{
@@ -645,6 +777,11 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
   .strip-panel:focus-visible::before,
   .strip-panel:active::before{transform:none}
   .sp-name{transform:none;transition:opacity 200ms ease}
+
+  /* Modo captura: sin zoom, solo fundido */
+  .capture-canvas,
+  .capture.is-closing .capture-canvas{--z:1;transition:opacity 200ms ease}
+  .capture-btn:active,.capture-close:active{transform:none}
   .nav-indicator.ready{transition:none}
 
   ::view-transition-new(root){animation:0.2s ease both fade-in}
