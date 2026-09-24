@@ -1,7 +1,6 @@
 import 'flag-icons/css/flag-icons.min.css';
 import { loadRegions, Player, Region } from './main.js';
 
-type FilterStatus = '' | 'confirmed' | 'likely' | 'possible' | 'rumor';
 type RegionKey = 'emea' | 'apac' | 'amer' | 'cn';
 
 const regionIds: RegionKey[] = ['emea', 'apac', 'amer', 'cn'];
@@ -12,8 +11,6 @@ const regionIdMap: Record<RegionKey, string> = {
   cn: 'china',
 };
 
-let currentSearch = '';
-let currentStatus: FilterStatus = '';
 const regionDataPromise = loadRegions();
 
 const statusLabels: Record<string, string> = {
@@ -154,7 +151,7 @@ async function renderRegion(id: RegionKey): Promise<void> {
   const count = document.getElementById(`${id}-count`);
   if (count) count.textContent = `${region.teams.length} equipos`;
 
-  grid.innerHTML = region.teams.map((team, index) => {
+  grid.innerHTML = region.teams.map(team => {
     const starters = team.players.filter(p => p.status !== 'benched' && p.status !== 'rumor');
     const bench    = team.players.filter(p => p.status === 'benched' || p.status === 'rumor');
 
@@ -190,29 +187,27 @@ async function renderRegion(id: RegionKey): Promise<void> {
       : '';
 
     const noteHtml = team.note
-      ? `<div class="team-note">${team.note}</div>`
+      ? `<p class="team-note"><span class="team-note-label">Nota /</span>${team.note}</p>`
       : '';
 
-    // Solo se muestra logo cuando hay imagen real; si no, el número de orden
+    // Solo se muestra logo cuando hay imagen real
     const logoHtml = team.logoUrl
       ? `<div class="team-logo"><img src="${team.logoUrl}" alt=""></div>`
       : '';
 
-    return `<div class="team-card">
+    return `<article class="team-card">
       <div class="team-card-header">
-        <span class="team-index">${String(index + 1).padStart(2, '0')}</span>
         ${logoHtml}
-        <span class="team-name">${team.name}</span>
+        <h2 class="team-name">${team.name}</h2>
         ${flagHtml(team.flag, 'team-flag')}
       </div>
       <div class="team-roster">${rosterHtml}</div>
       ${noteHtml}
       ${staffHtml}
-    </div>`;
+    </article>`;
   }).join('');
 
   animateCards(grid);
-  applyFilters();
 }
 
 // ─── Navigation ───────────────────────────────────────────
@@ -239,9 +234,14 @@ function swapPage(id: string): void {
   if (page) page.classList.add('active');
   window.scrollTo(0, 0);
   if (regionIds.includes(id as RegionKey)) {
-    resetFilters();
     renderRegion(id as RegionKey);
   }
+
+  // Título de la pestaña y foco en el titular (lectores de pantalla y teclado)
+  const heading = page?.querySelector<HTMLElement>('h1');
+  const name = heading?.getAttribute('aria-label') ?? heading?.textContent?.trim();
+  document.title = id === 'home' || !name ? 'VCT Mercato' : `${name} · VCT Mercato`;
+  heading?.focus({ preventScroll: true });
 }
 
 function showPage(id: string): void {
@@ -311,64 +311,22 @@ function initIndicator(): void {
   window.addEventListener('resize', moveIndicator);
 }
 
-function setTab(el: HTMLElement): void {
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  el.classList.add('active');
+function markActiveTab(isActive: (tab: Element) => boolean): void {
+  document.querySelectorAll('.nav-tab').forEach(t => {
+    const active = isActive(t);
+    t.classList.toggle('active', active);
+    if (active) t.setAttribute('aria-current', 'page');
+    else t.removeAttribute('aria-current');
+  });
   moveIndicator();
+}
+
+function setTab(el: HTMLElement): void {
+  markActiveTab(t => t === el);
 }
 
 function setTabByName(name: string): void {
-  document.querySelectorAll('.nav-tab').forEach(t => {
-    t.classList.toggle('active', t.textContent?.trim() === name);
-  });
-  moveIndicator();
-}
-
-// ─── Filters ──────────────────────────────────────────────
-
-function resetFilters(): void {
-  currentSearch = '';
-  currentStatus = '';
-  document.querySelectorAll<HTMLInputElement>('.search-input').forEach(i => (i.value = ''));
-  document.querySelectorAll<HTMLButtonElement>('.filter-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent?.trim() === 'Todos');
-  });
-}
-
-function applyFilters(): void {
-  const query = currentSearch.toLowerCase();
-  document.querySelectorAll<HTMLElement>('.player-row').forEach(row => {
-    const name   = row.querySelector('.player-name')?.textContent?.toLowerCase() || '';
-    const team   = row.closest('.team-card')?.querySelector('.team-name')?.textContent?.toLowerCase() || '';
-    const statusEl = row.querySelector('.player-status');
-    const hasStatus = statusEl && currentStatus
-      ? statusEl.classList.contains(`status-${currentStatus}`)
-      : true;
-    const matchesText = !query || name.includes(query) || team.includes(query);
-    row.style.display = hasStatus && matchesText ? '' : 'none';
-  });
-}
-
-function filterPlayers(q: string): void {
-  currentSearch = q;
-  applyFilters();
-}
-
-function filterStatus(status: FilterStatus): void {
-  currentStatus = status;
-  applyFilters();
-}
-
-function setActiveFilter(btn: HTMLElement): void {
-  btn.closest('.search-bar')?.querySelectorAll<HTMLElement>('.filter-btn').forEach(b => {
-    b.classList.remove('active');
-  });
-  btn.classList.add('active');
-}
-
-function sendPrompt(message: string): void {
-  console.warn('sendPrompt called with:', message);
-  alert(message);
+  markActiveTab(t => t.textContent?.trim() === name);
 }
 
 // ─── Expose globals ───────────────────────────────────────
@@ -376,10 +334,6 @@ function sendPrompt(message: string): void {
 (window as any).showPage       = showPage;
 (window as any).setTab         = setTab;
 (window as any).setTabByName   = setTabByName;
-(window as any).filterPlayers  = filterPlayers;
-(window as any).filterStatus   = filterStatus;
-(window as any).setActiveFilter = setActiveFilter;
-(window as any).sendPrompt     = sendPrompt;
 
 initIndicator();
 renderUpdated();

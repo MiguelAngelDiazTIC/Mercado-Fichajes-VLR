@@ -17,7 +17,7 @@
   <nav class="nav">
     <button class="nav-brand" type="button" onclick="showPage('home');setTabByName('Inicio')">VCT TRANSFERS</button>
     <div class="nav-tabs">
-      <button class="nav-tab active" type="button" onclick="showPage('home');setTab(this)">Inicio</button>
+      <button class="nav-tab active" type="button" aria-current="page" onclick="showPage('home');setTab(this)">Inicio</button>
       <button class="nav-tab" type="button" onclick="showPage('emea');setTab(this)">EMEA</button>
       <button class="nav-tab" type="button" onclick="showPage('apac');setTab(this)">APAC</button>
       <button class="nav-tab" type="button" onclick="showPage('amer');setTab(this)">AMER</button>
@@ -33,10 +33,12 @@
   </nav>
 </header>
 
+<main id="app">
+
 <!-- HOME -->
-<main id="page-home" class="page active">
+<section id="page-home" class="page active">
   <section class="hero frame">
-    <h1 class="hero-word" aria-label="MERCATO">
+    <h1 class="hero-word" aria-label="MERCATO" tabindex="-1">
       <span class="hero-clip" aria-hidden="true"><span class="hero-letter" style="--i:0">M</span><span class="hero-letter" style="--i:1">E</span><span class="hero-letter" style="--i:2">R</span><span class="hero-letter" style="--i:3">C</span><span class="hero-letter" style="--i:4">A</span><span class="hero-letter" style="--i:5">T</span><span class="hero-letter" style="--i:6">O</span></span><span class="hero-tm" aria-hidden="true">™</span>
     </h1>
     <div class="meta-row">
@@ -63,29 +65,24 @@
     <div class="strip-mark" aria-hidden="true">V</div>
     <div class="strip">
       <button class="strip-panel emea" style="--i:0" type="button" onclick="showPage('emea');setTabByName('EMEA')">
-        <span class="sp-index">01</span>
         <span class="sp-code">EMEA</span>
-        <span class="sp-name"><span class="sp-name-inner">Europe · Middle East · Africa — <span id="strip-count-emea">—</span> equipos</span></span>
+        <span class="sp-name"><span class="sp-name-inner">Europe · Middle East · Africa ·&nbsp;<span id="strip-count-emea">—</span>&nbsp;equipos</span></span>
       </button>
       <button class="strip-panel apac" style="--i:1" type="button" onclick="showPage('apac');setTabByName('APAC')">
-        <span class="sp-index">02</span>
         <span class="sp-code">APAC</span>
-        <span class="sp-name"><span class="sp-name-inner">Asia-Pacific — <span id="strip-count-apac">—</span> equipos</span></span>
+        <span class="sp-name"><span class="sp-name-inner">Asia-Pacific ·&nbsp;<span id="strip-count-apac">—</span>&nbsp;equipos</span></span>
       </button>
       <button class="strip-panel amer" style="--i:2" type="button" onclick="showPage('amer');setTabByName('AMER')">
-        <span class="sp-index">03</span>
         <span class="sp-code">AMER</span>
-        <span class="sp-name"><span class="sp-name-inner">Americas — <span id="strip-count-amer">—</span> equipos</span></span>
+        <span class="sp-name"><span class="sp-name-inner">Americas ·&nbsp;<span id="strip-count-amer">—</span>&nbsp;equipos</span></span>
       </button>
       <button class="strip-panel cn" style="--i:3" type="button" onclick="showPage('cn');setTabByName('CN')">
-        <span class="sp-index">04</span>
         <span class="sp-code">CN</span>
-        <span class="sp-name"><span class="sp-name-inner">China — <span id="strip-count-cn">—</span> equipos</span></span>
+        <span class="sp-name"><span class="sp-name-inner">China ·&nbsp;<span id="strip-count-cn">—</span>&nbsp;equipos</span></span>
       </button>
       <button class="strip-panel nats" style="--i:4" type="button" onclick="showPage('nats');setTabByName('Selecciones')">
-        <span class="sp-index">05</span>
         <span class="sp-code">ENC</span>
-        <span class="sp-name"><span class="sp-name-inner">Selecciones Nacionales — Nations Cup 2025</span></span>
+        <span class="sp-name"><span class="sp-name-inner">Selecciones Nacionales ·&nbsp;Nations Cup 2025</span></span>
       </button>
     </div>
   </section>
@@ -97,16 +94,15 @@
       <a href="https://x.com/MiikaElVAL" target="_blank" rel="noopener noreferrer">@MiikaElVAL</a>
     </div>
   </footer>
-</main>
+</section>
 
 <!-- EMEA -->
-<main id="page-emea" class="page">
+<section id="page-emea" class="page">
   <header class="region-header frame">
     <div class="rh-top">
-      <span class="label">Región / 01</span>
-      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
     </div>
-    <h1 class="rh-title">EMEA</h1>
+    <h1 class="rh-title" tabindex="-1">EMEA</h1>
     <div class="meta-row">
       <span>Europe · Middle East · Africa</span>
       <span>VCT 2026</span>
@@ -121,16 +117,15 @@
     <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
   <div class="teams-container frame"><div class="teams-grid" id="emea-grid"></div></div>
-</main>
+</section>
 
 <!-- APAC -->
-<main id="page-apac" class="page">
+<section id="page-apac" class="page">
   <header class="region-header frame">
     <div class="rh-top">
-      <span class="label">Región / 02</span>
-      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
     </div>
-    <h1 class="rh-title">APAC</h1>
+    <h1 class="rh-title" tabindex="-1">APAC</h1>
     <div class="meta-row">
       <span>Asia-Pacific</span>
       <span>VCT 2026</span>
@@ -145,16 +140,15 @@
     <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
   <div class="teams-container frame"><div class="teams-grid" id="apac-grid"></div></div>
-</main>
+</section>
 
 <!-- AMER -->
-<main id="page-amer" class="page">
+<section id="page-amer" class="page">
   <header class="region-header frame">
     <div class="rh-top">
-      <span class="label">Región / 03</span>
-      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
     </div>
-    <h1 class="rh-title">AMER</h1>
+    <h1 class="rh-title" tabindex="-1">AMER</h1>
     <div class="meta-row">
       <span>Americas</span>
       <span>VCT 2026</span>
@@ -169,16 +163,15 @@
     <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
   <div class="teams-container frame"><div class="teams-grid" id="amer-grid"></div></div>
-</main>
+</section>
 
 <!-- CN -->
-<main id="page-cn" class="page">
+<section id="page-cn" class="page">
   <header class="region-header frame">
     <div class="rh-top">
-      <span class="label">Región / 04</span>
-      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
     </div>
-    <h1 class="rh-title">CN</h1>
+    <h1 class="rh-title" tabindex="-1">CN</h1>
     <div class="meta-row">
       <span>China</span>
       <span>VCT 2026</span>
@@ -193,16 +186,15 @@
     <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
   <div class="teams-container frame"><div class="teams-grid" id="cn-grid"></div></div>
-</main>
+</section>
 
 <!-- SELECCIONES -->
-<main id="page-nats" class="page">
+<section id="page-nats" class="page">
   <header class="region-header frame">
     <div class="rh-top">
-      <span class="label">Región / 05</span>
-      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
     </div>
-    <h1 class="rh-title">SELECCIONES</h1>
+    <h1 class="rh-title" tabindex="-1">SELECCIONES</h1>
     <div class="meta-row">
       <span>Selecciones nacionales</span>
       <span>ENC · Nations Cup 2025</span>
@@ -212,6 +204,8 @@
   <div class="teams-container frame">
     <p class="empty-state">Las convocatorias de la Nations Cup aparecerán aquí.</p>
   </div>
+</section>
+
 </main>
 
 <script type="module" src="./src/RegionTable.ts"></script>
