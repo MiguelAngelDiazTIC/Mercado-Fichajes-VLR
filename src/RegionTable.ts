@@ -93,20 +93,23 @@ function renderUpdated(): void {
   el.setAttribute('title', date.toLocaleDateString('es-ES', { dateStyle: 'long' }));
 }
 
-// ─── Stagger animation via IntersectionObserver ───────────
+// ─── Entrada de tarjetas ──────────────────────────────────
+// Cada tanda que entra en pantalla se escalona por su orden dentro de la
+// tanda (no por su índice global), con un retraso máximo acotado.
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 function animateCards(grid: HTMLElement): void {
   const cards = Array.from(grid.querySelectorAll<HTMLElement>('.team-card'));
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const card = entry.target as HTMLElement;
-        const i = cards.indexOf(card);
-        setTimeout(() => card.classList.add('visible'), i * 40);
-        observer.unobserve(card);
-      }
+    const entering = entries.filter(e => e.isIntersecting);
+    entering.forEach((entry, i) => {
+      const card = entry.target as HTMLElement;
+      card.style.setProperty('--d', `${Math.min(i, 5) * 0.06}s`);
+      card.classList.add('visible');
+      observer.unobserve(card);
     });
-  }, { threshold: 0.05 });
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
   cards.forEach(card => observer.observe(card));
 }
 
@@ -214,7 +217,23 @@ async function renderRegion(id: RegionKey): Promise<void> {
 
 // ─── Navigation ───────────────────────────────────────────
 
-function showPage(id: string): void {
+let currentPage = 'home';
+
+function inViewport(el: Element | null): el is HTMLElement {
+  if (!el) return false;
+  const r = el.getBoundingClientRect();
+  return r.bottom > 0 && r.top < window.innerHeight;
+}
+
+// Elemento que hace de "título" de una página para la transición compartida:
+// en portada, el código del panel de esa región; en una región, su titular.
+function titleFor(page: string, region: string): Element | null {
+  return page === 'home'
+    ? document.querySelector(`.strip-panel.${region} .sp-code`)
+    : document.querySelector(`#page-${page} .rh-title`);
+}
+
+function swapPage(id: string): void {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   const page = document.getElementById('page-' + id);
   if (page) page.classList.add('active');
@@ -225,15 +244,80 @@ function showPage(id: string): void {
   }
 }
 
+function showPage(id: string): void {
+  if (id === currentPage) {
+    window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    return;
+  }
+  const previous = currentPage;
+  currentPage = id;
+  // La entrada de portada solo se ve una vez
+  document.documentElement.classList.add('intro-done');
+
+  if (!document.startViewTransition) {
+    swapPage(id);
+    return;
+  }
+
+  // Al entrar en una región, su código viaja hasta el titular gigante
+  const from = id !== 'home' && !reduceMotion.matches ? titleFor(previous, id) : null;
+  const to = titleFor(id, previous) as HTMLElement | null;
+  const shared = inViewport(from) ? from : null;
+  if (shared) shared.style.viewTransitionName = 'region-title';
+
+  const transition = document.startViewTransition(() => {
+    if (shared) shared.style.viewTransitionName = '';
+    swapPage(id);
+    if (shared && to) to.style.viewTransitionName = 'region-title';
+  });
+  transition.finished.finally(() => {
+    if (to) to.style.viewTransitionName = '';
+  });
+}
+
+// ─── Subrayado de pestañas ────────────────────────────────
+
+const TAB_INSET = 10; // padding horizontal de .nav-tab
+
+function moveIndicator(): void {
+  const indicator = document.querySelector<HTMLElement>('.nav-indicator');
+  const active = document.querySelector<HTMLElement>('.nav-tab.active');
+  if (!indicator || !active) return;
+  indicator.style.setProperty('--x', `${active.offsetLeft + TAB_INSET}px`);
+  // .nav-indicator mide 100px de base; se escala al ancho del texto
+  indicator.style.setProperty('--w', String((active.offsetWidth - TAB_INSET * 2) / 100));
+
+  // En móvil la fila de pestañas se desplaza: mantener visible la activa
+  const tabs = active.parentElement;
+  if (tabs && tabs.scrollWidth > tabs.clientWidth) {
+    const left = active.offsetLeft - tabs.scrollLeft;
+    if (left < 0 || left + active.offsetWidth > tabs.clientWidth) {
+      tabs.scrollTo({ left: active.offsetLeft - 16, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    }
+  }
+}
+
+function initIndicator(): void {
+  const indicator = document.querySelector<HTMLElement>('.nav-indicator');
+  if (!indicator) return;
+  moveIndicator();
+  // Colocarlo sin animar y activar la transición en el siguiente frame
+  requestAnimationFrame(() => indicator.classList.add('ready'));
+  document.fonts?.ready.then(moveIndicator);
+  window.addEventListener('resize', moveIndicator);
+}
+
 function setTab(el: HTMLElement): void {
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
+  moveIndicator();
 }
 
 function setTabByName(name: string): void {
   document.querySelectorAll('.nav-tab').forEach(t => {
     t.classList.toggle('active', t.textContent?.trim() === name);
   });
+  moveIndicator();
 }
 
 // ─── Filters ──────────────────────────────────────────────
@@ -293,6 +377,7 @@ function sendPrompt(message: string): void {
 (window as any).setActiveFilter = setActiveFilter;
 (window as any).sendPrompt     = sendPrompt;
 
+initIndicator();
 renderUpdated();
 regionDataPromise.then(renderHomeStats, () => {});
 renderRegion('emea');

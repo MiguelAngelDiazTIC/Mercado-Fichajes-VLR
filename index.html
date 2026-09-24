@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
+  <!-- Antes del primer pintado: habilita los estados ocultos que luego anima el script -->
+  <script>document.documentElement.classList.add('motion')</script>
 </head>
 <body>
 
@@ -21,6 +23,7 @@
       <button class="nav-tab" type="button" onclick="showPage('amer');setTab(this)">AMER</button>
       <button class="nav-tab" type="button" onclick="showPage('cn');setTab(this)">CN</button>
       <button class="nav-tab" type="button" onclick="showPage('nats');setTab(this)">Selecciones</button>
+      <span class="nav-indicator" aria-hidden="true"></span>
     </div>
     <div class="nav-meta">
       <span>2025 / 26</span>
@@ -33,7 +36,9 @@
 <!-- HOME -->
 <main id="page-home" class="page active">
   <section class="hero frame">
-    <h1 class="hero-word">MERCATO<span class="hero-tm">™</span></h1>
+    <h1 class="hero-word" aria-label="MERCATO">
+      <span class="hero-clip" aria-hidden="true"><span class="hero-letter" style="--i:0">M</span><span class="hero-letter" style="--i:1">E</span><span class="hero-letter" style="--i:2">R</span><span class="hero-letter" style="--i:3">C</span><span class="hero-letter" style="--i:4">A</span><span class="hero-letter" style="--i:5">T</span><span class="hero-letter" style="--i:6">O</span></span><span class="hero-tm" aria-hidden="true">™</span>
+    </h1>
     <div class="meta-row">
       <span>Valorant Champions Tour</span>
       <span>Mercado de fichajes 2025/26</span>
@@ -57,27 +62,27 @@
   <section class="strip-wrap frame" aria-label="Regiones">
     <div class="strip-mark" aria-hidden="true">V</div>
     <div class="strip">
-      <button class="strip-panel emea" type="button" onclick="showPage('emea');setTabByName('EMEA')">
+      <button class="strip-panel emea" style="--i:0" type="button" onclick="showPage('emea');setTabByName('EMEA')">
         <span class="sp-index">01</span>
         <span class="sp-code">EMEA</span>
         <span class="sp-name">Europe · Middle East · Africa — <span id="strip-count-emea">—</span> equipos</span>
       </button>
-      <button class="strip-panel apac" type="button" onclick="showPage('apac');setTabByName('APAC')">
+      <button class="strip-panel apac" style="--i:1" type="button" onclick="showPage('apac');setTabByName('APAC')">
         <span class="sp-index">02</span>
         <span class="sp-code">APAC</span>
         <span class="sp-name">Asia-Pacific — <span id="strip-count-apac">—</span> equipos</span>
       </button>
-      <button class="strip-panel amer" type="button" onclick="showPage('amer');setTabByName('AMER')">
+      <button class="strip-panel amer" style="--i:2" type="button" onclick="showPage('amer');setTabByName('AMER')">
         <span class="sp-index">03</span>
         <span class="sp-code">AMER</span>
         <span class="sp-name">Americas — <span id="strip-count-amer">—</span> equipos</span>
       </button>
-      <button class="strip-panel cn" type="button" onclick="showPage('cn');setTabByName('CN')">
+      <button class="strip-panel cn" style="--i:3" type="button" onclick="showPage('cn');setTabByName('CN')">
         <span class="sp-index">04</span>
         <span class="sp-code">CN</span>
         <span class="sp-name">China — <span id="strip-count-cn">—</span> equipos</span>
       </button>
-      <button class="strip-panel nats" type="button" onclick="showPage('nats');setTabByName('Selecciones')">
+      <button class="strip-panel nats" style="--i:4" type="button" onclick="showPage('nats');setTabByName('Selecciones')">
         <span class="sp-index">05</span>
         <span class="sp-code">ENC</span>
         <span class="sp-name">Selecciones Nacionales — Nations Cup 2025</span>
