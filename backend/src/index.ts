@@ -5,7 +5,11 @@ import teamsRouter from './routes/teams'
 const app = express()
 const PORT = process.env.PORT || 8080
 
-app.use(cors({ origin: 'https://mercado-fichajes-vlr.vercel.app' }))
+// Orígenes permitidos: CORS_ORIGINS="https://a.com,https://b.com" o el de Vercel por defecto
+const allowedOrigins = (process.env.CORS_ORIGINS ?? 'https://mercado-fichajes-vlr.vercel.app')
+  .split(',')
+  .map(o => o.trim())
+app.use(cors({ origin: allowedOrigins }))
 app.use(express.json())
 app.use('/api/teams', teamsRouter)
 

@@ -34,7 +34,10 @@ export interface Region {
 }
 
 export async function loadRegions(): Promise<Region[]> {
-  const baseUrl = 'https://mercado-fichajes-vlr-production.up.railway.app'
+  // En dev se usa el proxy de Vite (ruta relativa); en build, VITE_API_URL o Railway
+  const baseUrl = import.meta.env.DEV
+    ? ''
+    : (import.meta.env.VITE_API_URL ?? 'https://mercado-fichajes-vlr-production.up.railway.app')
   const files = [
     baseUrl + '/api/teams/teamsEmea',
     baseUrl + '/api/teams/teamsAmer',
@@ -42,6 +45,8 @@ export async function loadRegions(): Promise<Region[]> {
     baseUrl + '/api/teams/teamsCN',
   ]
   const responses = await Promise.all(files.map((f) => fetch(f)))
+  const failed = responses.find((r) => !r.ok)
+  if (failed) throw new Error(`API ${failed.status} en ${failed.url}`)
   const jsons = await Promise.all(responses.map((r) => r.json()))
   return ([] as Region[]).concat(...jsons)
 }

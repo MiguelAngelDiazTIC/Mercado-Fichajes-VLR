@@ -41,13 +41,20 @@ function animateCards(grid: HTMLElement): void {
 // ─── Render ───────────────────────────────────────────────
 
 async function renderRegion(id: RegionKey): Promise<void> {
-  const regions = await regionDataPromise;
+  const grid = document.getElementById(`${id}-grid`);
+  if (!grid) return;
+
+  let regions: Awaited<typeof regionDataPromise>;
+  try {
+    regions = await regionDataPromise;
+  } catch (err) {
+    console.error('No se pudieron cargar los equipos:', err);
+    grid.innerHTML = `<div class="empty-state">No se pudieron cargar los equipos. Inténtalo más tarde.</div>`;
+    return;
+  }
   const dataId = regionIdMap[id] ?? id;
   const region = regions.find(item => item.id === dataId);
   if (!region) return;
-
-  const grid = document.getElementById(`${id}-grid`);
-  if (!grid) return;
 
   const playerHtml = (player: Player): string => {
     const avatarInitials = initials(player.name);
