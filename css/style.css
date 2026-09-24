@@ -288,10 +288,11 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
   background-position:center;
   transition:transform 280ms var(--ease-expo);
 }
-.strip-panel.emea::before{background-image:url("../photos/backgrounds/tarjetas/emea-bg.png")}
-.strip-panel.apac::before{background-image:url("../photos/backgrounds/tarjetas/pcf_bg.jpg")}
-.strip-panel.amer::before{background-image:url("../photos/backgrounds/tarjetas/amer-bg.jpg")}
-.strip-panel.cn::before{background-image:url("../photos/backgrounds/tarjetas/ch_bg.jpg")}
+/* Fotos de public/regions/ (se sirven tal cual en /regions/…) */
+.strip-panel.emea::before{background-image:url("/regions/emea.png")}
+.strip-panel.apac::before{background-image:url("/regions/apac.jpg")}
+.strip-panel.amer::before{background-image:url("/regions/amer.jpg")}
+.strip-panel.cn::before{background-image:url("/regions/cn.jpg")}
 /* Velo: degradado para leer el texto + oscurecido cuando otro panel tiene el foco */
 .strip-panel::after{
   background-color:rgba(0,0,0,0);

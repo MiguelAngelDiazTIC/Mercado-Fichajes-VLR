@@ -87,9 +87,8 @@ Mercado-Fichajes-VLR/
 │   │   └── teamsPACF.json
 │   ├── logos/            (logos de equipo: /logos/…)
 │   ├── players/          (fotos de jugadores: /players/…)
+│   ├── regions/          (fotos del menú de regiones: emea.png, apac.jpg, amer.jpg, cn.jpg)
 │   └── staff/            (fotos de staff: /staff/…)
-├── photos/
-│   └── backgrounds/tarjetas/
 ├── src/
 │   ├── main.ts           (carga de datos y tipos)
 │   ├── RegionTable.ts    (render, navegación y animaciones)
@@ -199,6 +198,8 @@ Borra su bloque completo `{ ... }` y revisa las comas: entre elementos va una co
 **Cambiar:** sustituye el archivo por otro con el mismo nombre, o pon la ruta del nuevo en el JSON. Si el navegador sigue mostrando la imagen antigua, recarga con Ctrl+F5.
 
 **Quitar:** pon el campo a `null` (`"photoUrl": null`) y borra el archivo de la carpeta.
+
+**Fotos del menú de regiones (portada):** están en `public/regions/` y las enlaza `css/style.css`. Para cambiar una, sustituye el archivo manteniendo el nombre (`emea.png`, `apac.jpg`, `amer.jpg`, `cn.jpg`). Si cambias el nombre o la extensión, actualiza también su línea en `css/style.css` (busca `/regions/`).
 
 Sin imagen, o si la ruta está mal, la web muestra las iniciales en lugar de un icono roto, así que se pueden ir añadiendo poco a poco.
 
