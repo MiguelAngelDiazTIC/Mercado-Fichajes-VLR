@@ -1,5 +1,5 @@
 import 'flag-icons/css/flag-icons.min.css';
-import { loadRegions, Player, Region, Team } from './main.js';
+import { loadRegions, Player, Region, StaffMember, Team } from './main.js';
 
 type RegionKey = 'emea' | 'apac' | 'amer' | 'cn';
 
@@ -159,7 +159,7 @@ async function renderRegion(id: RegionKey): Promise<void> {
   const count = document.getElementById(`${id}-count`);
   if (count) count.textContent = `${region.teams.length} equipos`;
 
-  grid.innerHTML = region.teams.map(team => {
+  grid.innerHTML = region.teams.map((team, index) => {
     const starters = team.players.filter(p => p.status !== 'benched' && p.status !== 'rumor');
     const bench    = team.players.filter(p => p.status === 'benched' || p.status === 'rumor');
 
@@ -198,15 +198,11 @@ async function renderRegion(id: RegionKey): Promise<void> {
       ? `<p class="team-note"><span class="team-note-label">Nota /</span>${team.note}</p>`
       : '';
 
-    // Solo se muestra logo cuando hay imagen real
-    const logoHtml = team.logoUrl
-      ? `<div class="team-logo"><img src="${team.logoUrl}" alt=""></div>`
-      : '';
-
-    return `<article class="team-card">
+    // El botón del nombre se extiende a toda la tarjeta (ver .team-open::after)
+    return `<article class="team-card" data-search="${searchText(team)}">
       <div class="team-card-header">
-        ${logoHtml}
-        <h2 class="team-name">${team.name}</h2>
+        ${teamLogoHtml(team, 'team-logo')}
+        <h2 class="team-name"><button class="team-open" type="button" aria-haspopup="dialog" onclick="openTeam('${id}', ${index}, this)">${team.name}</button></h2>
         ${flagHtml(team.flag, 'team-flag')}
       </div>
       <div class="team-roster">${rosterHtml}</div>
@@ -216,6 +212,70 @@ async function renderRegion(id: RegionKey): Promise<void> {
   }).join('');
 
   animateCards(grid);
+  applyTeamFilter(id);
+}
+
+// ─── Buscador ─────────────────────────────────────────────
+// Filtra las tarjetas por nombre de equipo, jugador o staff.
+// Sin distinguir mayúsculas ni tildes ("krü" encuentra "KRU").
+
+const searchQueries: Partial<Record<RegionKey, string>> = {};
+
+function normalize(text: string): string {
+  return text.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().trim();
+}
+
+function searchText(team: Team): string {
+  const names = [team.name, ...team.players.map(p => p.name), ...(team.staff ?? []).map(m => m.name)];
+  return normalize(names.join(' ')).replace(/"/g, '');
+}
+
+function applyTeamFilter(id: RegionKey): void {
+  const grid = document.getElementById(`${id}-grid`);
+  if (!grid) return;
+  const query = normalize(searchQueries[id] ?? '');
+  const cards = Array.from(grid.querySelectorAll<HTMLElement>('.team-card'));
+  let visible = 0;
+  cards.forEach(card => {
+    const match = !query || (card.dataset.search ?? '').includes(query);
+    card.hidden = !match;
+    if (match) visible++;
+  });
+
+  const results = document.getElementById(`${id}-results`);
+  if (results) results.textContent = query ? `${visible} de ${cards.length} equipos` : '';
+  const empty = document.getElementById(`${id}-empty`);
+  if (empty) {
+    empty.hidden = !query || visible > 0;
+    empty.textContent = `Ningún equipo, jugador ni staff coincide con «${searchQueries[id]?.trim()}».`;
+  }
+}
+
+function filterTeams(id: RegionKey, value: string): void {
+  searchQueries[id] = value;
+  applyTeamFilter(id);
+}
+
+// ─── Imágenes ─────────────────────────────────────────────
+// Logos y fotos vienen de los JSON (logoUrl / photoUrl), p. ej. "/logos/fnatic.png".
+// Si una imagen no carga, se quita su contenedor en vez de mostrar el icono roto.
+
+function teamLogoHtml(team: Team, cls: string): string {
+  if (!team.logoUrl) return '';
+  return `<span class="${cls}"><img src="${team.logoUrl}" alt="" loading="lazy" onerror="this.parentElement.remove()"></span>`;
+}
+
+function initialsOf(name: string): string {
+  return name.replace(/[^\p{L}\p{N} ]/gu, '').split(/\s+/).filter(Boolean)
+    .map(w => w[0]).join('').slice(0, 2).toUpperCase() || name.slice(0, 2).toUpperCase();
+}
+
+// Foto de persona; sin foto (o si falla), un marco con sus iniciales
+function personPhotoHtml(name: string, url?: string | null): string {
+  const initials = `<span class="person-initials" aria-hidden="true">${initialsOf(name)}</span>`;
+  return `<div class="person-photo">${initials}${url
+    ? `<img src="${url}" alt="${name}" loading="lazy" onerror="this.remove()">`
+    : ''}</div>`;
 }
 
 // ─── Navigation ───────────────────────────────────────────
@@ -367,7 +427,7 @@ function captureCardHtml(team: Team): string {
   const coach = team.staff?.find(m => /head coach/i.test(m.role));
 
   return `<article class="cap-card">
-    <h3 class="cap-name"><span>${team.name}</span>${flagHtml(team.flag, 'team-flag')}</h3>
+    <h3 class="cap-name">${teamLogoHtml(team, 'cap-logo')}<span>${team.name}</span>${flagHtml(team.flag, 'team-flag')}</h3>
     ${starters.map(row).join('')}
     ${bench.length ? `<div class="cap-sub">Subs · Rumores /</div>${bench.map(row).join('')}` : ''}
     ${coach ? `<div class="cap-coach"><span>Head coach</span><span>${coach.name}${flagHtml(coach.flag, 'staff-flag')}</span></div>` : ''}
@@ -514,12 +574,145 @@ function closeCapture(): void {
   });
 }
 
+// ─── Vista grande de equipo ───────────────────────────────
+// Al hacer clic en una tarjeta se abre un <dialog> modal con fotos de jugadores
+// y staff. El nombre del equipo viaja de la tarjeta al titular (View Transition).
+
+let teamTrigger: HTMLElement | null = null;
+
+function playerFigureHtml(p: Player): string {
+  const label = statusLabels[p.status] ?? p.status;
+  const code = flagCode(p.flag ?? '');
+  return `<figure class="person">
+    ${personPhotoHtml(p.name, p.photoUrl)}
+    <figcaption>
+      <span class="person-meta"><span class="mark status-${p.status}" aria-hidden="true"></span>${label}</span>
+      <span class="person-name">${p.name}${p.igl ? ' <span class="player-igl">IGL</span>' : ''}</span>
+      ${p.flag ? `<span class="person-origin">${flagHtml(p.flag, 'person-flag')}${code ? flagName(code) : ''}</span>` : ''}
+      ${p.role ? `<span class="person-origin">${p.role}</span>` : ''}
+    </figcaption>
+  </figure>`;
+}
+
+function staffFigureHtml(m: StaffMember): string {
+  const code = flagCode(m.flag ?? '');
+  return `<figure class="person">
+    ${personPhotoHtml(m.name, m.photoUrl)}
+    <figcaption>
+      <span class="person-meta">${m.role}</span>
+      <span class="person-name">${m.name}</span>
+      ${m.flag ? `<span class="person-origin">${flagHtml(m.flag, 'person-flag')}${code ? flagName(code) : ''}</span>` : ''}
+    </figcaption>
+  </figure>`;
+}
+
+function teamDialogHtml(team: Team, id: RegionKey): string {
+  const starters = team.players.filter(p => p.status !== 'benched' && p.status !== 'rumor');
+  const bench = team.players.filter(p => p.status === 'benched' || p.status === 'rumor');
+  const staff = team.staff ?? [];
+  const section = (title: string, body: string) =>
+    `<section class="td-section"><h3 class="td-section-title">${title}</h3><div class="td-grid">${body}</div></section>`;
+
+  return `<div class="td-inner">
+    <div class="td-bar">
+      <span class="label">${id.toUpperCase()} / Equipo</span>
+      <button class="td-close" type="button" autofocus>
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        Cerrar
+      </button>
+    </div>
+    <header class="td-head">
+      ${teamLogoHtml(team, 'td-logo')}
+      <h2 class="td-title" id="td-title">${team.name}</h2>
+      ${flagHtml(team.flag, 'td-flag')}
+    </header>
+    ${section('Roster /', starters.map(playerFigureHtml).join(''))}
+    ${bench.length ? section('Subs · Rumores /', bench.map(playerFigureHtml).join('')) : ''}
+    ${staff.length ? section('Staff /', staff.map(staffFigureHtml).join('')) : ''}
+    ${team.note ? `<p class="team-note"><span class="team-note-label">Nota /</span>${team.note}</p>` : ''}
+  </div>`;
+}
+
+function withTeamTransition(update: () => void, from: HTMLElement | null, to: () => HTMLElement | null): void {
+  if (!document.startViewTransition || reduceMotion.matches || !inViewport(from)) {
+    update();
+    return;
+  }
+  const root = document.documentElement;
+  root.classList.add('vt-team');
+  from!.style.viewTransitionName = 'team-title';
+  const transition = document.startViewTransition(() => {
+    from!.style.viewTransitionName = '';
+    update();
+    const target = to();
+    if (target) target.style.viewTransitionName = 'team-title';
+  });
+  transition.finished.finally(() => {
+    root.classList.remove('vt-team');
+    const target = to();
+    if (target) target.style.viewTransitionName = '';
+  });
+}
+
+async function openTeam(id: RegionKey, index: number, trigger: HTMLElement): Promise<void> {
+  const dialog = document.getElementById('team-dialog') as HTMLDialogElement | null;
+  if (!dialog || dialog.open) return;
+  const regions = await regionDataPromise;
+  const team = regions.find(r => r.id === regionIdMap[id])?.teams[index];
+  if (!team) return;
+
+  teamTrigger = trigger;
+  dialog.innerHTML = teamDialogHtml(team, id);
+  dialog.scrollTop = 0;
+  dialog.querySelector('.td-close')?.addEventListener('click', closeTeam);
+
+  withTeamTransition(() => {
+    dialog.showModal();
+    document.documentElement.style.overflow = 'hidden';
+  }, trigger.closest<HTMLElement>('.team-name'), () => dialog.querySelector<HTMLElement>('.td-title'));
+}
+
+function closeTeam(): void {
+  const dialog = document.getElementById('team-dialog') as HTMLDialogElement | null;
+  if (!dialog?.open) return;
+  const title = dialog.querySelector<HTMLElement>('.td-title');
+  const back = teamTrigger?.closest<HTMLElement>('.team-name') ?? null;
+  // Solo hay viaje de vuelta si el titular está a la vista (no si se ha hecho scroll)
+  withTeamTransition(() => {
+    dialog.close();
+    document.documentElement.style.overflow = '';
+  }, inViewport(title) ? title : null, () => back);
+}
+
+function initTeamDialog(): void {
+  const dialog = document.getElementById('team-dialog') as HTMLDialogElement | null;
+  if (!dialog) return;
+  // Esc: cerrar con la misma transición que el botón
+  dialog.addEventListener('cancel', (e) => {
+    e.preventDefault();
+    closeTeam();
+  });
+  // Clic en el fondo oscuro (fuera del contenido)
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) closeTeam();
+  });
+  // Por si se cierra por otra vía, liberar el scroll y devolver el foco
+  dialog.addEventListener('close', () => {
+    document.documentElement.style.overflow = '';
+    teamTrigger?.focus({ preventScroll: true });
+  });
+}
+
 // ─── Expose globals ───────────────────────────────────────
 
 (window as any).showPage       = showPage;
 (window as any).setTab         = setTab;
 (window as any).setTabByName   = setTabByName;
 (window as any).openCapture    = openCapture;
+(window as any).filterTeams    = filterTeams;
+(window as any).openTeam       = openTeam;
+
+initTeamDialog();
 
 initIndicator();
 renderUpdated();

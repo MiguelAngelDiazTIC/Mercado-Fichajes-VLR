@@ -104,6 +104,11 @@
       <span>VCT 2026</span>
       <span id="emea-count">—</span>
     </div>
+    <div class="search" role="search">
+      <label class="label search-label" for="emea-search">Buscar /</label>
+      <input id="emea-search" class="search-input" type="search" placeholder="Equipo, jugador o staff" autocomplete="off" spellcheck="false" oninput="filterTeams('emea', this.value)">
+      <span class="search-count" id="emea-results" aria-live="polite"></span>
+    </div>
   </header>
   <div class="legend frame" aria-label="Leyenda de estados">
     <span class="legend-item"><span class="mark status-confirmed"></span>Confirmado</span>
@@ -112,7 +117,10 @@
     <span class="legend-item"><span class="mark status-rumor"></span>Rumor</span>
     <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
-  <div class="teams-container frame"><div class="teams-grid" id="emea-grid"></div></div>
+  <div class="teams-container frame">
+    <p class="empty-state search-empty" id="emea-empty" hidden></p>
+    <div class="teams-grid" id="emea-grid"></div>
+  </div>
 </section>
 
 <!-- APAC -->
@@ -128,6 +136,11 @@
       <span>VCT 2026</span>
       <span id="apac-count">—</span>
     </div>
+    <div class="search" role="search">
+      <label class="label search-label" for="apac-search">Buscar /</label>
+      <input id="apac-search" class="search-input" type="search" placeholder="Equipo, jugador o staff" autocomplete="off" spellcheck="false" oninput="filterTeams('apac', this.value)">
+      <span class="search-count" id="apac-results" aria-live="polite"></span>
+    </div>
   </header>
   <div class="legend frame" aria-label="Leyenda de estados">
     <span class="legend-item"><span class="mark status-confirmed"></span>Confirmado</span>
@@ -136,7 +149,10 @@
     <span class="legend-item"><span class="mark status-rumor"></span>Rumor</span>
     <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
-  <div class="teams-container frame"><div class="teams-grid" id="apac-grid"></div></div>
+  <div class="teams-container frame">
+    <p class="empty-state search-empty" id="apac-empty" hidden></p>
+    <div class="teams-grid" id="apac-grid"></div>
+  </div>
 </section>
 
 <!-- AMER -->
@@ -152,6 +168,11 @@
       <span>VCT 2026</span>
       <span id="amer-count">—</span>
     </div>
+    <div class="search" role="search">
+      <label class="label search-label" for="amer-search">Buscar /</label>
+      <input id="amer-search" class="search-input" type="search" placeholder="Equipo, jugador o staff" autocomplete="off" spellcheck="false" oninput="filterTeams('amer', this.value)">
+      <span class="search-count" id="amer-results" aria-live="polite"></span>
+    </div>
   </header>
   <div class="legend frame" aria-label="Leyenda de estados">
     <span class="legend-item"><span class="mark status-confirmed"></span>Confirmado</span>
@@ -160,7 +181,10 @@
     <span class="legend-item"><span class="mark status-rumor"></span>Rumor</span>
     <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
-  <div class="teams-container frame"><div class="teams-grid" id="amer-grid"></div></div>
+  <div class="teams-container frame">
+    <p class="empty-state search-empty" id="amer-empty" hidden></p>
+    <div class="teams-grid" id="amer-grid"></div>
+  </div>
 </section>
 
 <!-- CN -->
@@ -176,6 +200,11 @@
       <span>VCT 2026</span>
       <span id="cn-count">—</span>
     </div>
+    <div class="search" role="search">
+      <label class="label search-label" for="cn-search">Buscar /</label>
+      <input id="cn-search" class="search-input" type="search" placeholder="Equipo, jugador o staff" autocomplete="off" spellcheck="false" oninput="filterTeams('cn', this.value)">
+      <span class="search-count" id="cn-results" aria-live="polite"></span>
+    </div>
   </header>
   <div class="legend frame" aria-label="Leyenda de estados">
     <span class="legend-item"><span class="mark status-confirmed"></span>Confirmado</span>
@@ -184,10 +213,16 @@
     <span class="legend-item"><span class="mark status-rumor"></span>Rumor</span>
     <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
-  <div class="teams-container frame"><div class="teams-grid" id="cn-grid"></div></div>
+  <div class="teams-container frame">
+    <p class="empty-state search-empty" id="cn-empty" hidden></p>
+    <div class="teams-grid" id="cn-grid"></div>
+  </div>
 </section>
 
 </main>
+
+<!-- Vista grande de un equipo (se rellena desde RegionTable.ts) -->
+<dialog class="team-dialog" id="team-dialog" aria-labelledby="td-title"></dialog>
 
 <script type="module" src="./src/RegionTable.ts"></script>
 </body>

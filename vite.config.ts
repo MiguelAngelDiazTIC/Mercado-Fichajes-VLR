@@ -4,15 +4,15 @@ import { execSync } from 'node:child_process'
 // Fecha del último commit que tocó los datos; si no hay git, la fecha del build
 function dataUpdated(): string {
   try {
-    const date = execSync('git log -1 --format=%cI -- data', { encoding: 'utf8' }).trim()
+    const date = execSync('git log -1 --format=%cI -- public/data', { encoding: 'utf8' }).trim()
     if (date) return date
   } catch {}
   return new Date().toISOString()
 }
 
 export default defineConfig({
-  // Los JSON se sirven como estáticos (/teamsEmea.json…), sin backend
-  publicDir: 'data',
+  // public/ se publica tal cual: /data/*.json, /logos/*, /players/*, /staff/*
+  publicDir: 'public',
   define: {
     __DATA_UPDATED__: JSON.stringify(dataUpdated()),
   },

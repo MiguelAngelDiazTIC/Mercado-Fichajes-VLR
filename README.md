@@ -50,6 +50,8 @@ Toda la información se organiza por regiones para facilitar la navegación y el
 * Estado de cada jugador marcado por forma y color (accesible).
 * Banderas en SVG y diseño adaptado a móvil.
 * Modo captura en cada región: vista general con todos los equipos en una sola pantalla, lista para hacer captura.
+* Buscador por región: equipo, jugador o staff, sin distinguir mayúsculas ni tildes.
+* Vista grande de cada equipo al hacer clic, con fotos de jugadores y staff.
 
 ### ⚡ Rendimiento
 
@@ -77,11 +79,15 @@ Toda la información se organiza por regiones para facilitar la navegación y el
 Mercado-Fichajes-VLR/
 ├── css/
 │   └── style.css
-├── data/                 (se publica tal cual: /teamsEmea.json…)
-│   ├── teamsAmer.json
-│   ├── teamsCN.json
-│   ├── teamsEmea.json
-│   └── teamsPACF.json
+├── public/               (se publica tal cual en la raíz de la web)
+│   ├── data/             (/data/teamsEmea.json…)
+│   │   ├── teamsAmer.json
+│   │   ├── teamsCN.json
+│   │   ├── teamsEmea.json
+│   │   └── teamsPACF.json
+│   ├── logos/            (logos de equipo: /logos/…)
+│   ├── players/          (fotos de jugadores: /players/…)
+│   └── staff/            (fotos de staff: /staff/…)
 ├── photos/
 │   └── backgrounds/tarjetas/
 ├── src/
@@ -95,7 +101,29 @@ Mercado-Fichajes-VLR/
 └── README.md
 ```
 
-Para actualizar los datos basta con editar los JSON de `data/` y hacer push: Vercel vuelve a desplegar y la fecha de "Actualizado" se toma del último commit que tocó esa carpeta.
+Para actualizar los datos basta con editar los JSON de `public/data/` y hacer push: Vercel vuelve a desplegar y la fecha de "Actualizado" se toma del último commit que tocó esa carpeta.
+
+### 🖼️ Añadir logos y fotos
+
+1. Copia la imagen en su carpeta: `public/logos/`, `public/players/` o `public/staff/`.
+2. Enlázala en el JSON con una ruta que empiece por `/`:
+
+```json
+{
+  "name": "FNATIC",
+  "logoUrl": "/logos/fnatic.png",
+  "players": [
+    { "name": "Boaster", "status": "confirmed", "flag": "🇬🇧", "igl": true, "photoUrl": "/players/boaster.jpg" }
+  ],
+  "staff": [
+    { "role": "Head Coach", "name": "ENG", "flag": "🇷🇺", "photoUrl": "/staff/eng.jpg" }
+  ]
+}
+```
+
+- **Logos:** cuadrados, con fondo transparente (PNG o SVG). Se muestran antes del nombre del equipo en la tarjeta, en la vista grande y en el modo captura.
+- **Fotos:** vertical 4:5 (por ejemplo 400×500), JPG o WebP. Se ven al hacer clic en un equipo.
+- Sin imagen (o si la ruta falla) se muestran las iniciales, así que se pueden ir añadiendo poco a poco.
 
 ---
 
@@ -225,7 +253,7 @@ Previsualiza la carpeta `dist/` con Vite.
 
 ## 📝 Notas
 
-* Los datos se sirven como archivos JSON estáticos desde `data/`.
+* Los datos se sirven como archivos JSON estáticos desde `public/data/`.
 * El proyecto no usa frameworks; la única dependencia es `flag-icons` para las banderas.
 
 ---
