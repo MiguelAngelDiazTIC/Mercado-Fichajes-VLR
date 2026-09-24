@@ -3,206 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VCT Transfer Hub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <title>VCT Mercato</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo" onclick="showPage('home')">
-    <div class="v-icon">V</div>
-    <div>
-      <div class="nav-brand">VCT <span>TRANSFERS</span></div>
-      <div class="nav-sub">MERCADO DE FICHAJES</div>
+<header class="masthead">
+  <nav class="nav">
+    <button class="nav-brand" type="button" onclick="showPage('home');setTabByName('Inicio')">VCT TRANSFERS</button>
+    <div class="nav-tabs">
+      <button class="nav-tab active" type="button" onclick="showPage('home');setTab(this)">Inicio</button>
+      <button class="nav-tab" type="button" onclick="showPage('emea');setTab(this)">EMEA</button>
+      <button class="nav-tab" type="button" onclick="showPage('apac');setTab(this)">APAC</button>
+      <button class="nav-tab" type="button" onclick="showPage('amer');setTab(this)">AMER</button>
+      <button class="nav-tab" type="button" onclick="showPage('cn');setTab(this)">CN</button>
+      <button class="nav-tab" type="button" onclick="showPage('nats');setTab(this)">Selecciones</button>
     </div>
-  </div>
-  <div class="nav-tabs">
-    <div class="nav-tab active" onclick="showPage('home');setTab(this)">Inicio</div>
-    <div class="nav-tab" onclick="showPage('emea');setTab(this)">EMEA</div>
-    <div class="nav-tab" onclick="showPage('apac');setTab(this)">APAC</div>
-    <div class="nav-tab" onclick="showPage('amer');setTab(this)">AMER</div>
-    <div class="nav-tab" onclick="showPage('cn');setTab(this)">CN</div>
-    <div class="nav-tab" onclick="showPage('nats');setTab(this)">Selecciones</div>
-  </div>
-  <a class="nav-credit" href="https://x.com/MiikaElVAL" target="_blank" rel="noopener noreferrer">@MiikaElVAL</a>
-</nav>
+    <div class="nav-meta">
+      <span>2025 / 26</span>
+      <span class="nav-slash">/</span>
+      <a class="nav-credit" href="https://x.com/MiikaElVAL" target="_blank" rel="noopener noreferrer">@MiikaElVAL</a>
+    </div>
+  </nav>
+</header>
 
 <!-- HOME -->
-<div id="page-home" class="page active">
-  <div class="home-layout">
-
-    <!-- Left: Hero -->
-    <div class="home-hero">
-      <div>
-        <div class="hero-tag">
-          <span class="live-dot"></span>
-          Temporada 2025/26 · Transfer Window
-        </div>
-        <h1 class="hero-title">
-          <span class="line1">VCT</span>
-          <span class="line2">TRANSFER</span>
-          <span class="line3">HUB · 2025/26</span>
-        </h1>
-        <p class="hero-desc">
-          Todos los movimientos del mercado competitivo de Valorant en un solo lugar.
-          Fichajes confirmados, renovaciones y rumores organizados por región y equipo.
-        </p>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">42</div>
-          <div class="stat-label">Equipos</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">4</div>
-          <div class="stat-label">Regiones</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">09/06</div>
-          <div class="stat-label">Actualizado</div>
-        </div>
-      </div>
+<main id="page-home" class="page active">
+  <section class="hero frame">
+    <h1 class="hero-word">MERCATO<span class="hero-tm">™</span></h1>
+    <div class="meta-row">
+      <span>Valorant Champions Tour</span>
+      <span>Mercado de fichajes 2025/26</span>
+      <span>Fichajes · Renovaciones · Rumores</span>
     </div>
+  </section>
 
-    <!-- Right: Region list -->
-    <div class="home-regions">
+  <section class="intro frame">
+    <div class="label">Mercado /</div>
+    <p class="intro-text">
+      Todos los movimientos del mercado competitivo de Valorant en un solo lugar.
+      Fichajes confirmados, renovaciones y rumores organizados por región y equipo.
+    </p>
+    <dl class="stats">
+      <div class="stat"><dt>Equipos</dt><dd>42</dd></div>
+      <div class="stat"><dt>Regiones</dt><dd>4</dd></div>
+      <div class="stat"><dt>Actualizado</dt><dd>09/06</dd></div>
+    </dl>
+  </section>
 
-      <div class="region-entry emea" onclick="showPage('emea');setTabByName('EMEA')">
-        <div class="re-top">
-          <div class="re-code">EMEA</div>
-          <div class="re-arrow">→</div>
-        </div>
-        <div class="re-name">Europe · Middle East · Africa — 12 equipos</div>
-      </div>
-
-      <div class="region-entry apac" onclick="showPage('apac');setTabByName('APAC')">
-        <div class="re-top">
-          <div class="re-code">APAC</div>
-          <div class="re-arrow">→</div>
-        </div>
-        <div class="re-name">Asia-Pacific — 10 equipos</div>
-      </div>
-
-      <div class="region-entry amer" onclick="showPage('amer');setTabByName('AMER')">
-        <div class="re-top">
-          <div class="re-code">AMER</div>
-          <div class="re-arrow">→</div>
-        </div>
-        <div class="re-name">Americas — 10 equipos</div>
-      </div>
-
-      <div class="region-entry cn" onclick="showPage('cn');setTabByName('CN')">
-        <div class="re-top">
-          <div class="re-code">CN</div>
-          <div class="re-arrow">→</div>
-        </div>
-        <div class="re-name">China — 10 equipos</div>
-      </div>
-
-      <div class="region-entry nats" onclick="showPage('nats');setTabByName('Selecciones')">
-        <div class="re-top">
-          <div class="re-code">ENC</div>
-          <div class="re-arrow">→</div>
-        </div>
-        <div class="re-name">Selecciones Nacionales — Nations Cup 2025</div>
-      </div>
-
+  <section class="strip-wrap frame" aria-label="Regiones">
+    <div class="strip-mark" aria-hidden="true">V</div>
+    <div class="strip">
+      <button class="strip-panel emea" type="button" onclick="showPage('emea');setTabByName('EMEA')">
+        <span class="sp-index">01</span>
+        <span class="sp-code">EMEA</span>
+        <span class="sp-name">Europe · Middle East · Africa — 12 equipos</span>
+      </button>
+      <button class="strip-panel apac" type="button" onclick="showPage('apac');setTabByName('APAC')">
+        <span class="sp-index">02</span>
+        <span class="sp-code">APAC</span>
+        <span class="sp-name">Asia-Pacific — 10 equipos</span>
+      </button>
+      <button class="strip-panel amer" type="button" onclick="showPage('amer');setTabByName('AMER')">
+        <span class="sp-index">03</span>
+        <span class="sp-code">AMER</span>
+        <span class="sp-name">Americas — 10 equipos</span>
+      </button>
+      <button class="strip-panel cn" type="button" onclick="showPage('cn');setTabByName('CN')">
+        <span class="sp-index">04</span>
+        <span class="sp-code">CN</span>
+        <span class="sp-name">China — 10 equipos</span>
+      </button>
+      <button class="strip-panel nats" type="button" onclick="showPage('nats');setTabByName('Selecciones')">
+        <span class="sp-index">05</span>
+        <span class="sp-code">ENC</span>
+        <span class="sp-name">Selecciones Nacionales — Nations Cup 2025</span>
+      </button>
     </div>
-  </div>
-</div>
+  </section>
+
+  <footer class="footer frame">
+    <div class="meta-row">
+      <span>VCT Transfer Hub</span>
+      <span>Datos no oficiales</span>
+      <a href="https://x.com/MiikaElVAL" target="_blank" rel="noopener noreferrer">@MiikaElVAL</a>
+    </div>
+  </footer>
+</main>
 
 <!-- EMEA -->
-<div id="page-emea" class="page">
-  <div class="region-header">
-    <div class="rh-bar" style="background:var(--emea)"></div>
-    <div>
-      <div class="rh-title">EMEA</div>
-      <div class="rh-sub">Europe · Middle East · Africa — VCT 2026</div>
+<main id="page-emea" class="page">
+  <header class="region-header frame">
+    <div class="rh-top">
+      <span class="label">Región / 01</span>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
     </div>
-    <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+    <h1 class="rh-title">EMEA</h1>
+    <div class="meta-row">
+      <span>Europe · Middle East · Africa</span>
+      <span>VCT 2026</span>
+      <span id="emea-count">—</span>
+    </div>
+  </header>
+  <div class="legend frame" aria-label="Leyenda de estados">
+    <span class="legend-item"><span class="mark status-confirmed"></span>Confirmado</span>
+    <span class="legend-item"><span class="mark status-likely"></span>Probable</span>
+    <span class="legend-item"><span class="mark status-possible"></span>Posible</span>
+    <span class="legend-item"><span class="mark status-rumor"></span>Rumor</span>
+    <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
-  <div class="legend-inline">
-    <div class="legend-item"><span class="legend-dot status-confirmed"></span>Confirmado</div>
-    <div class="legend-item"><span class="legend-dot status-likely"></span>Probable</div>
-    <div class="legend-item"><span class="legend-dot status-possible"></span>Posible</div>
-    <div class="legend-item"><span class="legend-dot status-rumor"></span>Rumor</div>
-    <div class="legend-item"><span class="legend-dot status-benched"></span>Benched/Sub</div>
-  </div>
-  <div class="teams-container"><div class="teams-grid" id="emea-grid"></div></div>
-</div>
+  <div class="teams-container frame"><div class="teams-grid" id="emea-grid"></div></div>
+</main>
 
 <!-- APAC -->
-<div id="page-apac" class="page">
-  <div class="region-header">
-    <div class="rh-bar" style="background:var(--apac)"></div>
-    <div>
-      <div class="rh-title">APAC</div>
-      <div class="rh-sub">Asia-Pacific — VCT 2026</div>
+<main id="page-apac" class="page">
+  <header class="region-header frame">
+    <div class="rh-top">
+      <span class="label">Región / 02</span>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
     </div>
-    <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+    <h1 class="rh-title">APAC</h1>
+    <div class="meta-row">
+      <span>Asia-Pacific</span>
+      <span>VCT 2026</span>
+      <span id="apac-count">—</span>
+    </div>
+  </header>
+  <div class="legend frame" aria-label="Leyenda de estados">
+    <span class="legend-item"><span class="mark status-confirmed"></span>Confirmado</span>
+    <span class="legend-item"><span class="mark status-likely"></span>Probable</span>
+    <span class="legend-item"><span class="mark status-possible"></span>Posible</span>
+    <span class="legend-item"><span class="mark status-rumor"></span>Rumor</span>
+    <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
-  <div class="legend-inline">
-    <div class="legend-item"><span class="legend-dot status-confirmed"></span>Confirmado</div>
-    <div class="legend-item"><span class="legend-dot status-likely"></span>Probable</div>
-    <div class="legend-item"><span class="legend-dot status-possible"></span>Posible</div>
-    <div class="legend-item"><span class="legend-dot status-rumor"></span>Rumor</div>
-    <div class="legend-item"><span class="legend-dot status-benched"></span>Benched/Sub</div>
-  </div>
-  <div class="teams-container"><div class="teams-grid" id="apac-grid"></div></div>
-</div>
+  <div class="teams-container frame"><div class="teams-grid" id="apac-grid"></div></div>
+</main>
 
 <!-- AMER -->
-<div id="page-amer" class="page">
-  <div class="region-header">
-    <div class="rh-bar" style="background:var(--amer)"></div>
-    <div>
-      <div class="rh-title">AMER</div>
-      <div class="rh-sub">Americas — VCT 2026</div>
+<main id="page-amer" class="page">
+  <header class="region-header frame">
+    <div class="rh-top">
+      <span class="label">Región / 03</span>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
     </div>
-    <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+    <h1 class="rh-title">AMER</h1>
+    <div class="meta-row">
+      <span>Americas</span>
+      <span>VCT 2026</span>
+      <span id="amer-count">—</span>
+    </div>
+  </header>
+  <div class="legend frame" aria-label="Leyenda de estados">
+    <span class="legend-item"><span class="mark status-confirmed"></span>Confirmado</span>
+    <span class="legend-item"><span class="mark status-likely"></span>Probable</span>
+    <span class="legend-item"><span class="mark status-possible"></span>Posible</span>
+    <span class="legend-item"><span class="mark status-rumor"></span>Rumor</span>
+    <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
-  <div class="legend-inline">
-    <div class="legend-item"><span class="legend-dot status-confirmed"></span>Confirmado</div>
-    <div class="legend-item"><span class="legend-dot status-likely"></span>Probable</div>
-    <div class="legend-item"><span class="legend-dot status-possible"></span>Posible</div>
-    <div class="legend-item"><span class="legend-dot status-rumor"></span>Rumor</div>
-    <div class="legend-item"><span class="legend-dot status-benched"></span>Benched/Sub</div>
-  </div>
-  <div class="teams-container"><div class="teams-grid" id="amer-grid"></div></div>
-</div>
+  <div class="teams-container frame"><div class="teams-grid" id="amer-grid"></div></div>
+</main>
 
 <!-- CN -->
-<div id="page-cn" class="page">
-  <div class="region-header">
-    <div class="rh-bar" style="background:var(--cn)"></div>
-    <div>
-      <div class="rh-title">CN</div>
-      <div class="rh-sub">China — VCT 2026</div>
+<main id="page-cn" class="page">
+  <header class="region-header frame">
+    <div class="rh-top">
+      <span class="label">Región / 04</span>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
     </div>
-    <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+    <h1 class="rh-title">CN</h1>
+    <div class="meta-row">
+      <span>China</span>
+      <span>VCT 2026</span>
+      <span id="cn-count">—</span>
+    </div>
+  </header>
+  <div class="legend frame" aria-label="Leyenda de estados">
+    <span class="legend-item"><span class="mark status-confirmed"></span>Confirmado</span>
+    <span class="legend-item"><span class="mark status-likely"></span>Probable</span>
+    <span class="legend-item"><span class="mark status-possible"></span>Posible</span>
+    <span class="legend-item"><span class="mark status-rumor"></span>Rumor</span>
+    <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
-  <div class="legend-inline">
-    <div class="legend-item"><span class="legend-dot status-confirmed"></span>Confirmado</div>
-    <div class="legend-item"><span class="legend-dot status-likely"></span>Probable</div>
-    <div class="legend-item"><span class="legend-dot status-possible"></span>Posible</div>
-    <div class="legend-item"><span class="legend-dot status-rumor"></span>Rumor</div>
-    <div class="legend-item"><span class="legend-dot status-benched"></span>Benched/Sub</div>
-  </div>
-  <div class="teams-container"><div class="teams-grid" id="cn-grid"></div></div>
-</div>
+  <div class="teams-container frame"><div class="teams-grid" id="cn-grid"></div></div>
+</main>
 
 <!-- SELECCIONES -->
-<div id="page-nats" class="page">
-  <div class="region-header">
-    <div class="rh-bar" style="background:var(--nats)"></div>
-    <div>
-      <div class="rh-title">SELECCIONES</div>
-      <div class="rh-sub">ENC · Nations Cup 2025</div>
+<main id="page-nats" class="page">
+  <header class="region-header frame">
+    <div class="rh-top">
+      <span class="label">Región / 05</span>
+      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
     </div>
-    <button class="back-btn" onclick="showPage('home');setTabByName('Inicio')">← Volver</button>
+    <h1 class="rh-title">SELECCIONES</h1>
+    <div class="meta-row">
+      <span>Selecciones nacionales</span>
+      <span>ENC · Nations Cup 2025</span>
+      <span>Próximamente</span>
+    </div>
+  </header>
+  <div class="teams-container frame">
+    <p class="empty-state">Las convocatorias de la Nations Cup aparecerán aquí.</p>
   </div>
-</div>
+</main>
 
 <script type="module" src="./src/RegionTable.ts"></script>
 </body>

@@ -15,11 +15,14 @@ let currentSearch = '';
 let currentStatus: FilterStatus = '';
 const regionDataPromise = loadRegions();
 
-// ─── Helpers ──────────────────────────────────────────────
-
-function initials(name: string): string {
-  return name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
-}
+const statusLabels: Record<string, string> = {
+  confirmed: 'Confirmado',
+  likely: 'Probable',
+  possible: 'Posible',
+  rumor: 'Rumor',
+  benched: 'Benched / Sub',
+  out: 'Fuera',
+};
 
 // ─── Stagger animation via IntersectionObserver ───────────
 
@@ -57,18 +60,17 @@ async function renderRegion(id: RegionKey): Promise<void> {
   if (!region) return;
 
   const playerHtml = (player: Player): string => {
-    const avatarInitials = initials(player.name);
-    // When you have real photos, swap the initials span for:
-    // <img src="${player.photoUrl}" alt="${player.name}">
+    // Solo se muestra avatar cuando hay foto real
     const avatarHtml = player.photoUrl
-      ? `<img src="${player.photoUrl}" alt="${player.name}">`
-      : avatarInitials;
+      ? `<div class="player-avatar"><img src="${player.photoUrl}" alt=""></div>`
+      : '';
 
     const iglBadge = player.igl ? `<span class="player-igl">IGL</span>` : '';
+    const statusLabel = statusLabels[player.status] ?? player.status;
 
     return `<div class="player-row">
-      <div class="player-avatar" title="${player.name}">${avatarHtml}</div>
-      <div class="player-status status-${player.status}"></div>
+      <span class="mark player-status status-${player.status}" role="img" aria-label="${statusLabel}" title="${statusLabel}"></span>
+      ${avatarHtml}
       <div class="player-info">
         <span class="player-name">${player.name}</span>
         <span class="player-flag">${player.flag}</span>
@@ -77,7 +79,10 @@ async function renderRegion(id: RegionKey): Promise<void> {
     </div>`;
   };
 
-  grid.innerHTML = region.teams.map(team => {
+  const count = document.getElementById(`${id}-count`);
+  if (count) count.textContent = `${region.teams.length} equipos`;
+
+  grid.innerHTML = region.teams.map((team, index) => {
     const starters = team.players.filter(p => p.status !== 'benched' && p.status !== 'rumor');
     const bench    = team.players.filter(p => p.status === 'benched' || p.status === 'rumor');
 
@@ -88,18 +93,18 @@ async function renderRegion(id: RegionKey): Promise<void> {
     const rosterHtml = `
       <div class="team-roster-grid">
         <div class="roster-column">
-          <div class="roster-column-title">Roster</div>
+          <div class="roster-column-title">Roster /</div>
           ${starters.map(playerHtml).join('')}
         </div>
         <div class="roster-column">
-          <div class="roster-column-title">Subs / Rumores</div>
+          <div class="roster-column-title">Subs · Rumores /</div>
           ${benchHtml}
         </div>
       </div>`;
 
     const staffHtml = Array.isArray(team.staff) && team.staff.length
       ? `<div class="team-staff">
-          <div class="staff-title">Staff</div>
+          <div class="staff-title">Staff /</div>
           ${team.staff.map(m =>
             `<div class="staff-row">
               <span class="staff-role">${m.role}</span>
@@ -116,14 +121,15 @@ async function renderRegion(id: RegionKey): Promise<void> {
       ? `<div class="team-note">${team.note}</div>`
       : '';
 
-    // team-logo: when you have real logos, render the image
+    // Solo se muestra logo cuando hay imagen real; si no, el número de orden
     const logoHtml = team.logoUrl
-      ? `<img src="${team.logoUrl}" alt="${team.name}">`
-      : initials(team.name);
+      ? `<div class="team-logo"><img src="${team.logoUrl}" alt=""></div>`
+      : '';
 
     return `<div class="team-card">
       <div class="team-card-header">
-        <div class="team-logo" title="${team.name}">${logoHtml}</div>
+        <span class="team-index">${String(index + 1).padStart(2, '0')}</span>
+        ${logoHtml}
         <span class="team-name">${team.name}</span>
         <span class="team-flag">${team.flag}</span>
       </div>
@@ -143,6 +149,7 @@ function showPage(id: string): void {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   const page = document.getElementById('page-' + id);
   if (page) page.classList.add('active');
+  window.scrollTo(0, 0);
   if (regionIds.includes(id as RegionKey)) {
     resetFilters();
     renderRegion(id as RegionKey);
