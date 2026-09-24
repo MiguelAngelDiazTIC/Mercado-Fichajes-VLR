@@ -14,7 +14,7 @@
             "status": "confirmed",
             "name": "nAts",
             "flag": "🇷🇺",
-            "photoUrl": null,
+            "photoUrl": "players/nats.png",
             "igl": true
           },
           {
@@ -74,7 +74,7 @@
           }
         ],
         "note": null,
-        "logoUrl": null
+        "logoUrl": "/logos/team-liquid-logo.png"
       },
       {
         "flag": "🇹🇷",
