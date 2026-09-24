@@ -22,11 +22,10 @@
       <button class="nav-tab" type="button" onclick="showPage('apac');setTab(this)">APAC</button>
       <button class="nav-tab" type="button" onclick="showPage('amer');setTab(this)">AMER</button>
       <button class="nav-tab" type="button" onclick="showPage('cn');setTab(this)">CN</button>
-      <button class="nav-tab" type="button" onclick="showPage('nats');setTab(this)">Selecciones</button>
       <span class="nav-indicator" aria-hidden="true"></span>
     </div>
     <div class="nav-meta">
-      <span>2025 / 26</span>
+      <span>2026 / 27</span>
       <span class="nav-slash">/</span>
       <a class="nav-credit" href="https://x.com/MiikaElVAL" target="_blank" rel="noopener noreferrer">@MiikaElVAL</a>
     </div>
@@ -43,7 +42,7 @@
     </h1>
     <div class="meta-row">
       <span>Valorant Champions Tour</span>
-      <span>Mercado de fichajes 2025/26</span>
+      <span>Mercado de fichajes 2026/27</span>
       <span>Fichajes · Renovaciones · Rumores</span>
     </div>
   </section>
@@ -80,10 +79,6 @@
         <span class="sp-code">CN</span>
         <span class="sp-name">China ·&nbsp;<span id="strip-count-cn">—</span>&nbsp;equipos</span>
       </button>
-      <button class="strip-panel nats" style="--i:4" type="button" onclick="showPage('nats');setTabByName('Selecciones')">
-        <span class="sp-code">ENC</span>
-        <span class="sp-name">Selecciones Nacionales ·&nbsp;Nations Cup 2025</span>
-      </button>
     </div>
   </section>
 
@@ -100,6 +95,7 @@
 <section id="page-emea" class="page">
   <header class="region-header frame">
     <div class="rh-top">
+      <button class="capture-btn" type="button" onclick="openCapture('emea')" aria-haspopup="dialog"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM9 9h5v5H9z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Modo captura</button>
       <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
     </div>
     <h1 class="rh-title" tabindex="-1">EMEA</h1>
@@ -123,6 +119,7 @@
 <section id="page-apac" class="page">
   <header class="region-header frame">
     <div class="rh-top">
+      <button class="capture-btn" type="button" onclick="openCapture('apac')" aria-haspopup="dialog"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM9 9h5v5H9z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Modo captura</button>
       <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
     </div>
     <h1 class="rh-title" tabindex="-1">APAC</h1>
@@ -146,6 +143,7 @@
 <section id="page-amer" class="page">
   <header class="region-header frame">
     <div class="rh-top">
+      <button class="capture-btn" type="button" onclick="openCapture('amer')" aria-haspopup="dialog"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM9 9h5v5H9z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Modo captura</button>
       <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
     </div>
     <h1 class="rh-title" tabindex="-1">AMER</h1>
@@ -169,6 +167,7 @@
 <section id="page-cn" class="page">
   <header class="region-header frame">
     <div class="rh-top">
+      <button class="capture-btn" type="button" onclick="openCapture('cn')" aria-haspopup="dialog"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM9 9h5v5H9z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Modo captura</button>
       <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
     </div>
     <h1 class="rh-title" tabindex="-1">CN</h1>
@@ -186,24 +185,6 @@
     <span class="legend-item"><span class="mark status-benched"></span>Benched / Sub</span>
   </div>
   <div class="teams-container frame"><div class="teams-grid" id="cn-grid"></div></div>
-</section>
-
-<!-- SELECCIONES -->
-<section id="page-nats" class="page">
-  <header class="region-header frame">
-    <div class="rh-top">
-      <button class="back-btn" type="button" onclick="showPage('home');setTabByName('Inicio')"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Volver</button>
-    </div>
-    <h1 class="rh-title" tabindex="-1">SELECCIONES</h1>
-    <div class="meta-row">
-      <span>Selecciones nacionales</span>
-      <span>ENC · Nations Cup 2025</span>
-      <span>Próximamente</span>
-    </div>
-  </header>
-  <div class="teams-container frame">
-    <p class="empty-state">Las convocatorias de la Nations Cup aparecerán aquí.</p>
-  </div>
 </section>
 
 </main>
