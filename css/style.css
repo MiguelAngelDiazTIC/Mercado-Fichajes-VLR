@@ -413,6 +413,8 @@ a{color:inherit}
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 .player-flag{font-size:13px;flex-shrink:0}
+/* Banderas SVG (flag-icons): perfil fino para que las blancas no se pierdan */
+.fi{box-shadow:0 0 0 1px rgba(0,0,0,0.12)}
 .player-igl{
   margin-left:auto;
   font-size:9px;font-weight:800;letter-spacing:0.16em;

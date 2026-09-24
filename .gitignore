@@ -1,0 +1,14 @@
+# Dependencias (se reinstalan con npm install)
+node_modules/
+
+# Builds
+dist/
+backend/dist/
+
+# Entorno y sistema
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log

@@ -48,9 +48,9 @@
       Fichajes confirmados, renovaciones y rumores organizados por región y equipo.
     </p>
     <dl class="stats">
-      <div class="stat"><dt>Equipos</dt><dd>42</dd></div>
-      <div class="stat"><dt>Regiones</dt><dd>4</dd></div>
-      <div class="stat"><dt>Actualizado</dt><dd>09/06</dd></div>
+      <div class="stat"><dt>Equipos</dt><dd id="stat-teams">—</dd></div>
+      <div class="stat"><dt>Regiones</dt><dd id="stat-regions">—</dd></div>
+      <div class="stat"><dt>Actualizado</dt><dd id="stat-updated">—</dd></div>
     </dl>
   </section>
 
@@ -60,22 +60,22 @@
       <button class="strip-panel emea" type="button" onclick="showPage('emea');setTabByName('EMEA')">
         <span class="sp-index">01</span>
         <span class="sp-code">EMEA</span>
-        <span class="sp-name">Europe · Middle East · Africa — 12 equipos</span>
+        <span class="sp-name">Europe · Middle East · Africa — <span id="strip-count-emea">—</span> equipos</span>
       </button>
       <button class="strip-panel apac" type="button" onclick="showPage('apac');setTabByName('APAC')">
         <span class="sp-index">02</span>
         <span class="sp-code">APAC</span>
-        <span class="sp-name">Asia-Pacific — 10 equipos</span>
+        <span class="sp-name">Asia-Pacific — <span id="strip-count-apac">—</span> equipos</span>
       </button>
       <button class="strip-panel amer" type="button" onclick="showPage('amer');setTabByName('AMER')">
         <span class="sp-index">03</span>
         <span class="sp-code">AMER</span>
-        <span class="sp-name">Americas — 10 equipos</span>
+        <span class="sp-name">Americas — <span id="strip-count-amer">—</span> equipos</span>
       </button>
       <button class="strip-panel cn" type="button" onclick="showPage('cn');setTabByName('CN')">
         <span class="sp-index">04</span>
         <span class="sp-code">CN</span>
-        <span class="sp-name">China — 10 equipos</span>
+        <span class="sp-name">China — <span id="strip-count-cn">—</span> equipos</span>
       </button>
       <button class="strip-panel nats" type="button" onclick="showPage('nats');setTabByName('Selecciones')">
         <span class="sp-index">05</span>

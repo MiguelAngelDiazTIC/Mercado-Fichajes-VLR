@@ -1,4 +1,5 @@
-import { loadRegions, Player } from './main.js';
+import 'flag-icons/css/flag-icons.min.css';
+import { loadRegions, Player, Region } from './main.js';
 
 type FilterStatus = '' | 'confirmed' | 'likely' | 'possible' | 'rumor';
 type RegionKey = 'emea' | 'apac' | 'amer' | 'cn';
@@ -23,6 +24,74 @@ const statusLabels: Record<string, string> = {
   benched: 'Benched / Sub',
   out: 'Fuera',
 };
+
+// ─── Banderas ─────────────────────────────────────────────
+// Los JSON guardan emojis de bandera; Windows los pinta como letras,
+// así que se convierten a código ISO y se dibujan con flag-icons (SVG).
+
+const regionNames = new Intl.DisplayNames(['es'], { type: 'region' });
+const subdivisionNames: Record<string, string> = {
+  'gb-eng': 'Inglaterra',
+  'gb-sct': 'Escocia',
+  'gb-wls': 'Gales',
+};
+
+function flagCode(emoji: string): string | null {
+  const cps = Array.from(emoji).map(c => c.codePointAt(0)!);
+  // Par de indicadores regionales: 🇪🇸 → "es"
+  if (cps.length === 2 && cps.every(c => c >= 0x1F1E6 && c <= 0x1F1FF)) {
+    return String.fromCharCode(...cps.map(c => c - 0x1F1E6 + 97));
+  }
+  // Secuencia de etiquetas: 🏴 + "gbsct" + cancelar → "gb-sct"
+  if (cps[0] === 0x1F3F4 && cps.length > 2) {
+    const tag = cps.slice(1, -1).map(c => String.fromCharCode(c - 0xE0000)).join('');
+    return `${tag.slice(0, 2)}-${tag.slice(2)}`;
+  }
+  return null;
+}
+
+function flagName(code: string): string {
+  if (subdivisionNames[code]) return subdivisionNames[code];
+  try {
+    return regionNames.of(code.toUpperCase()) ?? code.toUpperCase();
+  } catch {
+    return code.toUpperCase();
+  }
+}
+
+function flagHtml(emoji: string | undefined, cls: string): string {
+  if (!emoji) return '';
+  const code = flagCode(emoji);
+  if (!code) return `<span class="${cls}">${emoji}</span>`;
+  const name = flagName(code);
+  return `<span class="fi fi-${code} ${cls}" role="img" aria-label="${name}" title="${name}"></span>`;
+}
+
+// ─── Datos de portada ─────────────────────────────────────
+
+function renderHomeStats(regions: Region[]): void {
+  const setText = (id: string, text: string) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  };
+  const total = regions.reduce((sum, r) => sum + r.teams.length, 0);
+  setText('stat-teams', String(total));
+  setText('stat-regions', String(regions.length));
+
+  (Object.keys(regionIdMap) as RegionKey[]).forEach(key => {
+    const region = regions.find(r => r.id === regionIdMap[key]);
+    if (region) setText(`strip-count-${key}`, String(region.teams.length));
+  });
+}
+
+function renderUpdated(): void {
+  const el = document.getElementById('stat-updated');
+  const date = new Date(__DATA_UPDATED__);
+  if (!el || isNaN(date.getTime())) return;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  el.textContent = `${pad(date.getDate())}/${pad(date.getMonth() + 1)}`;
+  el.setAttribute('title', date.toLocaleDateString('es-ES', { dateStyle: 'long' }));
+}
 
 // ─── Stagger animation via IntersectionObserver ───────────
 
@@ -73,7 +142,7 @@ async function renderRegion(id: RegionKey): Promise<void> {
       ${avatarHtml}
       <div class="player-info">
         <span class="player-name">${player.name}</span>
-        <span class="player-flag">${player.flag}</span>
+        ${flagHtml(player.flag, 'player-flag')}
         ${iglBadge}
       </div>
     </div>`;
@@ -110,7 +179,7 @@ async function renderRegion(id: RegionKey): Promise<void> {
               <span class="staff-role">${m.role}</span>
               <span class="staff-meta">
                 <span class="staff-name">${m.name}</span>
-                ${m.flag ? `<span class="staff-flag">${m.flag}</span>` : ''}
+                ${flagHtml(m.flag, 'staff-flag')}
               </span>
             </div>`
           ).join('')}
@@ -131,7 +200,7 @@ async function renderRegion(id: RegionKey): Promise<void> {
         <span class="team-index">${String(index + 1).padStart(2, '0')}</span>
         ${logoHtml}
         <span class="team-name">${team.name}</span>
-        <span class="team-flag">${team.flag}</span>
+        ${flagHtml(team.flag, 'team-flag')}
       </div>
       <div class="team-roster">${rosterHtml}</div>
       ${noteHtml}
@@ -224,4 +293,6 @@ function sendPrompt(message: string): void {
 (window as any).setActiveFilter = setActiveFilter;
 (window as any).sendPrompt     = sendPrompt;
 
+renderUpdated();
+regionDataPromise.then(renderHomeStats, () => {});
 renderRegion('emea');

@@ -2,7 +2,8 @@
   "name": "mercado-fichajes-vlr",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run dev --prefix backend\" \"vite\"",
+    "dev": "vite",
+    "dev:backend": "npm run dev --prefix backend",
     "build": "npm install -g vite && vite build",
     "preview": "vite preview"
   },
@@ -25,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/MiguelAngelDiazTIC/Mercado-Fichajes-VLR/issues"
   },
-  "homepage": "https://github.com/MiguelAngelDiazTIC/Mercado-Fichajes-VLR#readme"
+  "homepage": "https://github.com/MiguelAngelDiazTIC/Mercado-Fichajes-VLR#readme",
+  "dependencies": {
+    "flag-icons": "^7.5.0"
+  }
 }
