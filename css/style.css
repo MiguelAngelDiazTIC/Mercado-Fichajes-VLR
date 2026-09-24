@@ -295,13 +295,15 @@ a{color:inherit}
   font-size:12px;
   letter-spacing:0.04em;
   max-width:28ch;
-  max-height:0;
-  overflow:hidden;
+  /* Se despliega con grid-template-rows 0fr -> 1fr (sin animar max-height) */
+  display:grid;
+  grid-template-rows:0fr;
   opacity:0;
-  transition:opacity 0.3s ease, max-height 0.4s var(--ease-out);
+  transition:opacity 0.3s ease, grid-template-rows 0.4s var(--ease-expo);
 }
+.sp-name-inner{min-height:0;overflow:hidden}
 .strip-panel:hover .sp-name,
-.strip-panel:focus-visible .sp-name{opacity:1;max-height:4em}
+.strip-panel:focus-visible .sp-name{opacity:1;grid-template-rows:1fr}
 .strip-panel:hover .sp-code{color:#fff}
 
 /* Marca gigante superpuesta (el ® de la referencia) */
@@ -548,7 +550,7 @@ a{color:inherit}
   .strip{flex-direction:column;height:auto}
   .strip-panel{flex:none;height:120px}
   .strip-panel:hover,.strip-panel:focus-visible{flex-grow:0}
-  .sp-name{opacity:1;max-height:none}
+  .sp-name{opacity:1;grid-template-rows:1fr}
   .strip-mark{right:var(--gutter)}
 }
 @media(max-width:520px){
@@ -556,7 +558,7 @@ a{color:inherit}
   .roster-column + .roster-column{margin-top:12px}
 }
 @media(hover:none){
-  .sp-name{opacity:1;max-height:none}
+  .sp-name{opacity:1;grid-template-rows:1fr}
 }
 /* ─── CAMBIO DE PÁGINA (View Transitions) ───
    La barra superior se queda quieta; la página sale rápido y la nueva
@@ -574,8 +576,11 @@ a{color:inherit}
 ::view-transition-new(region-title){
   /* Escalar las dos instantáneas a la altura del grupo, no estirarlas */
   height:100%;width:auto;
-  animation-duration:0.3s;
 }
+/* La instantánea pequeña se desvanece enseguida (ampliada se vería borrosa);
+   la grande, nítida al reducirse, hace todo el viaje */
+::view-transition-old(region-title){animation:0.12s ease both vt-out}
+::view-transition-new(region-title){animation:none}
 
 /* ─── MOVIMIENTO REDUCIDO ───
    Se quita el desplazamiento y se conservan los fundidos que comunican

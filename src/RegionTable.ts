@@ -300,10 +300,14 @@ function moveIndicator(): void {
 function initIndicator(): void {
   const indicator = document.querySelector<HTMLElement>('.nav-indicator');
   if (!indicator) return;
-  moveIndicator();
-  // Colocarlo sin animar y activar la transición en el siguiente frame
-  requestAnimationFrame(() => indicator.classList.add('ready'));
-  document.fonts?.ready.then(moveIndicator);
+  // Medir cuando la fuente ya está cargada (cambia el ancho de las pestañas)
+  // y activar la transición en el frame siguiente, para que no se deslice al cargar
+  const place = () => {
+    moveIndicator();
+    requestAnimationFrame(() => indicator.classList.add('ready'));
+  };
+  if (document.fonts) document.fonts.ready.then(place);
+  else place();
   window.addEventListener('resize', moveIndicator);
 }
 
