@@ -44,24 +44,17 @@ Toda la información se organiza por regiones para facilitar la navegación y el
 * Información organizada por equipos.
 * Soporte para jugadores y staff técnico.
 
-### 🔍 Sistema de filtros
-
-* Búsqueda por jugador.
-* Búsqueda por equipo.
-* Filtrado por rol.
-* Filtrado por estado del movimiento.
-
 ### 🎨 Interfaz
 
-* Diseño limpio y ligero.
-* Navegación entre regiones.
-* Dashboard dedicado para selecciones nacionales.
-* Colores personalizados por región.
+* Diseño de estilo suizo: blanco, negro y un único acento rojo.
+* Navegación entre regiones con transiciones animadas.
+* Estado de cada jugador marcado por forma y color (accesible).
+* Banderas en SVG y diseño adaptado a móvil.
 
 ### ⚡ Rendimiento
 
 * Sin frameworks externos.
-* Datos cargados desde archivos JSON.
+* Datos servidos como archivos JSON estáticos (sin backend).
 * Renderizado dinámico mediante TypeScript.
 
 ---
@@ -82,32 +75,28 @@ Toda la información se organiza por regiones para facilitar la navegación y el
 
 ```text
 Mercado-Fichajes-VLR/
-├── .git/
-├── node_modules/
 ├── css/
 │   └── style.css
-├── data/
+├── data/                 (se publica tal cual: /teamsEmea.json…)
 │   ├── teamsAmer.json
 │   ├── teamsCN.json
 │   ├── teamsEmea.json
 │   ├── teamsPACF.json
 │   └── teamsSEL.json
-├── dist/
-│   ├── assets/
-│   │   ├── index-DjZN0phc.css
-│   │   └── index-tzrnkB1X.js
-│   ├── index.html
-│   └── teams*.json  (copias públicas de los JSON usados en `src`)
+├── photos/
+│   └── backgrounds/tarjetas/
 ├── src/
-│   ├── main.ts
-│   └── RegionTable.ts
+│   ├── main.ts           (carga de datos y tipos)
+│   ├── RegionTable.ts    (render, navegación y animaciones)
+│   └── vite-env.d.ts
 ├── index.html
 ├── package.json
-├── package-lock.json
 ├── tsconfig.json
 ├── vite.config.ts
 └── README.md
 ```
+
+Para actualizar los datos basta con editar los JSON de `data/` y hacer push: Vercel vuelve a desplegar y la fecha de "Actualizado" se toma del último commit que tocó esa carpeta.
 
 ---
 
@@ -232,7 +221,6 @@ Previsualiza la carpeta `dist/` con Vite.
 3. `loadRegions()` carga las regiones disponibles.
 4. `renderRegion()` genera las tarjetas de equipos.
 5. `showPage()` controla la navegación.
-6. `filterPlayers()` y `filterStatus()` aplican los filtros dinámicos.
 
 ---
 
@@ -240,8 +228,8 @@ Previsualiza la carpeta `dist/` con Vite.
 
 * La sección de selecciones nacionales utiliza contenido HTML estático.
 * `teamsSEL.json` aún no está conectado dinámicamente.
-* Los datos se cargan localmente desde archivos JSON.
-* El proyecto no requiere frameworks ni librerías Frontend externas.
+* Los datos se sirven como archivos JSON estáticos desde `data/`.
+* El proyecto no usa frameworks; la única dependencia es `flag-icons` para las banderas.
 
 ---
 

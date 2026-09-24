@@ -34,7 +34,7 @@ export interface Region {
 }
 
 export async function loadRegions(): Promise<Region[]> {
-  // JSON estáticos publicados por Vite desde backend/data
+  // JSON estáticos publicados por Vite desde data/
   const baseUrl = import.meta.env.BASE_URL
   const files = [
     baseUrl + 'teamsEmea.json',
