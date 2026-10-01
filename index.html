@@ -10,6 +10,15 @@
   <link href="./css/style.css" rel="stylesheet">
   <!-- Antes del primer pintado: habilita los estados ocultos que luego anima el script -->
   <script>document.documentElement.classList.add('motion')</script>
+  <!-- Tema antes del primer pintado (sin destello): el elegido o, si no hay, el del sistema -->
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
 </head>
 <body>
 
@@ -25,6 +34,11 @@
       <span class="nav-indicator" aria-hidden="true"></span>
     </div>
     <div class="nav-meta">
+      <button class="theme-toggle" type="button" onclick="toggleTheme()">
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 2.5a5.5 5.5 0 0 1 0 11z" fill="currentColor"/></svg>
+        <span class="theme-toggle-label">Oscuro</span>
+      </button>
+      <span class="nav-slash">/</span>
       <span>2026 / 27</span>
       <span class="nav-slash">/</span>
       <a class="nav-credit" href="https://x.com/MiikaElVAL" target="_blank" rel="noopener noreferrer">@MiikaElVAL</a>

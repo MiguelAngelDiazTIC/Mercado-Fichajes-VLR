@@ -798,6 +798,36 @@ function initCreditsDialog(): void {
   });
 }
 
+// ─── Tema claro / oscuro ──────────────────────────────────
+// El tema inicial lo pone el script de index.html antes del primer pintado;
+// aquí solo se alterna, se recuerda la elección y se rotula el botón.
+
+type Theme = 'light' | 'dark';
+
+const currentTheme = (): Theme =>
+  document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+
+function syncThemeToggle(): void {
+  const dark = currentTheme() === 'dark';
+  document.querySelectorAll<HTMLElement>('.theme-toggle').forEach(btn => {
+    // El rótulo dice a qué modo se cambia
+    const label = btn.querySelector('.theme-toggle-label');
+    if (label) label.textContent = dark ? 'Claro' : 'Oscuro';
+    btn.setAttribute('aria-label', dark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+  });
+}
+
+function toggleTheme(): void {
+  const next: Theme = currentTheme() === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  try {
+    localStorage.setItem('theme', next);
+  } catch {
+    // Sin almacenamiento (modo privado): el cambio vale para esta visita
+  }
+  syncThemeToggle();
+}
+
 // ─── Expose globals ───────────────────────────────────────
 
 (window as any).showPage       = showPage;
@@ -807,7 +837,9 @@ function initCreditsDialog(): void {
 (window as any).filterTeams    = filterTeams;
 (window as any).openTeam       = openTeam;
 (window as any).openCredits    = openCredits;
+(window as any).toggleTheme    = toggleTheme;
 
+syncThemeToggle();
 initTeamDialog();
 initCreditsDialog();
 

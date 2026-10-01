@@ -10,6 +10,9 @@
   --accent:#d7261e;
   --green:#178a47;
   --surface:#f1f1ef;
+  --initials:#c4c4c0;
+  --flag-edge:rgba(0,0,0,0.12);
+  color-scheme:light;
 
   --gutter:clamp(16px,4vw,56px);
   --max:1600px;
@@ -19,6 +22,22 @@
 
   --ease-out:cubic-bezier(0.2,0.8,0.2,1);
   --ease-expo:cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Modo oscuro: mismos tokens invertidos. data-theme lo pone el script de index.html
+   (antes del primer pintado) y lo cambia toggleTheme en RegionTable.ts */
+:root[data-theme="dark"]{
+  --paper:#0e0e0e;
+  --ink:#f2f2ee;
+  --ink-2:#b4b4b0;
+  --ink-3:#8a8a86;
+  --rule:#3a3a3a;
+  --accent:#ff4a3d;
+  --green:#34c06f;
+  --surface:#1c1c1c;
+  --initials:#4c4c49;
+  --flag-edge:rgba(255,255,255,0.2);
+  color-scheme:dark;
 }
 
 html{background:var(--paper)}
@@ -146,6 +165,18 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 }
 .nav-credit{font-weight:700;color:var(--ink);text-decoration:none}
 .nav-credit:hover{color:var(--accent)}
+.theme-toggle{
+  position:relative;
+  display:inline-flex;align-items:center;gap:6px;
+  letter-spacing:inherit;text-transform:inherit;
+  color:var(--ink-2);
+  transition:color 0.15s;
+}
+/* Área táctil de ~44px sin cambiar el aspecto */
+.theme-toggle::before{content:'';position:absolute;inset:-14px -6px}
+.theme-toggle:hover{color:var(--ink)}
+.theme-toggle .icon{transition:transform 0.42s var(--ease-expo)}
+[data-theme="dark"] .theme-toggle .icon{transform:rotate(180deg)}
 
 /* ─── PAGES ─── */
 .page{display:none}
@@ -273,7 +304,7 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
   padding:18px;
   text-align:left;
   color:#fff;
-  background-color:var(--ink);
+  background-color:#0a0a0a;
 }
 .strip-panel::before,
 .strip-panel::after{
@@ -647,6 +678,9 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 .team-logo img,
 .cap-logo img,
 .td-logo img{display:block;width:100%;height:100%;object-fit:contain}
+/* En oscuro los logos van sobre una placa clara: muchos son la versión para fondo blanco */
+[data-theme="dark"] :is(.team-logo,.cap-logo){background:#f4f4f1;padding:3px}
+[data-theme="dark"] .td-logo{background:#f4f4f1;padding:6px}
 
 /* El botón del nombre cubre toda la tarjeta: toda ella es clicable */
 .team-open{
@@ -710,7 +744,7 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 }
 .player-flag{font-size:13px;flex-shrink:0}
 /* Banderas SVG (flag-icons): perfil fino para que las blancas no se pierdan */
-.fi{box-shadow:0 0 0 1px rgba(0,0,0,0.12)}
+.fi{box-shadow:0 0 0 1px var(--flag-edge)}
 .player-igl{
   margin-left:auto;
   font-size:11px;font-weight:800;letter-spacing:0.12em;
@@ -784,7 +818,7 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
   /* Fundido en el borde derecho: indica que la fila se desplaza */
   .nav-tabs{mask-image:linear-gradient(to right,#000 82%,transparent)}
   .nav-tab{flex-shrink:0}
-  .nav-meta > :not(.nav-credit){display:none}
+  .nav-meta > :not(.nav-credit):not(.theme-toggle){display:none}
 
   .meta-row{grid-template-columns:1fr;gap:4px}
   .meta-row > *{text-align:left !important}
@@ -819,6 +853,9 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
   scrollbar-width:thin;
 }
 .team-dialog::backdrop{background:rgba(10,10,10,0.6)}
+/* En oscuro el diálogo y la página son casi del mismo tono: se separa con un filo */
+[data-theme="dark"] .team-dialog{outline:1px solid var(--rule)}
+[data-theme="dark"] .team-dialog::backdrop{background:rgba(0,0,0,0.72)}
 .td-inner{padding:0 clamp(20px,3vw,44px) clamp(28px,4vw,56px)}
 .td-bar{
   position:sticky;top:0;z-index:2;
@@ -886,7 +923,7 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
   font-size:clamp(26px,3vw,36px);
   font-weight:800;
   font-stretch:var(--wide);
-  color:#c4c4c0;
+  color:var(--initials);
   letter-spacing:-0.02em;
 }
 .person figcaption{
