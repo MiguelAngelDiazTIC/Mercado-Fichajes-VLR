@@ -201,6 +201,8 @@ Borra su bloque completo `{ ... }` y revisa las comas: entre elementos va una co
 
 **Fotos del menú de regiones (portada):** están en `public/regions/` y las enlaza `css/style.css`. Para cambiar una, sustituye el archivo manteniendo el nombre (`emea.png`, `apac.jpg`, `amer.jpg`, `cn.jpg`). Si cambias el nombre o la extensión, actualiza también su línea en `css/style.css` (busca `/regions/`).
 
+**Descarga automática desde Liquipedia:** el proyecto aparte `vlr-image-scraper` descarga fotos y logos y rellena estos campos (solo los que están en `null`). El origen y la licencia de cada imagen quedan en `public/data/image-credits.json`; el pie de la web cita a Liquipedia.
+
 Sin imagen, o si la ruta está mal, la web muestra las iniciales en lugar de un icono roto, así que se pueden ir añadiendo poco a poco.
 
 ### Comprobar antes de publicar
