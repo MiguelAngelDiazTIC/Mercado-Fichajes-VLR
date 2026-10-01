@@ -28,7 +28,7 @@
             "status": "confirmed",
             "name": "samed",
             "flag": "🇦🇹",
-            "photoUrl": null,
+            "photoUrl": "/players/samed.jpg",
             "igl": false
           },
           {
@@ -79,7 +79,7 @@
             "status": "confirmed",
             "name": "BenjyFishy",
             "flag": "🇬🇧",
-            "photoUrl": null,
+            "photoUrl": "/players/benjyfishy.jpg",
             "igl": false
           },
           {
@@ -100,7 +100,7 @@
             "status": "rumor",
             "name": "Jamelinho",
             "flag": "🇫🇷",
-            "photoUrl": null,
+            "photoUrl": "/players/jamelinho.jpg",
             "igl": false
           }
         ],
@@ -185,7 +185,7 @@
             "status": "rumor",
             "name": "echo",
             "flag": "🇹🇷",
-            "photoUrl": null,
+            "photoUrl": "/players/echo.jpg",
             "igl": false
           },
           {
@@ -229,7 +229,7 @@
             "status": "confirmed",
             "name": "LewN",
             "flag": "🇹🇷",
-            "photoUrl": null,
+            "photoUrl": "/players/lewn.jpg",
             "igl": false
           },
           {
@@ -336,7 +336,7 @@
             "role": "Head Coach",
             "name": "KUNDIKUNDI",
             "flag": "🇫🇮",
-            "photoUrl": null
+            "photoUrl": "/staff/kundikundi.jpg"
           }
         ],
         "note": null,
@@ -364,7 +364,7 @@
             "status": "confirmed",
             "name": "KROSTALY",
             "flag": "🇹🇷",
-            "photoUrl": "/players/krostaly.png",
+            "photoUrl": "/players/krostaly.jpg",
             "igl": false
           },
           {
@@ -393,7 +393,7 @@
             "role": "Analista",
             "name": "Bambino",
             "flag": "🇬🇧",
-            "photoUrl": "/staff/bambino.png"
+            "photoUrl": "/staff/bambino.jpg"
           }
         ],
         "note": null,
@@ -556,7 +556,7 @@
             "status": "out",
             "name": "Lovers Rock",
             "flag": "🇹🇷",
-            "photoUrl": null,
+            "photoUrl": "/players/lovers-rock.jpg",
             "igl": false
           },
           {
@@ -635,7 +635,7 @@
             "status": "out",
             "name": "Exit",
             "flag": "🇸🇦",
-            "photoUrl": null,
+            "photoUrl": "/players/exit.jpg",
             "igl": false
           },
           {
@@ -744,7 +744,7 @@
             "status": "out",
             "name": "echo",
             "flag": "🇹🇷",
-            "photoUrl": null,
+            "photoUrl": "/players/echo.jpg",
             "igl": false
           },
           {
@@ -758,7 +758,7 @@
             "status": "rumor",
             "name": "MrFalin",
             "flag": "🇹🇷",
-            "photoUrl": null,
+            "photoUrl": "/players/mrfallin.jpg",
             "igl": false
           }
         ],
@@ -795,7 +795,7 @@
             "status": "rumor",
             "name": "echo",
             "flag": "🇹🇷",
-            "photoUrl": null,
+            "photoUrl": "/players/echo.jpg",
             "igl": false
           },
           {
@@ -852,7 +852,7 @@
             "role": "Assistant Coach",
             "name": "xikii",
             "flag": "🇪🇸",
-            "photoUrl": null
+            "photoUrl": "/staff/xikii.jpg"
           }
         ],
         "note": null,
@@ -873,7 +873,7 @@
             "status": "possible",
             "name": "BadreX",
             "flag": "🇹🇷",
-            "photoUrl": null,
+            "photoUrl": "/players/bradrex.jpeg",
             "igl": false
           },
           {
@@ -903,7 +903,7 @@
             "role": "Head Coach",
             "name": "Jonsyp",
             "flag": "🇹🇷",
-            "photoUrl": null
+            "photoUrl": "/staff/jonsyp.jpg"
           }
         ],
         "note": null,
@@ -940,7 +940,7 @@
             "role": "Head Coach",
             "name": "Larsson",
             "flag": "🇫🇷",
-            "photoUrl": null
+            "photoUrl": "/staff/larsson.jpg"
           }
         ],
         "note": null,
