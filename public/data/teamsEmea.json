@@ -7,48 +7,99 @@
     "_comment": "Status values: confirmed, likely, possible, rumor. Extras: benched, out.",
     "teams": [
       {
-        "flag": "🇳🇱",
-        "name": "TEAM LIQUID",
+        "flag": "🇩🇪",
+        "name": "CGN ESPORTS",
         "players": [
           {
             "status": "confirmed",
-            "name": "nAts",
-            "flag": "🇷🇺",
-            "photoUrl": "players/nats.png",
-            "igl": true
-          },
-          {
-            "status": "confirmed",
-            "name": "purp0",
-            "flag": "🇷🇺",
+            "name": "SerialKiller",
+            "flag": "🇱🇻",
             "photoUrl": null,
             "igl": false
           },
           {
             "status": "confirmed",
-            "name": "kamo",
-            "flag": "🇵🇱",
+            "name": "Wolfen",
+            "flag": "🇧🇬",
             "photoUrl": null,
             "igl": false
           },
           {
             "status": "confirmed",
+            "name": "samed",
+            "flag": "🇦🇹",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Vince",
+            "flag": "🇩🇪",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "shinnok",
+            "flag": "🇭🇺",
+            "photoUrl": null,
+            "igl": false
+          }
+        ],
+        "staff": [],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇪🇸",
+        "name": "TEAM HERETICS",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "hiro",
+            "flag": "🇳🇱",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "possible",
+            "name": "Wo0t",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "RieNs",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "BenjyFishy",
+            "flag": "🇬🇧",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "chloric",
+            "flag": "🇺🇸",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
             "name": "MiniBoo",
             "flag": "🇱🇹",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "benched",
-            "name": "wayne",
-            "flag": "🇸🇬",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "likely",
-            "name": "trexx",
-            "flag": "🇷🇺",
+            "status": "rumor",
+            "name": "Jamelinho",
+            "flag": "🇫🇷",
             "photoUrl": null,
             "igl": false
           }
@@ -56,25 +107,240 @@
         "staff": [
           {
             "role": "Head Coach",
-            "name": "LohaN",
-            "flag": "🇵🇹",
+            "name": "neilzinho",
+            "flag": "🇬🇧",
             "photoUrl": null
           },
           {
             "role": "Assistant Coach",
-            "name": "yaotziN.",
-            "flag": "🇵🇱",
-            "photoUrl": null
-          },
-          {
-            "role": "Analista",
-            "name": "Beacon9",
+            "name": "Weber",
             "flag": "🇬🇧",
             "photoUrl": null
           }
         ],
         "note": null,
-        "logoUrl": "/logos/team-liquid-logo.png"
+        "logoUrl": null
+      },
+      {
+        "flag": "🇬🇧",
+        "name": "FNATIC",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "kaajak",
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Cloud",
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "marteen",
+            "flag": "🇨🇿",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "out",
+            "name": "Boaster",
+            "flag": "🇬🇧",
+            "photoUrl": null,
+            "igl": true
+          },
+          {
+            "status": "rumor",
+            "name": "Boo",
+            "flag": "🇱🇹",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "al0rante",
+            "flag": "🇩🇪",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "possible",
+            "name": "westside",
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Spear",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "echo",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Loita",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Lar0k",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Oroni",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          }
+        ],
+        "staff": [
+          {
+            "role": "Assistant Coach",
+            "name": "Desmo",
+            "flag": "🇩🇰",
+            "photoUrl": null
+          }
+        ],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇫🇷",
+        "name": "KARMINE CORP",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "LewN",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "avez",
+            "flag": "🇪🇬",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "dos9",
+            "flag": "🇰🇿",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "SUYGETSU",
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "N4RRATE",
+            "flag": "🇺🇸",
+            "photoUrl": null,
+            "igl": false
+          }
+        ],
+        "staff": [
+          {
+            "role": "Head Coach",
+            "name": "ZE1SH",
+            "flag": "🇪🇬",
+            "photoUrl": null
+          },
+          {
+            "role": "Assistant Coach",
+            "name": "simoz",
+            "flag": "🇮🇹",
+            "photoUrl": null
+          }
+        ],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇫🇷",
+        "name": "GENTLE MATES",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "Alfajer",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Kozzy",
+            "flag": "🇷🇴",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Ruxic",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Boaster",
+            "flag": "🇬🇧",
+            "photoUrl": null,
+            "igl": true
+          },
+          {
+            "status": "rumor",
+            "name": "Magnum",
+            "flag": "🇨🇿",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "out",
+            "name": "Minny",
+            "flag": "🇨🇿",
+            "photoUrl": null,
+            "igl": false
+          }
+        ],
+        "staff": [
+          {
+            "role": "Assistant Coach",
+            "name": "Kaplan",
+            "flag": "🇺🇸",
+            "photoUrl": null
+          },
+          {
+            "role": "Head Coach",
+            "name": "KUNDIKUNDI",
+            "flag": "🇫🇮",
+            "photoUrl": null
+          }
+        ],
+        "note": null,
+        "logoUrl": null
       },
       {
         "flag": "🇹🇷",
@@ -82,21 +348,14 @@
         "players": [
           {
             "status": "confirmed",
-            "name": "sociablEE",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "yetujey",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
             "name": "xeus",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "s0pp",
             "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
@@ -110,7 +369,14 @@
           },
           {
             "status": "confirmed",
-            "name": "s0pp",
+            "name": "sociablEE",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "yetujey",
             "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
@@ -128,430 +394,53 @@
             "name": "Bambino",
             "flag": "🇬🇧",
             "photoUrl": null
-          },
-          {
-            "role": "Manager",
-            "name": "Mighty",
-            "flag": "🇹🇷",
-            "photoUrl": null
           }
         ],
         "note": null,
         "logoUrl": null
       },
       {
-        "flag": "🇺🇦",
-        "name": "NATUS VINCERE",
+        "flag": "🇳🇱",
+        "name": "TEAM LIQUID",
         "players": [
           {
-            "status": "possible",
-            "name": "Filu",
+            "status": "confirmed",
+            "name": "trexx",
+            "flag": "🇷🇺",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "Kicks",
+            "flag": "🇪🇪",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "confirmed",
+            "name": "kamo",
             "flag": "🇵🇱",
             "photoUrl": null,
             "igl": false
           },
           {
             "status": "confirmed",
-            "name": "chloric",
-            "flag": "🇺🇸",
+            "name": "GSR",
+            "flag": "🇷🇸",
             "photoUrl": null,
             "igl": false
           },
           {
             "status": "confirmed",
-            "name": "Ruxic",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "hiro",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "benched",
-            "name": "ComeBack",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "ExiT",
-            "flag": "🇸🇦",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "rumor",
-            "name": "Cyvoph",
-            "flag": "🇫🇷",
-            "photoUrl": null,
-            "igl": false
-          }
-        ],
-        "staff": [
-          {
-            "role": "Head Coach",
-            "name": "ANGE1",
-            "flag": "🇺🇦",
-            "photoUrl": null
-          },
-          {
-            "role": "Assistant Coach",
-            "name": "chippy",
-            "flag": "🇺🇦",
-            "photoUrl": null
-          },
-          {
-            "role": "Analista",
-            "name": "Flynn",
-            "flag": "🇩🇿",
-            "photoUrl": null
-          }
-        ],
-        "note": null,
-        "logoUrl": null
-      },
-      {
-        "flag": "🇫🇷",
-        "name": "GENTLE MATES",
-        "players": [
-          {
-            "status": "confirmed",
-            "name": "starxo",
-            "flag": "🇵🇱",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "bipo",
-            "flag": "🇮🇹",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "marteen",
-            "flag": "🇨🇿",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "benched",
-            "name": "GLYPH",
-            "flag": "🇺🇸",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "Minny",
-            "flag": "🇨🇿",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "likely",
-            "name": "Proxh",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          }
-        ],
-        "staff": [
-          {
-            "role": "Head Coach",
-            "name": "KUNDIKUNDI",
-            "flag": "🇺🇦",
-            "photoUrl": null
-          },
-          {
-            "role": "Assistant Coach",
-            "name": "Mavera",
-            "flag": "🇹🇷",
-            "photoUrl": null
-          },
-          {
-            "role": "Analista",
-            "name": "Luinwess",
-            "flag": "🇹🇷",
-            "photoUrl": null
-          }
-        ],
-        "note": null,
-        "logoUrl": null
-      },
-      {
-        "flag": "🇪🇸",
-        "name": "TEAM HERETICS",
-        "players": [
-          {
-            "status": "confirmed",
-            "name": "Boo",
-            "flag": "🇱🇹",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "RieNs",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "Wo0t",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "Koshmaras",
-            "flag": "🇱🇹",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "benjyfishy",
-            "flag": "🇬🇧",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "benched",
-            "name": "ComeBack",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          }
-        ],
-        "staff": [
-          {
-            "role": "Head Coach",
-            "name": "neilzinho",
-            "flag": "🇬🇧",
-            "photoUrl": null
-          },
-          {
-            "role": "Assistant Coach",
-            "name": "Weber",
-            "flag": "🇬🇧",
-            "photoUrl": null
-          },
-          {
-            "role": "Analista",
-            "name": "Beny",
-            "flag": "🇩🇪",
-            "photoUrl": null
-          }
-        ],
-        "note": null,
-        "logoUrl": null
-      },
-      {
-        "flag": "🇫🇷",
-        "name": "KARMINE CORP",
-        "players": [
-          {
-            "status": "confirmed",
-            "name": "SUYGETSU",
+            "name": "nAts",
             "flag": "🇷🇺",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "Avez",
-            "flag": "🇪🇬",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "dos9",
-            "flag": "🇰🇿",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "LewN",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "N4RRATE",
-            "flag": "🇺🇸",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "benched",
-            "name": "sheydos",
-            "flag": "🇷🇺",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "benched",
-            "name": "ENGH",
-            "flag": "🇷🇺",
-            "photoUrl": null,
-            "igl": false
-          }
-        ],
-        "staff": [
-          {
-            "role": "Head Coach",
-            "name": "ZE1SH",
-            "flag": "🇪🇬",
-            "photoUrl": null
-          },
-          {
-            "role": "Assistant Coach",
-            "name": "Youenn",
-            "flag": "🇫🇷",
-            "photoUrl": null
-          },
-          {
-            "role": "Manager",
-            "name": "P4tz",
-            "flag": "🇫🇷",
-            "photoUrl": null
-          }
-        ],
-        "note": null,
-        "logoUrl": null
-      },
-      {
-        "flag": "🇬🇧",
-        "name": "FNATIC",
-        "players": [
-          {
-            "status": "confirmed",
-            "name": "crashies",
-            "flag": "🇺🇸",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "Boaster",
-            "flag": "🇬🇧",
-            "photoUrl": null,
+            "photoUrl": "players/nats.png",
             "igl": true
           },
           {
             "status": "confirmed",
-            "name": "kaajak",
-            "flag": "🇩🇰",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "Alfajer",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "Veqaj",
-            "flag": "🇫🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "benched",
-            "name": "Cyvoph",
-            "flag": "🇫🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "rumor",
-            "name": "Cloud",
-            "flag": "🇷🇺",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "benched",
-            "name": "Milan",
-            "flag": "🇳🇱",
-            "photoUrl": null,
-            "igl": false
-          }
-        ],
-        "staff": [
-          {
-            "role": "Head Coach",
-            "name": "ENG",
-            "flag": "🇷🇺",
-            "photoUrl": null
-          },
-          {
-            "role": "Assistant Coach",
-            "name": "Desmo",
-            "flag": "🇩🇰",
-            "photoUrl": null
-          },
-          {
-            "role": "Manager",
-            "name": "Cojo",
-            "flag": "🇺🇸",
-            "photoUrl": null
-          }
-        ],
-        "note": null,
-        "logoUrl": null
-      },
-      {
-        "flag": "🇹🇷",
-        "name": "ETERNAL FIRE",
-        "players": [
-          {
-            "status": "confirmed",
-            "name": "Izzy",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "nekky",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "audaz",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "Favian",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
-            "name": "echo",
+            "name": "Kachoww",
             "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
@@ -560,25 +449,19 @@
         "staff": [
           {
             "role": "Head Coach",
-            "name": "afr0nfire",
-            "flag": "🇹🇷",
+            "name": "LohaN",
+            "flag": "🇵🇹",
             "photoUrl": null
           },
           {
             "role": "Assistant Coach",
-            "name": "L7",
-            "flag": "🇹🇷",
-            "photoUrl": null
-          },
-          {
-            "role": "Manager",
-            "name": "Big Poppa",
-            "flag": "🇹🇷",
+            "name": "yaotziN",
+            "flag": "🇵🇱",
             "photoUrl": null
           }
         ],
         "note": null,
-        "logoUrl": null
+        "logoUrl": "/logos/team-liquid-logo.png"
       },
       {
         "flag": "🇫🇷",
@@ -600,7 +483,7 @@
           },
           {
             "status": "confirmed",
-            "name": "PROFEK",
+            "name": "Profek",
             "flag": "🇵🇱",
             "photoUrl": null,
             "igl": false
@@ -615,7 +498,7 @@
           {
             "status": "confirmed",
             "name": "Sayonara",
-            "flag": "🇷🇴",
+            "flag": "🇲🇩",
             "photoUrl": null,
             "igl": false
           }
@@ -632,12 +515,6 @@
             "name": "Scuttt",
             "flag": "🇮🇪",
             "photoUrl": null
-          },
-          {
-            "role": "Analista",
-            "name": "slk",
-            "flag": "🇷🇺",
-            "photoUrl": null
           }
         ],
         "note": null,
@@ -648,36 +525,71 @@
         "name": "BBL ESPORTS",
         "players": [
           {
-            "status": "confirmed",
-            "name": "Rosé",
-            "flag": "🇹🇷",
-            "photoUrl": null,
-            "igl": false
-          },
-          {
-            "status": "confirmed",
+            "status": "out",
             "name": "Crewen",
             "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
+            "status": "possible",
             "name": "Loita",
             "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
+            "status": "possible",
             "name": "Lar0k",
             "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
-            "name": "lovers rock",
+            "status": "out",
+            "name": "Rosé",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "out",
+            "name": "Lovers Rock",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "possible",
+            "name": "ComeBack",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Kachoww",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "batujnax",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "possible",
+            "name": "VenTT",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "possible",
+            "name": "Oroni",
             "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
@@ -689,17 +601,63 @@
             "name": "KEY",
             "flag": "🇹🇷",
             "photoUrl": null
+          }
+        ],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇺🇦",
+        "name": "NATUS VINCERE",
+        "players": [
+          {
+            "status": "out",
+            "name": "CyvOph",
+            "flag": "🇫🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
-            "role": "Assistant Coach",
-            "name": "Viento",
-            "flag": "🇹🇷",
-            "photoUrl": null
+            "status": "out",
+            "name": "chloric",
+            "flag": "🇺🇸",
+            "photoUrl": null,
+            "igl": false
           },
           {
-            "role": "Manager",
-            "name": "Tropik",
+            "status": "out",
+            "name": "Ruxic",
             "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "out",
+            "name": "Exit",
+            "flag": "🇸🇦",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "out",
+            "name": "hiro",
+            "flag": "🇳🇱",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "out",
+            "name": "Kolosha",
+            "flag": "🇺🇦",
+            "photoUrl": null,
+            "igl": false
+          }
+        ],
+        "staff": [
+          {
+            "role": "Head Coach",
+            "name": "ANGE1",
+            "flag": "🇺🇦",
             "photoUrl": null
           }
         ],
@@ -711,35 +669,35 @@
         "name": "GIANTX",
         "players": [
           {
-            "status": "confirmed",
-            "name": "grubinho",
+            "status": "out",
+            "name": "GRUBINHO",
             "flag": "🇵🇱",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
+            "status": "out",
             "name": "ara",
             "flag": "🇷🇴",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
+            "status": "out",
             "name": "Flickless",
             "flag": "🇧🇪",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
-            "name": "Cloud",
-            "flag": "🇷🇺",
+            "status": "out",
+            "name": "neT",
+            "flag": "🇺🇸",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
+            "status": "out",
             "name": "westside",
             "flag": "🇵🇱",
             "photoUrl": null,
@@ -752,17 +710,148 @@
             "name": "pipsoN",
             "flag": "🇷🇺",
             "photoUrl": null
+          }
+        ],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇹🇷",
+        "name": "ETERNAL FIRE",
+        "players": [
+          {
+            "status": "out",
+            "name": "nekky",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
           },
           {
-            "role": "Assistant Coach",
-            "name": "wayLander",
-            "flag": "🇫🇮",
+            "status": "out",
+            "name": "audaz",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "out",
+            "name": "Izzy",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "out",
+            "name": "echo",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "out",
+            "name": "Favian",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "MrFalin",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          }
+        ],
+        "staff": [
+          {
+            "role": "Head Coach",
+            "name": "afr0nfire",
+            "flag": "🇹🇷",
+            "photoUrl": null
+          }
+        ],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇪🇸",
+        "name": "BARÇA ESPORTS",
+        "players": [
+          {
+            "status": "confirmed",
+            "name": "Fit1nho",
+            "flag": "🇪🇸",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "westside",
+            "flag": "🇵🇱",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "echo",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Oroni",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "MONSTEERR",
+            "flag": "🇨🇿",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Pa1ze",
+            "flag": "🇩🇰",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Minny",
+            "flag": "🇨🇿",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "CyvOph",
+            "flag": "🇫🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Proxh",
+            "flag": "🇹🇷",
+            "photoUrl": null,
+            "igl": false
+          }
+        ],
+        "staff": [
+          {
+            "role": "Head Coach",
+            "name": "meisoN",
+            "flag": "🇪🇸",
             "photoUrl": null
           },
           {
-            "role": "Manager",
-            "name": "Hehnal",
-            "flag": "🇩🇪",
+            "role": "Assistant Coach",
+            "name": "xikii",
+            "flag": "🇪🇸",
             "photoUrl": null
           }
         ],
@@ -774,37 +863,37 @@
         "name": "PCIFIC ESPORTS",
         "players": [
           {
-            "status": "confirmed",
-            "name": "cNed",
+            "status": "possible",
+            "name": "Izzy",
             "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
-            "name": "al0rante",
-            "flag": "🇩🇪",
+            "status": "possible",
+            "name": "BadreX",
+            "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
-            "name": "qpert",
-            "flag": "🇸🇰",
+            "status": "possible",
+            "name": "JN3v1cEEE",
+            "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
-            "name": "seven",
-            "flag": "🇲🇽",
+            "status": "possible",
+            "name": "Crewen",
+            "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
           },
           {
-            "status": "confirmed",
-            "name": "NINJA",
-            "flag": "🇵🇱",
+            "status": "possible",
+            "name": "burzzy",
+            "flag": "🇹🇷",
             "photoUrl": null,
             "igl": false
           }
@@ -812,23 +901,104 @@
         "staff": [
           {
             "role": "Head Coach",
-            "name": "thnikii",
-            "flag": "🇪🇸",
-            "photoUrl": null
-          },
-          {
-            "role": "Assistant Coach",
-            "name": "ZaeS",
-            "flag": "🇪🇸",
-            "photoUrl": null
-          },
-          {
-            "role": "Analista",
-            "name": "Koyo",
-            "flag": "🇩🇪",
+            "name": "Jonsyp",
+            "flag": "🇹🇷",
             "photoUrl": null
           }
         ],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇩🇪",
+        "name": "FOKUS",
+        "players": [
+          {
+            "status": "out",
+            "name": "Veqaj",
+            "flag": "🇫🇷",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "MiniBoo",
+            "flag": "🇱🇹",
+            "photoUrl": null,
+            "igl": false
+          },
+          {
+            "status": "rumor",
+            "name": "Boo",
+            "flag": "🇱🇹",
+            "photoUrl": null,
+            "igl": false
+          }
+        ],
+        "staff": [
+          {
+            "role": "Head Coach",
+            "name": "Larsson",
+            "flag": "🇫🇷",
+            "photoUrl": null
+          }
+        ],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇪🇸",
+        "name": "MOVISTAR KOI",
+        "players": [
+          {
+            "status": "rumor",
+            "name": "Minny",
+            "flag": "🇨🇿",
+            "photoUrl": null,
+            "igl": false
+          }
+        ],
+        "staff": [],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇸🇦",
+        "name": "FALCONS",
+        "players": [],
+        "staff": [],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇫🇷",
+        "name": "JOBLIFE",
+        "players": [],
+        "staff": [],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇨🇿",
+        "name": "ENTERPRISE ESPORTS",
+        "players": [],
+        "staff": [],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇹🇷",
+        "name": "FIRE FLUX ESPORTS",
+        "players": [],
+        "staff": [],
+        "note": null,
+        "logoUrl": null
+      },
+      {
+        "flag": "🇩🇪",
+        "name": "EINTRACHT FRANKFURT",
+        "players": [],
+        "staff": [],
         "note": null,
         "logoUrl": null
       }
