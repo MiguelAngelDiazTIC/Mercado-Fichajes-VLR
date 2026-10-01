@@ -407,7 +407,7 @@
             "status": "confirmed",
             "name": "trexx",
             "flag": "🇷🇺",
-            "photoUrl": null,
+            "photoUrl": "players/trexx.png",
             "igl": false
           },
           {
@@ -421,14 +421,14 @@
             "status": "confirmed",
             "name": "kamo",
             "flag": "🇵🇱",
-            "photoUrl": null,
+            "photoUrl": "players/kamo.png",
             "igl": false
           },
           {
             "status": "confirmed",
             "name": "GSR",
             "flag": "🇷🇸",
-            "photoUrl": null,
+            "photoUrl": "players/GSR.png",
             "igl": false
           },
           {
@@ -442,7 +442,7 @@
             "status": "confirmed",
             "name": "Kachoww",
             "flag": "🇹🇷",
-            "photoUrl": null,
+            "photoUrl": "players/Kachoww.png",
             "igl": false
           }
         ],
@@ -451,13 +451,13 @@
             "role": "Head Coach",
             "name": "LohaN",
             "flag": "🇵🇹",
-            "photoUrl": null
+            "photoUrl": "staff/LohaN.png"
           },
           {
             "role": "Assistant Coach",
             "name": "yaotziN",
             "flag": "🇵🇱",
-            "photoUrl": null
+            "photoUrl": "staff/yaotziN.png"
           }
         ],
         "note": null,
@@ -570,7 +570,7 @@
             "status": "rumor",
             "name": "Kachoww",
             "flag": "🇹🇷",
-            "photoUrl": null,
+            "photoUrl": "players/Kachoww.png",
             "igl": false
           },
           {
