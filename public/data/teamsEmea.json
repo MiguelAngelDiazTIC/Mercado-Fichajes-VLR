@@ -336,11 +336,11 @@
             "role": "Head Coach",
             "name": "KUNDIKUNDI",
             "flag": "🇫🇮",
-            "photoUrl": "/logos/gentle-mates.png"
+            "photoUrl": null
           }
         ],
         "note": null,
-        "logoUrl": null
+        "logoUrl": "/logos/gentle-mates.png"
       },
       {
         "flag": "🇹🇷",
