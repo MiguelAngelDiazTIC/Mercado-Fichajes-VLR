@@ -414,8 +414,9 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 }
 
 /* ─── MODO CAPTURA ───
-   Capa a pantalla completa con un lienzo de tamaño fijo (1600px en horizontal,
-   900px en vertical) que se escala para que toda la región quepa en pantalla.
+   Capa a pantalla completa con un lienzo que se escala para que toda la región
+   quepa en pantalla. Su ancho (--cw) lo calcula fitCapture() según la proporción
+   de la ventana, para aprovechar el espacio hasta los bordes.
    Al abrir, el lienzo llega desde algo más grande: se lee como un zoom out. */
 .capture{
   position:fixed;inset:0;z-index:200;
@@ -428,6 +429,7 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 .capture-canvas{
   position:absolute;left:50%;top:50%;
   width:var(--cw,1600px);
+  container-type:inline-size;
   --z:1.1;
   transform:translate(-50%,-50%) scale(calc(var(--s,1) * var(--z)));
   opacity:0;
@@ -438,16 +440,17 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 .capture.is-closing{transition-duration:180ms}
 .capture.is-closing .capture-canvas{--z:1.06;opacity:0;transition-duration:200ms,160ms}
 
+/* Título, leyenda y datos en una sola fila: el alto es lo que limita la escala */
 .cap-head{
   display:grid;
-  grid-template-columns:1fr auto;
+  grid-template-columns:auto 1fr auto;
   align-items:end;
-  gap:24px;
-  padding-bottom:18px;
+  gap:12px 40px;
+  padding-bottom:14px;
   border-bottom:1px solid var(--ink);
 }
 .cap-title{
-  font-size:120px;
+  font-size:96px;
   font-weight:800;
   font-stretch:var(--wide);
   line-height:0.86;
@@ -461,15 +464,21 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 .cap-meta strong{font-weight:800;font-stretch:var(--wide);letter-spacing:0.01em;font-size:18px}
 .cap-legend{
   display:flex;flex-wrap:wrap;gap:6px 24px;
-  padding-block:12px 26px;
+  padding-bottom:2px;
   font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
 }
 .cap-legend span{display:inline-flex;align-items:center;gap:8px}
+/* Lienzo estrecho (pocas columnas, móvil): la leyenda baja a su propia fila */
+@container (max-width:1400px){
+  .cap-head{grid-template-columns:1fr auto}
+  .cap-legend{grid-column:1 / -1;order:1}
+}
 
 .cap-grid{
   display:grid;
   grid-template-columns:repeat(var(--cols,4),1fr);
-  gap:30px 32px;
+  gap:26px 32px;
+  margin-top:22px;
 }
 .cap-card{border-top:2px solid var(--ink);padding-top:10px;min-width:0}
 .cap-name{
@@ -504,14 +513,16 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 .cap-coach span:last-child{font-weight:600;display:inline-flex;align-items:center;gap:6px}
 .cap-foot{
   display:flex;justify-content:space-between;
-  margin-top:26px;padding-top:12px;
+  margin-top:20px;padding-top:10px;
   border-top:1px solid var(--rule);
   font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-2);
 }
 
-/* Controles fuera del lienzo; se ocultan si el ratón está quieto para no salir en la captura */
+/* Controles abajo en el centro, donde el lienzo no tiene contenido; se ocultan si el
+   ratón está quieto para no salir en la captura */
 .capture-bar{
-  position:absolute;top:16px;right:16px;z-index:1;
+  position:absolute;bottom:12px;left:50%;translate:-50% 0;z-index:1;
+  white-space:nowrap;
   display:flex;align-items:center;gap:14px;
   font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-2);
   transition:opacity 250ms ease;

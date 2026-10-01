@@ -399,7 +399,7 @@ function setTabByName(name: string): void {
 
 // ─── Modo captura ─────────────────────────────────────────
 // Vista general de una región pensada para hacer captura de pantalla:
-// se maqueta en un lienzo de tamaño fijo y se escala para que quepa entero.
+// se maqueta en un lienzo con la proporción de la ventana y se escala para que quepa entero.
 
 const regionSubtitles: Record<RegionKey, string> = {
   emea: 'Europe · Middle East · Africa',
@@ -434,25 +434,41 @@ function captureCardHtml(team: Team): string {
   </article>`;
 }
 
+// Ancho mínimo de una columna y del lienzo, y separación entre columnas
+// (la misma que el gap de .cap-grid)
+const CAP_COL_MIN = 240;
+const CAP_COL_GAP = 32;
+const CAP_MIN_W = 760;
+
 // Prueba varias columnas y se queda con la que permite la escala más grande
-// (texto más legible); después escala el lienzo para que quepa con un margen
+// (texto más legible). El ancho del lienzo no es fijo: se ajusta a la proporción
+// de la ventana para que la vista llegue hasta los bordes en vez de dejar bandas
 function fitCapture(): void {
   if (!captureEl) return;
   const canvas = captureEl.querySelector<HTMLElement>('.capture-canvas');
   if (!canvas) return;
-  const pad = window.innerWidth < 700 ? 12 : 40;
+  const pad = window.innerWidth < 700 ? 8 : 16;
   const availW = window.innerWidth - pad * 2;
   const availH = window.innerHeight - pad * 2;
-  const portrait = window.innerHeight > window.innerWidth;
+  const teams = canvas.querySelectorAll('.cap-card').length;
 
-  canvas.style.setProperty('--cw', portrait ? '900px' : '1600px');
-  let best = { cols: 4, s: 0 };
-  for (const cols of portrait ? [2, 3] : [4, 5, 6]) {
+  let best = { cols: 2, w: CAP_MIN_W, s: 0 };
+  for (let cols = 2; cols <= Math.max(2, Math.min(teams, 8)); cols++) {
     canvas.style.setProperty('--cols', String(cols));
-    const s = Math.min(availW / canvas.offsetWidth, availH / canvas.offsetHeight);
-    if (s > best.s) best = { cols, s };
+    const minW = Math.max(CAP_MIN_W, cols * CAP_COL_MIN + (cols - 1) * CAP_COL_GAP);
+    // El alto depende un poco del ancho (textos que saltan de línea): se itera
+    let w = minW;
+    for (let i = 0; i < 3; i++) {
+      canvas.style.setProperty('--cw', `${w}px`);
+      w = Math.max(minW, Math.round(availW * canvas.offsetHeight / availH));
+    }
+    canvas.style.setProperty('--cw', `${w}px`);
+    const s = Math.min(availW / w, availH / canvas.offsetHeight);
+    // A igualdad de escala, menos columnas: tarjetas más anchas
+    if (s > best.s * 1.005) best = { cols, w, s };
   }
   canvas.style.setProperty('--cols', String(best.cols));
+  canvas.style.setProperty('--cw', `${best.w}px`);
   canvas.style.setProperty('--s', String(Math.max(best.s, 0.1)));
 }
 
@@ -508,19 +524,19 @@ async function openCapture(id: RegionKey): Promise<void> {
     <div class="capture-canvas">
       <header class="cap-head">
         <h2 class="cap-title" id="cap-title">${title}</h2>
+        <div class="cap-legend" aria-hidden="true">
+          <span><span class="mark status-confirmed"></span>Confirmado</span>
+          <span><span class="mark status-likely"></span>Probable</span>
+          <span><span class="mark status-possible"></span>Posible</span>
+          <span><span class="mark status-rumor"></span>Rumor</span>
+          <span><span class="mark status-benched"></span>Benched / Sub</span>
+        </div>
         <div class="cap-meta">
           <strong>VCT Transfers</strong>
           <span>${regionSubtitles[id]} · VCT 2026</span>
           <span>${n} equipos${updated ? ` · Actualizado ${updated}` : ''}</span>
         </div>
       </header>
-      <div class="cap-legend" aria-hidden="true">
-        <span><span class="mark status-confirmed"></span>Confirmado</span>
-        <span><span class="mark status-likely"></span>Probable</span>
-        <span><span class="mark status-possible"></span>Posible</span>
-        <span><span class="mark status-rumor"></span>Rumor</span>
-        <span><span class="mark status-benched"></span>Benched / Sub</span>
-      </div>
       <div class="cap-grid">${region.teams.map(captureCardHtml).join('')}</div>
       <footer class="cap-foot">
         <span>Mercado de fichajes 2025/26 · Datos no oficiales</span>
