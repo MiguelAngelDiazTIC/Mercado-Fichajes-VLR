@@ -10,13 +10,12 @@
   <link href="./css/style.css" rel="stylesheet">
   <!-- Antes del primer pintado: habilita los estados ocultos que luego anima el script -->
   <script>document.documentElement.classList.add('motion')</script>
-  <!-- Tema antes del primer pintado (sin destello): el elegido o, si no hay, el del sistema -->
+  <!-- Tema antes del primer pintado (sin destello): claro salvo que se haya elegido oscuro -->
   <script>
     (function () {
       var t;
       try { t = localStorage.getItem('theme'); } catch (e) {}
-      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = t;
+      document.documentElement.dataset.theme = t === 'dark' ? 'dark' : 'light';
     })();
   </script>
 </head>
