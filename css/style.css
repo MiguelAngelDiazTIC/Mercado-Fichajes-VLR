@@ -806,7 +806,7 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 }
 /* ─── VISTA GRANDE DE EQUIPO (dialog) ─── */
 .team-dialog{
-  width:min(1240px,calc(100vw - 2 * var(--gutter)));
+  width:min(1000px,calc(100vw - 2 * var(--gutter)));
   max-width:none;
   max-height:calc(100dvh - 48px);
   margin:auto;
@@ -863,28 +863,27 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
   padding-bottom:10px;margin-bottom:16px;
   border-bottom:1px solid var(--rule);
 }
-/* 5 columnas: un roster completo ocupa una fila; subs y staff se alinean debajo */
+/* Columnas de ~150–200px: las fotos miden 256px de ancho, así nunca se amplían.
+   A ancho completo caben 5: un roster ocupa una fila; subs y staff se alinean debajo */
 .td-grid{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
   gap:28px 20px;
 }
-@media(max-width:1000px){
-  .td-grid{grid-template-columns:repeat(3,1fr)}
-}
 
-/* Ficha de persona: foto 4:5 y pie de foto */
+/* Ficha de persona: foto 3:2 (la proporción de los originales) y pie de foto */
 .person{min-width:0}
 .person-photo{
   position:relative;
-  aspect-ratio:4 / 5;
+  aspect-ratio:3 / 2;
   background:var(--surface);
   overflow:hidden;
   display:flex;align-items:center;justify-content:center;
 }
-.person-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* Las pocas fotos verticales se recortan desde arriba para no cortar la cara */
+.person-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%}
 .person-initials{
-  font-size:clamp(34px,4vw,52px);
+  font-size:clamp(26px,3vw,36px);
   font-weight:800;
   font-stretch:var(--wide);
   color:#c4c4c0;
@@ -902,7 +901,7 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 }
 .person-name{
   display:flex;align-items:center;gap:8px;
-  font-size:19px;font-weight:800;font-stretch:var(--wide);line-height:1.1;
+  font-size:17px;font-weight:800;font-stretch:var(--wide);line-height:1.1;
   overflow-wrap:anywhere;
 }
 .person-name .player-igl{margin-left:0}
