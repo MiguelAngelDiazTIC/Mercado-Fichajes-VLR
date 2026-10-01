@@ -909,6 +909,53 @@ html{scrollbar-color:var(--ink) var(--paper);scrollbar-width:thin}
 .person-flag{font-size:12px}
 .team-dialog .team-note{margin-top:28px}
 
+/* ─── CRÉDITOS (dialog) ─── reutiliza la barra y las secciones de la vista de equipo */
+.footer-link{
+  font:inherit;letter-spacing:inherit;text-transform:inherit;color:var(--ink);
+  font-weight:700;
+  text-decoration:underline;text-underline-offset:3px;
+}
+.footer-link:hover{color:var(--accent)}
+.credits-dialog{width:min(720px,calc(100vw - 2 * var(--gutter)))}
+.credits-dialog[open]{animation:fade-in 0.2s ease both}
+.cr-title{
+  padding-block:clamp(20px,3vw,36px) clamp(14px,2vw,20px);
+  border-bottom:2px solid var(--ink);
+  font-size:clamp(34px,6vw,60px);
+  font-weight:800;
+  font-stretch:var(--wide);
+  line-height:0.9;
+  letter-spacing:-0.03em;
+  text-transform:uppercase;
+}
+.cr-text{max-width:62ch;line-height:1.5;color:var(--ink-2)}
+.cr-text a,.cr-sources a{color:var(--ink);font-weight:700;text-underline-offset:3px}
+.cr-text a:hover,.cr-sources a:hover,.cr-list a:hover{color:var(--accent)}
+.cr-sources{list-style:none;display:grid;gap:6px;color:var(--ink-2)}
+.cr-text + .cr-sources{margin-top:14px}
+#credits-images{margin-top:16px;border-bottom:1px solid var(--rule)}
+.cr-group{border-top:1px solid var(--rule)}
+.cr-group summary{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding-block:12px;
+  font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  cursor:pointer;
+  list-style:none;
+}
+.cr-group summary::-webkit-details-marker{display:none}
+.cr-group summary:hover{color:var(--accent)}
+.cr-count{font-weight:500;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.cr-count::after{content:' +'}
+.cr-group[open] .cr-count::after{content:' −'}
+.cr-list{
+  list-style:none;
+  columns:3 130px;column-gap:20px;
+  padding-bottom:16px;
+  font-size:13px;line-height:1.7;
+}
+.cr-list li{break-inside:avoid;overflow-wrap:anywhere}
+.cr-list a{color:var(--ink-2);text-decoration:none}
+
 @media(max-width:760px){
   .team-dialog{width:100vw;max-height:100dvh;height:100dvh}
   .td-grid{grid-template-columns:repeat(2,1fr);gap:22px 14px}

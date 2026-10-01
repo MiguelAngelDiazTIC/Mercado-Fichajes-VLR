@@ -85,7 +85,7 @@
   <footer class="footer frame">
     <div class="meta-row">
       <span>VCT Transfer Hub</span>
-      <span>Datos no oficiales</span>
+      <span>Datos no oficiales · <button class="footer-link" type="button" onclick="openCredits()" aria-haspopup="dialog">Créditos</button></span>
       <a href="https://x.com/MiikaElVAL" target="_blank" rel="noopener noreferrer">@MiikaElVAL</a>
     </div>
   </footer>
@@ -223,6 +223,55 @@
 
 <!-- Vista grande de un equipo (se rellena desde RegionTable.ts) -->
 <dialog class="team-dialog" id="team-dialog" aria-labelledby="td-title"></dialog>
+
+<!-- Créditos: el texto se edita aquí; la lista de imágenes sale de public/data/image-credits.json -->
+<dialog class="team-dialog credits-dialog" id="credits-dialog" aria-labelledby="cr-title">
+  <div class="td-inner">
+    <div class="td-bar">
+      <span class="label">Créditos /</span>
+      <button class="td-close" type="button" autofocus>
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        Cerrar
+      </button>
+    </div>
+    <h2 class="cr-title" id="cr-title">Créditos</h2>
+
+    <section class="td-section">
+      <h3 class="td-section-title">Fuentes /</h3>
+      <p class="cr-text">
+        Fichajes, renovaciones y rumores recopilados por
+        <a href="https://x.com/MiikaElVAL" target="_blank" rel="noopener noreferrer">@MiikaElVAL</a>
+        a partir de anuncios oficiales de los equipos y de información publicada por periodistas de la escena.
+        Los rumores no están confirmados.
+      </p>
+      <!-- Añade aquí cada fuente: <li><a href="https://…" target="_blank" rel="noopener noreferrer">Nombre</a> — qué aporta</li> -->
+      <ul class="cr-sources">
+        <li><a href="https://liquipedia.net/valorant/" target="_blank" rel="noopener noreferrer">Liquipedia</a> — logos y fotos</li>
+      </ul>
+    </section>
+
+    <section class="td-section">
+      <h3 class="td-section-title">Imágenes /</h3>
+      <p class="cr-text">
+        Los logos de los equipos y las fotos de jugadores y staff proceden de
+        <a href="https://liquipedia.net/valorant/" target="_blank" rel="noopener noreferrer">Liquipedia</a>.
+        Cada imagen pertenece a su autor u organización; cada enlace lleva a su ficha original,
+        con la autoría y la licencia.
+      </p>
+      <div id="credits-images"></div>
+    </section>
+
+    <section class="td-section">
+      <h3 class="td-section-title">Tipografía e iconos /</h3>
+      <ul class="cr-sources">
+        <li><a href="https://fonts.google.com/specimen/Archivo" target="_blank" rel="noopener noreferrer">Archivo</a> — Omnibus-Type, vía Google Fonts (SIL Open Font License)</li>
+        <li><a href="https://flagicons.lipis.dev/" target="_blank" rel="noopener noreferrer">flag-icons</a> — banderas (licencia MIT)</li>
+      </ul>
+    </section>
+
+    <p class="team-note"><span class="team-note-label">Aviso /</span>Proyecto de fans no oficial, sin afiliación con Riot Games. VALORANT y VCT son marcas de Riot Games, Inc.</p>
+  </div>
+</dialog>
 
 <script type="module" src="./src/RegionTable.ts"></script>
 </body>

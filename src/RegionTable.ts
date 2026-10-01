@@ -719,6 +719,85 @@ function initTeamDialog(): void {
   });
 }
 
+// ─── Créditos ─────────────────────────────────────────────
+// El texto vive en index.html (#credits-dialog). Aquí se abre el <dialog> y, la
+// primera vez, se pinta la lista de imágenes desde public/data/image-credits.json.
+
+interface ImageCredit {
+  source: string;
+  page: string;
+  file?: string | null;
+}
+
+const creditGroups: [prefix: string, title: string][] = [
+  ['/logos/', 'Logos de equipos'],
+  ['/players/', 'Fotos de jugadores'],
+  ['/staff/', 'Fotos de staff'],
+];
+
+let creditsLoaded = false;
+
+const escapeHtml = (s: string): string => s.replace(/[&<>"]/g, c => `&#${c.charCodeAt(0)};`);
+
+// "https://liquipedia.net/valorant/Team_Heretics" → "Team Heretics"
+function creditLabel(page: string): string {
+  const slug = page.split('/').pop() || page;
+  try {
+    return decodeURIComponent(slug).replace(/_/g, ' ');
+  } catch {
+    return slug;
+  }
+}
+
+async function renderImageCredits(): Promise<void> {
+  const box = document.getElementById('credits-images');
+  if (!box || creditsLoaded) return;
+  creditsLoaded = true;
+  try {
+    const res = await fetch(import.meta.env.BASE_URL + 'data/image-credits.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const credits = await res.json() as Record<string, ImageCredit>;
+    box.innerHTML = creditGroups.map(([prefix, title]) => {
+      const items = Object.entries(credits)
+        .filter(([path]) => path.startsWith(prefix))
+        .map(([, c]) => ({ label: creditLabel(c.page), href: c.file ?? c.page }))
+        .sort((a, b) => a.label.localeCompare(b.label, 'es', { sensitivity: 'base' }));
+      if (!items.length) return '';
+      return `<details class="cr-group">
+        <summary>${title}<span class="cr-count">${items.length}</span></summary>
+        <ul class="cr-list">${items.map(i =>
+          `<li><a href="${escapeHtml(i.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(i.label)}</a></li>`).join('')}</ul>
+      </details>`;
+    }).join('');
+  } catch {
+    // Permite reintentar al volver a abrir
+    creditsLoaded = false;
+    box.innerHTML = '<p class="cr-text">No se ha podido cargar la lista de imágenes.</p>';
+  }
+}
+
+function openCredits(): void {
+  const dialog = document.getElementById('credits-dialog') as HTMLDialogElement | null;
+  if (!dialog || dialog.open) return;
+  dialog.scrollTop = 0;
+  dialog.showModal();
+  document.documentElement.style.overflow = 'hidden';
+  renderImageCredits();
+}
+
+function initCreditsDialog(): void {
+  const dialog = document.getElementById('credits-dialog') as HTMLDialogElement | null;
+  if (!dialog) return;
+  dialog.querySelector('.td-close')?.addEventListener('click', () => dialog.close());
+  // Clic en el fondo oscuro (fuera del contenido)
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    document.documentElement.style.overflow = '';
+  });
+}
+
 // ─── Expose globals ───────────────────────────────────────
 
 (window as any).showPage       = showPage;
@@ -727,8 +806,10 @@ function initTeamDialog(): void {
 (window as any).openCapture    = openCapture;
 (window as any).filterTeams    = filterTeams;
 (window as any).openTeam       = openTeam;
+(window as any).openCredits    = openCredits;
 
 initTeamDialog();
+initCreditsDialog();
 
 initIndicator();
 renderUpdated();
